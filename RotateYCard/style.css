@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: cursive;
+  background-color: #020e14;
+}
+
+section {
+  background-color: #020e14;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .rect {
+  margin: 5px;
+  background-color: #ffb4ff;
+  width: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-transition: 1.4s ease;
+  transition: 1.4s ease;
+}
+
+section .rect:hover {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+  background-color: white;
+}
+/*# sourceMappingURL=style.css.map */

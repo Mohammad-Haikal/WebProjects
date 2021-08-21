@@ -1,0 +1,55 @@
+body, html{
+    margin: 0;
+    height: 100%;
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+    font-family: cursive;
+    background-color: #020e14;
+}
+
+
+
+section{
+    background-color: #020e14;
+    display: flex;
+    padding: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+
+    .rect{
+        margin: 5px;
+        background-color: rgb(255, 180, 255);
+        width: 300px;
+        padding: 10px;
+        border-radius: 20px;
+        transition: 1.4s ease;
+
+        &:hover{
+            transform: rotateY(360deg);
+            background-color: white;
+            
+        }
+    }
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+
+    
+    
+}
+
+
+
+  
+  
+   
