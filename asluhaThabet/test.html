@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>جمعية أصلها ثابت</title>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>مجموعة أصلها ثابت للتنمية المجتمعية</h1>
+            
+            <!-- menuContainer -->
+            <div id="flip">
+                <div class="menuContainer" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <!-- menuContainer -->
+
+            <!-- Navbar -->
+            <nav id="panel">
+                <div class="mainPage"><a href="index.html">الرئيسية</a></div>
+
+                <div class="mainPage"><a id="mainDrop1" href="#">عن الجمعية</a>
+                    <div id="dropdown1" class="dropdown">
+                        <div class="mainPage"><a href="about.html">من نحن</a></div>
+                        <div class="mainPage"><a href="about.html#weLocatedAt">تجدوونا في</a></div>
+                    </div>
+                </div>
+
+                <div class="mainPage"><a id="mainDrop2" href="#">برامجنا</a>
+                    <div id="dropdown2" class="dropdown">
+                        <div class="mainPage"><a href="courses.html"> الدورات الخاصة</a></div>
+                        <div class="mainPage"><a id="selectedA">المنح العامة</a></div>
+                    </div>
+                </div>
+
+                <div class="mainPage"><a href="activities.html">النشاطات</a></div>
+                <div class="mainPage"><a href="volunteerWithUs.html">تطوع معنا</a></div>
+                <div class="mainPage"><a href="contactUs.html">تواصل معنا</a></div>
+            </nav>
+            <!-- Navbar -->
+
+            <!-- logo -->
+            <div class="logo"><img src="./images/logo2.png"></div>
+            <!-- logo -->
+        </header>
+        <!-- Header -->
+
+        <section class="grantContent">
+            <div class="grantsContainer">
+
+                <div class="grantBox">
+                    <div class="grant">
+                        <div class="grantInfo">
+                            <h3>دورة التغذية الصحية </h3>
+                            <img src="./images/healthyNutritionC.png">
+                        </div>
+                        <div class="grantInfo">
+                            <h3>دورة الحجامة الحديثة</h3>
+                            <img src="./images/modernCuppingC.jpg">
+                        </div>
+                        <div class="grantInfo">
+                            <h3>دورة الإسعـافات الأوليـة</h3>
+                            <img src="./images/firstAidC.jpg">
+                        </div>
+                    </div>
+        
+                    <article id="details">
+                        <p>يستحق الطفل 3 ساعات تعليمية في 3 أيام أسبوعياً</p>
+                        <p>كلفة الانتساب 15 ديناراً تدفع بشكل شهري لمدة ثلاث أشهر.</p>
+                    </article>
+    
+                    <a id="registerNow" target="_blank" href="https://forms.gle/poNSoB4xnUhHEkaC6">سجل الان</a>
+                </div>
+
+                
+    
+    
+                
+    
+            </div>
+        </section>
+        
+            
+
+
+        <!-- Footer -->
+        <footer>
+            
+            <!-- <div class="contactDiv"> -->
+                <div><h4>تواصل معنا</h4></div>
+                <div class="referencesDiv">
+                    <div class="refDiv">
+                        <div id="d1">
+                        <label><img class="socialIcons2" src="./images/icons8-mail-256.png" alt="Mail"></label>
+                        <a target="_blank" href="mailTo: asluhathabet7@gmail.com">asluhathabet7@gmail.com</a>
+                        </div>
+
+                        <div id="d2">
+                        <label><img class="socialIcons2" src="./images/icons8-phone-96.png" alt="Phone"></label>
+                        <a target="_blank" href="tel:+962790956257">0790956257</a>
+                        </div>
+                    </div>
+                    <div class="butDiv">
+                        <a target="_blank" href="https://www.facebook.com/ASLUHA1"><img class="socialIcons" src="./images/icons8-facebook-480.png"></a>
+                        <a target="_blank" href="https://www.instagram.com/asluhathabet7/?fbclid=IwAR1PaIpGsVTVv4lPym6BfZJFNjootbsM9XiaRRnhuDO3sd_ej-bOocq5KKA"><img class="socialIcons" src="./images/icons8-instagram-240.png"></a>
+                        <a target="_blank" href="https://t.me/joinchat/xBwisrfnJog2NDY8"><img class="socialIcons" src="./images/icons8-telegram-app-96.png"></a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCEBn70MBNwJkD1Z0BxIWXDA/featured"><img class="socialIcons" src="./images/icons8-youtube-96.png"></a>
+                    </div>
+                </div>
+
+                <div><img id="logo" src="./images/logo2.png" alt="logo"></div>
+            <!-- </div> -->
+        </footer>
+        <!-- Footer -->
+        
+        <section class="developedBy">
+            <p>تصميم وتطوير <a href="https://wa.me/+962790580502">Muhammad Haikal</a></p>
+        </section>
+
+    </div>
+
+
+    
+    <script src="./js/menuSlide.js"></script>
+    <script src="./js/fade.js"></script>
+    <script src="./js/coursesInfoFade.js"></script>
+    
+</body>
+</html>

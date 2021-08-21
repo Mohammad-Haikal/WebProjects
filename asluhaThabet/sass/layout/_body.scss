@@ -1,0 +1,11 @@
+html, body{
+    margin: 0;
+    height: 100%;
+    background-color: #1f1f1f;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}

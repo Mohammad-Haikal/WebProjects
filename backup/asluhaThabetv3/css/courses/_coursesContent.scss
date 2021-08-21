@@ -1,0 +1,182 @@
+h1{
+    margin: auto;
+    text-align: center;
+    background-color: #0c0c0ce0;
+    color: white;
+    font-size: 2rem;  
+    box-shadow: 0px 3px 20px black;
+    text-shadow: 6px 4px 3px black;
+    padding: 5px;
+    width: 100%;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.coursesContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-bottom: 50px;
+    
+    .coursesFlex{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        // background-color: red;
+        padding: 20px;
+
+        a{
+            box-shadow: 0px 3px 20px #beb7a573;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white; 
+            transition-duration: 0.3s;
+            margin: 5px;
+            border-radius: 5px;
+            border: solid 5px black;
+            
+            .div1{
+            background-color: rgba(32, 32, 32, 0.534);
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img{
+                    max-width: 100%;
+                    max-height: 220px;
+                    transition-duration: 0.3s;
+                    opacity: 0.8;
+                }
+
+                h3{
+                    position: absolute;
+                    top: 25%;
+                    opacity: 0.4;
+                    transition-duration: 0.3s;
+                }
+
+                &:hover img{
+                    opacity: 0.2;
+                    // filter: blur(1px);
+    
+                }
+                
+                &:hover h3{
+                    opacity: 1;
+                }
+            }
+            
+            
+            &:hover{
+            box-shadow: 0px 3px 30px #beb7a573;
+
+            }
+            
+
+        }
+    }
+
+    .courseBox{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 20px;
+        background-color: rgba(0, 0, 0, 0.26);
+        width: 85%;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0px 3px 20px #976f1373;
+        
+        img{
+            margin: auto;
+            height: 250px;
+            width: 40%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        h2{
+            margin: auto;
+            text-align: center;
+            width: 50%;
+            background-color: #d3a0288a;
+            color: white;
+            font-size: 2rem;  
+            box-shadow: 0px 3px 20px black;
+            text-shadow: 6px 4px 3px black;
+            padding: 10px;
+            border-top-right-radius: 30px;
+            border-top-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-bottom-left-radius: 30px;
+            margin-bottom: 20px;
+        }
+
+        $boxShadwow: 0px 3px 20px #d3a0288a;
+        $h2BgColor: rgba(0, 0, 0, 0.61);
+
+        article{
+            width: 100%;
+            h2{
+                width: 90%;
+                box-shadow: $boxShadwow;
+                background-color: $h2BgColor;
+            }
+            p{
+                margin-right: 30px;
+                margin-left: 30px;
+                color: white;
+                font-size: 1.2rem; 
+                text-shadow: 6px 4px 3px black;
+                text-align: center; 
+                
+            }
+        }
+
+        .rowDiv{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+            article{
+                width: 50%;
+                p{
+                    text-align: justify;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .onlyOne{
+                width: 100%;
+            }
+        }
+
+        a{
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+            padding: 10px;
+            border: solid 2px #051923;
+            box-shadow: 0px 3px 20px black;
+            border-radius: 20px;
+            background-color: #f0b731;    
+            margin: 20px;
+            margin-top: 0px;
+            transition-duration: 0.3s;
+            
+            &:hover{
+                background-color: #c99929c0;
+                box-shadow: 0px 0px 10px 5px #000000c0;
+            }
+            &:active{
+                transition-duration: 0.5s;
+                box-shadow: 0px 0px 20px 10px #000000;
+            }
+        }
+
+    }
+}

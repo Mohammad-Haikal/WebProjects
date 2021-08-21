@@ -1,0 +1,112 @@
+h2{
+    margin: auto;
+    text-align: center;
+    background-color: #0c0c0ce0;
+    color: white;
+    font-size: 2.5rem;  
+    box-shadow: 0px 3px 20px black;
+    text-shadow: 6px 4px 3px black;
+    padding: 5px;
+    width: 100%;
+    
+}
+
+.verticalDivFlex{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    
+    
+    img{
+        margin: auto;
+        width: 100%;
+        height: 450px;
+        box-shadow: 0px 20px 30px rgba(34, 34, 34, 0.801);
+        animation: fade 3s forwards;
+    }
+
+    .addressesFlex{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+
+        a{
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #ecc256; 
+            transition-duration: 0.3s;
+            &:hover{
+                color: white;  
+                background-color: #E4BB56; 
+            }
+
+            margin: 5px;
+            background-color: rgba(0, 0, 0, 0.534);
+            padding: 15px;
+            border-radius: 10px;
+
+
+        }
+    }
+
+    article{
+        margin-top: 30px;
+        margin-bottom: 10px;
+        
+        h2{
+            margin: auto;
+            text-align: center;
+            background-color: #0c0c0ce0;
+            color: white;
+            font-size: 2rem;  
+            box-shadow: 0px 3px 20px black;
+            text-shadow: 6px 4px 3px black;
+            padding: 5px;
+            width: 80%;
+            border-bottom: solid 9px #9e813f;
+            border-radius: 20px;
+            
+        }
+
+        p{
+            color: white;
+            margin: auto;
+            margin-top: 20px;
+            margin-top: 20px;
+            width: 60%;
+            padding: 10px;
+            font-size:1.5rem;
+            font-weight: 800;
+            text-align: center;
+            border-inline-start: solid #ffffff5e;
+            border-inline-end: solid #ffffff80;
+            border-radius: 20px;
+            a{
+                // font-size: 1.2rem;
+                    text-decoration: none;
+                    color: #E4BB56; 
+                    &:hover{
+                        color: #e4bc56d2;   
+                    }
+            }
+        }
+        
+    }
+
+    iframe{
+        margin: auto;
+        margin-top: 0px;
+        width:60%;
+        height:300px;
+        border:0;
+        margin-bottom: 30px;
+    }
+
+
+}
+
+

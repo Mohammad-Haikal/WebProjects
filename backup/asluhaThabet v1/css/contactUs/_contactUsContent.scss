@@ -1,0 +1,88 @@
+.mainContactDiv{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+        h4{
+            margin: auto;
+            text-align: center;
+            background-color: #0c0c0ce0;
+            color: white;
+            font-size: 2.5rem;  
+            box-shadow: 0px 3px 20px black;
+            text-shadow: 6px 4px 3px black;
+            padding: 5px;
+            width: 80%;
+            border-bottom: solid 9px #9e813f;
+            border-radius: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            
+        }
+
+        .contents1{
+            padding: 20px;
+            background-color: #0c0c0ce0;
+            margin-bottom: 20px;
+            direction: ltr;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+              
+            .socialIcons{
+                width: 50px;
+                height: 50px;
+                border: dotted 2px;
+                border-radius: 10px;
+                border-color: #C4A14D;
+                transition-duration: 0.2s;
+            }
+    
+            .socialIcons:hover{
+                padding: 2px;
+                border-color: #94793a;
+                filter: grayscale(30%);
+            }
+    
+            
+    
+            .socialIcons2{
+                width: 43px;
+                height: 43px;
+                vertical-align: middle;
+            }
+            a{
+                font-size: 20px;
+                color: white;
+                text-decoration: none;
+                transition-duration: 0.5s;
+            
+                &:hover{
+                    color: #E4BB56;   
+                }
+            }
+
+        }
+        
+    
+        .contents2{
+            .mapouter{ position:relative; margin: auto ;text-align:right;height:450px;width:70%;margin-bottom: 20px}
+            .gmap_canvas {overflow:hidden;background:none!important;height:450px;width:100%;}
+        }
+
+        .logoCont{
+            background-color: #0c0c0ce0;
+        
+            #logo{
+                margin-top: 10px;
+                border-radius: 40px;
+                width: 100px;
+                height: 100px;
+                border: dotted 2px #C4A14D;
+            } 
+        
+        }
+
+      
+}

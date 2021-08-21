@@ -1,0 +1,64 @@
+@media screen and (max-width: 800px) { 
+    header{
+        
+        .headerRowFlex{
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            .h11{
+                width: 100%;
+                text-align: center;
+                
+                h1{
+                    margin: auto;
+                    width: 90%;
+                }
+            }
+            
+            .logo{
+                width: 100%;
+                margin: auto;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+        }
+
+
+        #flip {
+            display: unset;
+        }
+
+        #panel{
+            display: none;
+        }
+
+
+        nav{
+            flex-direction: column;
+            flex-wrap: unset;
+            margin: unset;
+            text-align: center;
+
+            
+            
+            .mainPage{
+                margin: 2px;
+                border-radius: unset;
+                
+                a{
+                    display: block;
+                    
+                }
+            }
+        }
+    }
+
+
+
+    #forMoreInfoButton{
+        width: 40%;
+    }
+
+
+
+}

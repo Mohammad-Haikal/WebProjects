@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>جمعية أصلها ثابت</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>مجموعة أصلها ثابت للتنمية المجتمعية</h1>
+            
+            <!-- menuContainer -->
+            <div id="flip">
+                <div class="menuContainer" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <!-- menuContainer -->
+
+            <!-- Navbar -->
+            <nav id="panel">
+                <div class="mainPage"><a href="index.html">الرئيسية</a></div>
+
+                <div class="mainPage"><a id="mainDrop1" href="#">عن الجمعية</a>
+                    <div id="dropdown1" class="dropdown">
+                        <div class="mainPage"><a href="about.html">من نحن</a></div>
+                        <div class="mainPage"><a href="about.html#weLocatedAt">تجدوونا في</a></div>
+                    </div>
+                </div>
+
+                <div class="mainPage"><a id="mainDrop2" href="#">برامجنا</a>
+                    <div id="dropdown2" class="dropdown">
+                        <div class="mainPage"><a href="courses.html"> الدورات الخاصة</a></div>
+                        <div class="mainPage"><a href="grants.html">المنح العامة</a></div>
+                    </div>
+                </div>
+
+                <div class="mainPage"><a href="activities.html">النشاطات</a></div>
+                <div class="mainPage"><a href="volunteerWithUs.html">تطوع معنا</a></div>
+                <div class="mainPage"><a id="selectedA">تواصل معنا</a></div>
+            </nav>
+            <!-- Navbar -->
+
+            <!-- logo -->
+            <div class="logo"><img src="./images/logo2.png"></div>
+            <!-- logo -->
+        </header>
+        <!-- Header -->
+        
+
+        <!-- Section -->
+        <section class="mainContactDiv">
+                <h2 class="fad">وسائل التواصل الاجتماعي</h2>
+                <div class="contents1 fad">
+                    <div>
+                        <a target="_blank" href="https://www.facebook.com/ASLUHA1"><img class="socialIcons" src="./images/icons8-facebook-480.png"></a>
+                        <a target="_blank" href="https://www.instagram.com/asluhathabet7/?fbclid=IwAR1PaIpGsVTVv4lPym6BfZJFNjootbsM9XiaRRnhuDO3sd_ej-bOocq5KKA"><img class="socialIcons" src="./images/icons8-instagram-240.png"></a>
+                        <a target="_blank" href="https://t.me/joinchat/xBwisrfnJog2NDY8"><img class="socialIcons" src="./images/icons8-telegram-app-96.png"></a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCEBn70MBNwJkD1Z0BxIWXDA/featured"><img class="socialIcons" src="./images/icons8-youtube-96.png"></a>
+                    </div>
+                    <br>
+
+                    <label><img class="socialIcons2" src="./images/icons8-mail-256.png" alt="Mail"></label>
+                    <a target="_blank" href="mailTo: asluhathabet7@gmail.com">asluhathabet7@gmail.com</a>
+                    <br>
+                    <label><img class="socialIcons2" src="./images/icons8-phone-96.png" alt="Phone"></label>
+                    <a target="_blank" href="tel:+962790956257">0790956257</a>
+                </div>
+
+                
+                <h2 class="fad">زيارة موقعنا الرئيسي</h2>
+                <div class="contents2">
+                    <div class="mapouter" >
+                        <div class="gmap_canvas">
+                            <iframe class="fad" height="450" width="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=Asluha%20thabet,%20%D8%B4%D8%A7%D8%B1%D8%B9%20%D8%AD%D8%B3%D9%86%20%D8%A7%D9%84%D8%A8%D9%86%D8%A7%D8%8C%D8%8C%20Rabbath%20Ammon&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="logoCont"><img id="logo" src="./images/logo2.png" alt="logo"></div>
+        </section>
+        <!-- Section -->
+
+        <section class="developedBy">
+            <p>تصميم وتطوير <a href="https://wa.me/+962790580502">Muhammad Haikal</a></p>
+        </section>
+    </div>
+
+    <script src="./js/menuSlide.js"></script>
+    <script src="./js/fade.js"></script>
+</body>
+</html>

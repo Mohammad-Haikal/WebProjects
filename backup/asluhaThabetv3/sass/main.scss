@@ -1,0 +1,25 @@
+// @import "vendors/";
+// @import "core/";
+// @import "tools/";
+
+@import "abstracts/variables";
+
+@import "layout/body";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/footer";
+
+@import "sections/section";
+
+@import "components/text";
+@import "components/buttons";
+@import "components/slider";
+
+
+@import "pages/home";
+@import "pages/about";
+@import "pages/courses";
+@import "pages/grants";
+@import "pages/activities";
+@import "pages/volunteer";
+@import "pages/contact";

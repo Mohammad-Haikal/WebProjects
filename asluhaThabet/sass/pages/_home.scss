@@ -1,0 +1,45 @@
+.homeContent{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .paragraphs{
+        margin: auto;
+        width: 95%;
+        padding-top: 20px ;
+        padding-bottom: 20px ;
+        
+        #p1{
+            width: 87%;
+        }
+        #p2{
+            width: 80%;
+        }
+        #p3{
+            width: 73%;
+        }
+        #p4{
+            width: 66%;  
+        }
+        #p5{
+            width: 59%;
+        }
+    }
+    
+
+}
+
+@media screen and (max-width: 500px) { 
+    section{
+        .slideshow-container {
+            max-height: 300px;
+        
+            /* My Slides */
+            .mySlides {
+                img {
+                    height: 300px;
+                }
+            }
+        }
+    }
+ }

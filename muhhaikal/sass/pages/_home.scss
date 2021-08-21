@@ -1,0 +1,51 @@
+.rectangle{
+    z-index: -1;
+    position: absolute;
+    background-color: $primary;
+    width: 70%;
+    height: 100%;
+}
+
+.circlesDiv{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .circleC{
+ 
+        .circle{
+            opacity: 0.5;
+            border: solid;
+
+        }
+    }
+    
+}
+
+
+.socialDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    img{
+        width: 60px;
+        height: 60px;
+        background: none;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width: 800px) { 
+    .rectangle{
+        width: 100%;
+    }
+
+}
+
+

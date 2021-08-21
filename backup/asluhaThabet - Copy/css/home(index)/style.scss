@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
+
+.container{
+    background-image: url(../../images/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    @import '../header'; // _header
+    @import '../responsiveHeader'; //_responsiveHeader
+    
+
+    section{
+        @import 'slider'; // _slider
+
+        @import 'homeContent'; // _homeContent
+    }
+    
+    
+    @import '../footer'; // _footer
+     
+    @import 'responsive'; // _responsive
+
+    
+   
+}
+
+
+
+
+
+
+
+

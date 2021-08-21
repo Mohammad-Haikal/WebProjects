@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>HTU's GPA Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>HTU's GPA Calculator</h1>
+        <div class="logoDiv"><img src="./Htu.png" alt="HTU logo"></div>
+
+        <fieldset>
+        <legend>Grades System</legend>
+        <h4><strong>D</strong> = 4  <strong>M</strong> = 3.2  <strong>P</strong> = 2.4  <strong>U</strong> = 1.6</h4>
+        </fieldset>
+
+        <div id="preDiv" class="preDiv">
+            <div>
+                <label>Your previous cumulative average:</label>
+                <label>:معدلك التراكمي السابق (دون هذا الفصل)</label>
+                <label>(اذا كان هذا اول  فصل لك في الجامعة, ادخل رقم 0)</label>
+                <input id="previousGpa" type="number" min="0" max="4" value="0" required>
+            </div>
+
+            <div>
+                <label>Number of previous passed hours:</label>
+                <label>:الساعات التراكمية السابقة (الداخلة في المعدل دون الناجح/ راسب)</label>
+                <label>(اذا كان هذا اول  فصل لك في الجامعة, ادخل رقم 0)</label>
+                <input id="previousHours" type="number" min="0" max="170" value="0" required>
+            </div>
+            <button id="next" onclick="next()">Next &raquo;</button>
+        </div>
+
+        <div id="afterDiv" class="afterDiv">
+            <div class="numOfCDiv">
+                <label>Number of Courses of this semester (1 - 10):</label>
+                <label>:عدد المواد الداخلة في المعدل (دون الناجح / راسب)</label>
+                <input id="numOfCourses" type="number" min="1" max="10" value="1">
+                
+            </div>
+
+            <button onclick="enterNum()">Enter</button>
+
+            <div id="coursesContainer"></div>
+            
+            <div id="averageContainer">
+                <label>Your Semester Average will be:</label>
+                <input disabled id="semGpa" type="number">
+                <label>Your Cumulative Average will be:</label>
+                <input disabled id="comGpa" type="number">   
+            </div>
+
+            <button id="back" onclick="back()">&laquo; Back</button>
+        </div>
+
+        
+    </div>
+
+    <div class="developedBy">
+        <h3>Developed by <a target="_blank" href="mailTo: mohammad.haikal@htu.edu.jo">Muhammad Haikal</a> & Sami Aburabee</h3>
+        
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

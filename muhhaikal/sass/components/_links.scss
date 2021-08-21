@@ -1,0 +1,35 @@
+a{
+    color: black;
+}
+
+#homeTitle{
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    padding-left: 5%;
+    text-decoration: none;
+    
+}
+.navA{
+    text-decoration: none;
+    border-radius: 3px;
+    transition-duration: 0.3s;
+
+    &:hover{
+        color: $secondary;
+    }
+
+    
+}
+
+.activeA{
+    border-bottom: dotted 3px $secondary;
+}
+
+@media screen and (max-width: 800px) { 
+    #homeTitle{
+        padding-left: unset;
+    }
+
+}
+

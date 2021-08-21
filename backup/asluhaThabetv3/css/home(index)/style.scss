@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    height: 100%; 
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+
+.container{
+    
+    
+    @import '../header'; // _header
+    @import '../responsiveHeader'; //_responsiveHeader
+    
+
+    section{
+        background-image: url(../../images/wal2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @import 'slider'; // _slider
+
+        @import 'homeContent'; // _homeContent
+    }
+    
+    
+    @import '../footer'; // _footer
+     
+    @import 'responsive'; // _responsive
+
+    
+   
+}
+
+
+
+
+
+
+
+

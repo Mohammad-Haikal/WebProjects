@@ -1,0 +1,50 @@
+.homeContent{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h2{
+        margin: auto;
+        text-align: center;
+        background-color: #070707e1;
+        color: #dfb961;
+        font-size: 2.5rem;  
+        box-shadow: 0px 3px 20px black;
+        text-shadow: 6px 4px 3px black;
+        padding: 5px;
+        width: 100%;
+    }
+
+    .paragraphs{
+        margin: auto;
+        // margin-bottom: 20px;
+        // text-shadow: 6px 4px 3px black;
+        background-color: #0000006e;
+        
+
+        p{
+            margin: auto;
+            color: white;
+            padding: 20px;
+            font-size:1.5rem;
+            text-align: center;
+            opacity: 1;
+        }
+        #p1{
+            width: 87%;
+        }
+        #p2{
+            width: 80%;
+        }
+        #p3{
+            width: 73%;
+        }
+        #p4{
+            width: 66%;  
+        }
+        #p5{
+            width: 59%;
+        }
+    }
+    
+
+}

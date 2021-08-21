@@ -1,0 +1,71 @@
+.verticalDivFlex{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    .addressesFlex{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+
+        a{
+            font-weight: 600;
+            transition-duration: 0.3s;
+            &:hover{
+                color: white;  
+                background-color: $darkGold; 
+            }
+
+            margin: 5px;
+            background-color: rgba(0, 0, 0, 0.534);
+            padding: 15px;
+            border-radius: 5px;
+
+
+        }
+    }
+
+    
+    article{
+        margin-bottom: 35px;
+
+        p{
+            background-color: #0c0c0ce0;
+            width: 80%;
+            margin-bottom: 10px;
+
+        }
+        
+    }
+
+    iframe{
+        margin: auto;
+        margin-top: 0px;
+        width:60%;
+        height:300px;
+        border:0;
+        margin-bottom: 30px;
+        border-radius: 5px;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .verticalDivFlex{
+        article{
+            h3{
+                width: 80%;
+            }
+            
+        }
+    
+        iframe{
+            width: 90%;
+        }
+    }
+
+}
+
+

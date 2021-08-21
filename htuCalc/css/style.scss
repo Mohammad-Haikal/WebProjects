@@ -1,0 +1,236 @@
+body, html{
+    margin: 0px;
+    height: 100%;
+    background-color: #DD4B39;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.container{
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    padding: 50px;
+    background-color: white;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 3px 3px 20px 5px rgb(31, 24, 24);
+
+    h1{
+        strong{
+            color: #DD4B39;
+        }
+    }
+    fieldset{
+        padding: 10px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        h4{
+            margin: 0px;
+            strong{
+                color: #DD4B39;
+                font-weight: 900;
+                margin-left: 10px;
+            }
+        }
+    }
+    
+    .logoDiv{
+        margin: auto;
+        text-align: center;
+        width: 20%;
+        margin-bottom: 30px;
+        padding: 20px;
+        img{
+            width: 100%;
+        }
+    }
+
+    .preDiv{
+        display: flex;
+        flex-direction: column;
+        // background-color: red;
+        div{
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            label{
+                margin-top: 5px;
+                margin-bottom: 2px;
+            }
+        }
+        #next{
+            width: 30%;
+            background-color: #9e1b09;
+            &:hover{
+                background-color: #9e1a09dc;
+            }
+            &:active{
+                background-color: #9e1b09;
+            }
+        }
+    }
+
+    .afterDiv{
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        margin-top: -400px;
+        opacity: 0;
+        // background-color: rgb(0, 255, 115);
+        .numOfCDiv{
+            display: flex;
+            flex-direction: column;
+            
+            // button{
+                // margin: 1px;
+            // }
+        }
+        div{
+            margin: 5px;
+        }
+        #back{
+            width: 30%;
+            background-color: #9e1b09;
+            &:hover{
+                background-color: #9e1a09d7;
+            }
+            &:active{
+                background-color: #9e1b09;
+            }
+        }
+    }
+
+    label{
+        margin-top: 5px;
+    }
+    input{
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        width: 10%;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #ffe7e3;
+        
+    }
+
+    button{
+        margin: auto;
+        margin-bottom: 50px;
+        // margin-top: 50px;
+        padding: 20px;
+        width: 60%;
+        border-radius: 20px;
+        background-color: #DD4B39;
+        color: white;
+        border: none;
+        &:hover{
+            background-color: #dd4c39e5;
+        }
+        &:active{
+            background-color: #DD4B39;
+        }
+    }
+
+    .courseDiv{
+        margin: 5px;
+    }
+
+    #averageContainer{
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+.developedBy{
+    margin: 0px;
+    margin-top: 0px;
+    background-color: #0f2029;
+    color: white;
+    text-align: center;
+    padding: 4px;
+
+    h3{
+        font-size: 0.9rem;
+        margin: 10px;
+    }
+
+    a{
+        color: aliceblue;
+        &:hover{
+            color: #DD4B39;
+        }
+    
+    }
+}
+
+
+@media screen and (max-width: 800px) { 
+
+.container{
+    .logoDiv{
+        margin: auto;
+        text-align: center;
+        width: 70%;
+        margin-bottom: 20px;
+        padding: 20px;
+        img{
+            width: 100%;
+        }
+    }
+
+    .preDiv{
+        div{
+            margin-top: 50px;
+        }
+        #next{
+            width: 50%;
+        }
+    }
+    .afterDiv{
+        margin-top: -500px;
+        #back{
+            width: 50%;
+        }
+    }
+
+    input{
+        width: 20%;
+    }
+    button{
+        width: 70%;
+    }
+
+    
+}
+
+
+
+
+}
+
+
+@keyframes next1{
+    from{transform: translateX(0%);opacity: 1;}
+    to{transform: translateX(-100%);opacity: 0;}
+}
+@keyframes next2{
+    from{transform: translateX(100%);opacity: 0;}
+    to{transform: translateX(0%);opacity: 1;}
+}
+
+
+@keyframes back1{
+    from{transform: translateX(-100%);opacity: 0;}
+    to{transform: translateX(0%);opacity: 1;}
+}
+@keyframes back2{
+    from{transform: translateX(0%);opacity: 1;}
+    to{transform: translateX(100%);opacity: 0;}
+}
