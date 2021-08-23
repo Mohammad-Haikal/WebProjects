@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet" type="text/css" >
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <header>
+        <h1>Rock <span style="color: rgb(0, 0, 0); background-color: #ff6600;">Paper</span> Scissors</h1>
+    </header>
+    <p style="font-weight: bold;font-size: 20px;">Score:</p>
+    <div>
+        <input type="text" disabled id="resultBox" value="0 - 0">
+    </div>
+    <br>
+    <div style="padding:10px;">
+        <img src="./images/rock.png" id="rock" onclick="rockPressed()">
+        <img src="./images/paper.png"  id="paper" onclick="paperPressed()">
+        <img src="./images/scissors.png"  id="scissors" onclick="scissorsPressed()">
+    </div>
+    <p id="info"></p>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

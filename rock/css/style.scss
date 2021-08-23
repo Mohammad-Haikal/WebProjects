@@ -1,0 +1,77 @@
+
+*{
+    text-align: center;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(58, 57, 71);
+    color: white;
+    
+}
+
+
+header{
+   
+    background-color: #ff6600;
+    padding: 20px;
+    h1{
+        font-weight: 900;
+        background-color: #ff6600;
+    }
+}
+
+#resultBox{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+    font-family: auto;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+
+#info{
+    font-size: 50px;
+}
+
+
+img, #rock, #paper, #scissors{
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    border: solid;
+    border-radius: 50%;
+    background-color: rgb(224, 224, 224);
+    border-color: #929292; 
+}
+
+// #rock:hover{
+//     width: 70px;
+//     height: 70px;
+// }
+
+// #paper:hover{
+//     width: 70px;
+//     height: 70px;
+// }
+
+// #scissors:hover{
+//     width: 70px;
+//     height: 70px;
+// }
+
+
+
+.green-glow{
+    border: 5px solid rgb(15, 136, 15);
+    box-shadow: 0 0 30px rgb(51, 190, 51);
+}
+
+.red-glow{
+    border: 5px solid rgb(182, 25, 25);
+    box-shadow: 0 0 30px rgb(255, 28, 28);
+}
+
+.brown-glow{
+    border: 5px solid rgb(156, 54, 14);
+    box-shadow: 0 0 30px rgb(253, 91, 27);
+}

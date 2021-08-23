@@ -1,0 +1,60 @@
+* {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #3a3947;
+  color: white;
+}
+
+header {
+  background-color: #ff6600;
+  padding: 20px;
+}
+
+header h1 {
+  font-weight: 900;
+  background-color: #ff6600;
+}
+
+#resultBox {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  font-family: auto;
+  font-size: 20px;
+  color: black;
+}
+
+#info {
+  font-size: 50px;
+}
+
+img, #rock, #paper, #scissors {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  border: solid;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  border-color: #929292;
+}
+
+.green-glow {
+  border: 5px solid #0f880f;
+  -webkit-box-shadow: 0 0 30px #33be33;
+          box-shadow: 0 0 30px #33be33;
+}
+
+.red-glow {
+  border: 5px solid #b61919;
+  -webkit-box-shadow: 0 0 30px #ff1c1c;
+          box-shadow: 0 0 30px #ff1c1c;
+}
+
+.brown-glow {
+  border: 5px solid #9c360e;
+  -webkit-box-shadow: 0 0 30px #fd5b1b;
+          box-shadow: 0 0 30px #fd5b1b;
+}
+/*# sourceMappingURL=style.css.map */
