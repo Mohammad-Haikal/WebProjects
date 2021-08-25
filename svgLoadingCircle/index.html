@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notification API</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./jquery/jquery.js"></script>
+    <script src="./jquery/jquery-ui.js"></script>
+</head>
+<body>
+    <section class="container">
+        <svg>
+            <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation = "10"/>
+                <feColorMatrix values="
+                        1 0 0 0 0 
+                        0 1 0 0 0 
+                        0 0 1 0 0 
+                        0 0 0 20 -10"></feColorMatrix>
+
+            </filter>
+        </svg>
+        <section id="loader" class="loader">
+            <div class="rotate"></div>
+            <span id="span"></span>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+</html>
