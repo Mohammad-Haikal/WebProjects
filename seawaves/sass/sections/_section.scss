@@ -1,0 +1,136 @@
+section{
+    padding: 5px;
+    color: black;
+    position: relative;
+
+    
+}
+
+.filtered{
+    padding: unset;
+    position: fixed;
+    // filter: url(#gooey);
+
+
+    .circle00, .circle01, .circle1, .circle2{
+        background-color:#9ed2ff;
+        width: 300px;
+        height: 300px;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+
+    
+    .cShadow1, .cShadow2{
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .circle00, .circle01{
+            background: linear-gradient(90deg,#92b7d8, #92b7d8,#92b7d8,#83afd4, #ecab72)
+
+        }
+
+        .circle00{
+            transform: translate(-50%, -50%);
+            animation: cir00 3s ease-in-out infinite;
+        }
+        .circle01{
+            transform: translate(-50%, 0%);
+            animation: cir01 3s ease-in-out infinite;
+        }
+
+    }
+
+
+    
+
+    .c1Div{
+        z-index: 3;
+        position: relative;
+        .circle1{
+            transform: translate(-50%, -50%);
+            animation: cir1 3s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+    }
+    
+
+    .c2Div{
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .circle2{
+            z-index: 2;
+            animation: cir2 3s ease-in-out infinite;
+        }
+    }
+
+    
+    
+    // .circle:nth-child(odd){
+    //     animation-delay: 1s;
+    // }
+    // box-shadow: 10px 0 5px -2px #888;
+
+}
+
+
+@keyframes cir00  {
+    0%{
+        transform: translate(-50%, -50%);
+    }
+    50%{
+        transform: translate(-40%, -50%);
+    }
+    100%{
+        transform: translate(-50%, -50%);
+
+    }
+}
+
+@keyframes cir01 {
+    0%{
+        transform: translate(-50%, 0%);
+    }
+    50%{
+        transform: translate(-40%, 0%);
+    }
+    100%{
+        transform: translate(-50%, 0%);
+
+    }
+}
+
+
+@keyframes cir1 {
+    0%{
+        transform: translate(-50%, -50%);
+    }
+    50%{
+        transform: translate(-45%, -50%);
+    }
+    100%{
+        transform: translate(-50%, -50%);
+
+    }
+}
+
+@keyframes cir2 {
+    0%{
+        transform: translate(-50%, -5%);
+    }
+    50%{
+        transform: translate(-45%, 5%);
+    }
+    100%{
+        transform: translate(-50%, -5%);
+
+    }
+}
+
+
+
