@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,IAAI,EAAE,IAAI,CAAA;EACN,MAAM,EAAE,CAAC;CACZ",
+    "sources": [
+        "root.scss",
+        "abstracts/_variables.scss",
+        "layout/_body.scss",
+        "layout/_header.scss",
+        "layout/_nav.scss",
+        "layout/_footer.scss",
+        "sections/_section.scss",
+        "components/_text.scss",
+        "components/_buttons.scss",
+        "components/_slider.scss",
+        "pages/_home.scss"
+    ],
+    "names": [],
+    "file": "root.css"
+}
