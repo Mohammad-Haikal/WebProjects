@@ -133,6 +133,7 @@ header h1 {
 }
 
 .foodNav {
+  z-index: 1;
   background-color: white;
   width: 100%;
   display: -webkit-box;
@@ -373,11 +374,17 @@ article {
 
 .menuDiv section .food-type {
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   margin: auto;
   width: 100%;
   background-color: #f3f3f3;
+  -webkit-box-shadow: 0px 0px 3px gray;
+          box-shadow: 0px 0px 3px gray;
   border-radius: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+  border-bottom: 3px solid gray;
   margin-bottom: 15px;
   padding: 15px;
   display: -webkit-box;
@@ -386,6 +393,14 @@ article {
   text-align: justify;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+.menuDiv section .food-type:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  border-bottom: 1px solid gray;
 }
 
 .menuDiv section .food-type img {

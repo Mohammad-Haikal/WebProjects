@@ -1,47 +1,97 @@
+[
+    {
+        "id":"sandwiches",
+        "name": "Sandwiches",
+        "info": [
+            {
+                "title": "Small Sandwich",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "path": "./img/sandwich.jpg"
+            },
+            {
+                "title": "Large Sandwich",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "path": "./img/largesandwich.jpg"
+            }
+        ]
+    },
 
-{
-    "sandwiches":[
-        {
-            "name":"Sandwiches",
-            "title":"Small Sandwich",
-            "para":"Lorem dolo amet, qui minim minim sint cillum sint consectetur cupidatat.",
-            "path":"./img/sandwich.jpg"
-        },
-        {
-            "title":"Large Sandwich",
-            "para":"Lorem ipsum dolor sit amet, qui minim lab.",
-            "path":"./img/largesandwich.jpg"
-        } 
-    ],
-
-    "shMeals":[
-        {
-            "name":"Shawerma Meals",
-            "title":"Personal Meal",
-            "para":"Lorem ipsum dolor sit amet, qui minim labore adipisicing minim.",
-            "path":"./img/meal.jpg"
-        },
-        {
-            "title":"Super Shawerma Meal",
-            "para":"Lorem ipsum dolor sit amet, qui minim labore adipisicing minim.",
-            "path":"./img/meal.jpg"
-        },
-        {
-            "title":"Double Shawerma Meal",
-            "para":"Lorem ipsum dolor sit amet, qui minim labore adipisicing minim.",
-            "path":"./img/meal.jpg"
-        },
-        {
-            "title":"Triple Shawerma Meal",
-            "para":"Lorem ipsum dolor sit amet, qui minim labore adipisicing minim.",
-            "path":"./img/meal.jpg"
-        },
-        {
-            "title":"Family Shawerma Meal",
-            "para":"Lorem ipsum dolor sit amet, qui minim labore adipisicing minim.",
-            "path":"./img/meal.jpg"
-        }
-    ]
-}
-
-
+    {
+        "id":"shMeals",
+        "name": "Shawerma Meals",
+        "info": [
+            {
+                "title": "Personal Shawerma Meal",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "path": "./img/meal.jpg"
+            },
+            {
+                "title": "Super Shawerma Meal",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "path": "./img/meal.jpg"
+            },
+            {
+                "title": "Double Shawerma Meal",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "path": "./img/meal.jpg"
+            },
+            {
+                "title": "Triple Shawerma Meal",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "path": "./img/meal.jpg"
+            },
+            {
+                "title": "Family Shawerma Meal",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "path": "./img/familyMeal.jpg"
+            }
+        ]
+    },
+    {
+        "id":"snacks",
+        "name": "Snacks",
+        "info": [
+            {
+                "title": "Italian Shawerma Meal",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "path": "./img/italiMeal.jpg"
+            }
+        ]
+    },
+    {
+        "id":"drinks",
+        "name": "Cold Drinks",
+        "info": [
+            {
+                "title": "Pepsi",
+                "para": "",
+                "path": "./img/drinks/pepsi.jpg"
+            },
+            {
+                "title": "Mirinda",
+                "para": "",
+                "path": "./img/drinks/mirinda.jpg"
+            },
+            {
+                "title": "7Up",
+                "para": "",
+                "path": "./img/drinks/sevenUp.jpg"
+            },
+            {
+                "title": "Fanta",
+                "para": "",
+                "path": "./img/drinks/fanta.jpg"
+            },
+            {
+                "title": "Sprite",
+                "para": "",
+                "path": "./img/drinks/sprite.jpg"
+            },
+            {
+                "title": "CocaCola",
+                "para": "",
+                "path": "./img/drinks/cocaCola.jpg"
+            }
+        ]
+    }
+]
