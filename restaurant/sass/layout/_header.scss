@@ -1,0 +1,23 @@
+header{
+    width: 100%;
+    display: flex;
+    background-color: #00000071;
+    
+    h1{
+        margin-left: 50px;
+        font-family: 'Almarai', sans-serif;
+    }
+
+    
+}
+
+@media screen and (max-width: 800px) { 
+    header{
+        flex-direction: column;
+        align-items: center;
+        h1{
+            margin-left: unset;
+        }
+    }
+
+}

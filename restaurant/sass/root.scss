@@ -1,0 +1,21 @@
+// @import "vendors/";
+// @import "core/";
+// @import "tools/";
+
+@import "abstracts/variables";
+@import "abstracts/animations";
+
+@import "layout/body";
+@import "layout/header";
+@import "layout/nav";
+@import "layout/footer";
+
+@import "sections/article";
+@import "sections/section";
+@import "sections/div";
+
+@import "components/text";
+@import "components/buttons";
+@import "components/slider";
+
+@import "pages/home";

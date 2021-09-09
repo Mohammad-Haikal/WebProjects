@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mirza&display=swap");
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  position: relative;
+  margin: 0;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #00000071;
+}
+
+header h1 {
+  margin-left: 50px;
+  font-family: 'Almarai', sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header h1 {
+    margin-left: unset;
+  }
+}
+
+.headerNav {
+  margin-left: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headerNav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.headerNav ul li {
+  cursor: pointer;
+  list-style: none;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.headerNav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.headerNav ul li:hover a {
+  color: red;
+}
+
+.headerNav ul .logIn {
+  margin-left: 30px;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.headerNav ul .logIn:hover {
+  background-color: white;
+}
+
+.headerNav ul .logIn:active {
+  background-color: unset;
+}
+
+.headerNav ul .activeLi {
+  color: red;
+}
+
+.foodNav {
+  background-color: white;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 5px 14px -13px black;
+          box-shadow: 0px 5px 14px -13px black;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  overflow-x: scroll;
+}
+
+.foodNav::-webkit-scrollbar {
+  display: none;
+}
+
+.foodNav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.foodNav ul li {
+  cursor: pointer;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.foodNav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+}
+
+.foodNav ul li:hover a {
+  color: red;
+}
+
+@media screen and (max-width: 800px) {
+  .headerNav {
+    margin-left: unset;
+  }
+  .foodNav::-webkit-scrollbar {
+    display: unset;
+  }
+}
+
+footer {
+  background-color: #0A0A08;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+article {
+  height: 100%;
+}
+
+.main {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+}
+
+.main h1 {
+  margin-bottom: 0;
+}
+
+.main p {
+  text-align: justify;
+}
+
+.main:first-of-type {
+  -webkit-animation: fadeIn 1s ease-in-out forwards;
+          animation: fadeIn 1s ease-in-out forwards;
+}
+
+.menu, .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #161715d3;
+  padding: 20px;
+}
+
+.menu {
+  height: unset;
+}
+
+.contact {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #161715d3;
+  padding: 20px;
+}
+
+.contact img {
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 5px white;
+          box-shadow: 0px 0px 5px white;
+}
+
+.contact img:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px rgba(235, 235, 235, 0.856);
+          box-shadow: 0px 0px 10px rgba(235, 235, 235, 0.856);
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    width: 100%;
+  }
+}
+
+.menu-conatiner {
+  height: 100%;
+  width: 80%;
+  position: relative;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+}
+
+.menu-conatiner img {
+  width: 150px;
+  height: 150px;
+}
+
+.background {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menuDiv {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.menuDiv h1 {
+  color: red;
+}
+
+.menuDiv section {
+  padding-top: 60px;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menuDiv section .food-type {
+  cursor: pointer;
+  margin: auto;
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+  margin-bottom: 15px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: justify;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menuDiv section .food-type img {
+  width: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menuDiv section .food-type .description {
+  width: 50%;
+  padding: 20px;
+}
+
+.menuDiv section .food-type .description h4, .menuDiv section .food-type .description p {
+  color: black !important;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.menuDiv section .food-type .description p {
+  font-size: small;
+}
+
+@media screen and (max-width: 800px) {
+  .background img {
+    -o-object-position: right;
+       object-position: right;
+    -webkit-filter: blur(1);
+            filter: blur(1);
+    -webkit-filter: brightness(0.2);
+            filter: brightness(0.2);
+  }
+}
+
+* {
+  font-family: 'Mirza', cursive;
+  line-height: 1.6;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  color: #ebebeb;
+}
+
+*::-moz-selection {
+  background-color: red;
+}
+
+*::selection {
+  background-color: red;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+li {
+  font-size: 18px;
+}
+/*# sourceMappingURL=root.css.map */
