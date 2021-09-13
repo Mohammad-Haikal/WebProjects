@@ -1,64 +1,117 @@
-article{
+article {
     height: 100%;
+    color : #ebebeb;
 }
 
-.main{
-    width: 60%;
-    display: flex;
+.main {
+    width      : 60%;
+    display    : flex;
     align-items: center;
-    padding: 50px;
+    padding    : 50px;
 
-    h1{
-    margin-bottom: 0;
-
+    h1 {
+        margin-bottom: 0;
     }
-    p{
+
+    p {
         text-align: justify;
     }
-    &:first-of-type{
+
+    &:first-of-type {
         animation: fadeIn 1s ease-in-out forwards;
     }
-    
-    
 }
 
-
-.menu, .contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
+.menu,
+.contact {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : flex-start;
+    align-items     : center;
+    text-align      : center;
     background-color: #161715d3;
-    padding: 20px;
+    padding         : 20px;
 }
-.menu{
+
+.menu {
     height: unset;
 }
 
-.contact{
-    justify-content: center;
+.contact {
+    justify-content : center;
     background-color: #161715d3;
-    padding: 20px;
+    padding         : 20px;
 
-    img{
-        width: 45px;
-        height: 45px;
-        margin: 5px;
-        padding: 5px;
+    img {
+        width        : 45px;
+        height       : 45px;
+        margin       : 5px;
+        padding      : 5px;
         border-radius: 50%;
-        box-shadow: 0px 0px 5px white;
-        
-        &:hover{
-            cursor: pointer;
+        box-shadow   : 0px 0px 5px white;
+
+        &:hover {
+            cursor    : pointer;
             box-shadow: 0px 0px 10px rgba(235, 235, 235, 0.856);
         }
     }
-
 }
 
-@media screen and (max-width: 800px) { 
-    .main{
-        width: 100%;        
+
+.data-php {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    background-color: red;
+
+    form {
+        display         : flex;
+        flex-direction  : column;
+        align-items     : center;
+        width           : 80%;
+        margin          : 15px;
+        padding         : 20px;
+        background-color: white;
+        border-radius   : 30px;
+
+        textarea {
+            min-width : 90%;
+            min-height: 400px;
+        }
+
+        input[type=submit] {
+            cursor          : pointer;
+            margin          : auto;
+            border          : none;
+            width           : 30%;
+            padding         : 5px;
+            color           : white;
+            background-color: #0A95FF;
+            border-radius   : 10px;
+            font-size       : large;
+
+            &:hover{background-color: #199cff;}
+        }
+    }
+
+    #logout {
+        margin-top      : 10px;
+        background-color: red;
+        padding         : 5px;
+        border-radius   : 10px;
+        text-decoration : none;
+        color           : white;
+
+        &:hover{background-color: rgb(255, 50, 50);}
+
+    }
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    .main {
+        width: 100%;
     }
 }

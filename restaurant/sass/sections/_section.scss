@@ -1,19 +1,15 @@
-.menu-conatiner{
-    height: 100%;
-    width: 80%;
-    position: relative;
+.menu-conatiner {
+    height          : 100%;
+    width           : 80%;
+    position        : relative;
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 15px;
-    
-    // &::-webkit-scrollbar{
-    //     display: none;
-    // }
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    border-radius   : 15px;
 
-    img{
-        width: 150px;
+    img {
+        width : 150px;
         height: 150px;
     }
 }

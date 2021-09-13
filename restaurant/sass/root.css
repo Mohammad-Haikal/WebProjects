@@ -31,7 +31,8 @@
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   position: relative;
   margin: 0;
   height: 100%;
@@ -46,8 +47,9 @@ header {
 }
 
 header h1 {
+  color: #ebebeb;
   margin-left: 50px;
-  font-family: 'Almarai', sans-serif;
+  font-family: "Almarai", sans-serif;
 }
 
 @media screen and (max-width: 800px) {
@@ -90,7 +92,6 @@ header h1 {
 .headerNav ul li {
   cursor: pointer;
   list-style: none;
-  padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,6 +101,7 @@ header h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 15px;
 }
 
 .headerNav ul li a {
@@ -111,7 +113,8 @@ header h1 {
   color: red;
 }
 
-.headerNav ul .logIn {
+.headerNav ul .logIn,
+.headerNav ul .logInA {
   margin-left: 30px;
   border: 2px solid white;
   border-radius: 20px;
@@ -120,12 +123,23 @@ header h1 {
   padding-right: 30px;
 }
 
-.headerNav ul .logIn:hover {
+.headerNav ul .logIn:hover,
+.headerNav ul .logInA:hover {
   background-color: white;
 }
 
-.headerNav ul .logIn:active {
+.headerNav ul .logIn:active,
+.headerNav ul .logInA:active {
   background-color: unset;
+}
+
+.headerNav ul .logInA {
+  background-color: white;
+  border: unset;
+}
+
+.headerNav ul .logInA a {
+  color: red;
 }
 
 .headerNav ul .activeLi {
@@ -201,7 +215,7 @@ header h1 {
 }
 
 footer {
-  background-color: #0A0A08;
+  background-color: #0a0a08;
   height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,6 +233,7 @@ footer {
 
 article {
   height: 100%;
+  color: #ebebeb;
 }
 
 .main {
@@ -245,7 +260,8 @@ article {
           animation: fadeIn 1s ease-in-out forwards;
 }
 
-.menu, .contact {
+.menu,
+.contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,6 +306,72 @@ article {
   cursor: pointer;
   -webkit-box-shadow: 0px 0px 10px rgba(235, 235, 235, 0.856);
           box-shadow: 0px 0px 10px rgba(235, 235, 235, 0.856);
+}
+
+.data-php {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: red;
+}
+
+.data-php form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: 15px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.data-php form textarea {
+  min-width: 90%;
+  min-height: 400px;
+}
+
+.data-php form input[type=submit] {
+  cursor: pointer;
+  margin: auto;
+  border: none;
+  width: 30%;
+  padding: 5px;
+  color: white;
+  background-color: #0A95FF;
+  border-radius: 10px;
+  font-size: large;
+}
+
+.data-php form input[type=submit]:hover {
+  background-color: #199cff;
+}
+
+.data-php #logout {
+  margin-top: 10px;
+  background-color: red;
+  padding: 5px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.data-php #logout:hover {
+  background-color: #ff3232;
 }
 
 @media screen and (max-width: 800px) {
@@ -339,6 +421,13 @@ article {
      object-fit: cover;
 }
 
+.blurred {
+  -webkit-filter: blur(1);
+          filter: blur(1);
+  -webkit-filter: brightness(0.2);
+          filter: brightness(0.2);
+}
+
 .menuDiv {
   width: 100%;
   display: -webkit-box;
@@ -378,23 +467,24 @@ article {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  margin: auto;
+  margin: auto auto 15px;
   width: 100%;
   background-color: #f3f3f3;
-  -webkit-box-shadow: 0px 0px 3px gray;
-          box-shadow: 0px 0px 3px gray;
+  -webkit-box-shadow: 0 0 3px gray;
+          box-shadow: 0 0 3px gray;
   border-radius: 10px;
   border-bottom: 3px solid gray;
-  margin-bottom: 15px;
   padding: 15px;
+  text-align: justify;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: justify;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .menuDiv section .food-type:active {
@@ -403,18 +493,13 @@ article {
   border-bottom: 1px solid gray;
 }
 
-.menuDiv section .food-type img {
-  width: 40%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .menuDiv section .food-type .description {
   width: 50%;
   padding: 20px;
 }
 
-.menuDiv section .food-type .description h4, .menuDiv section .food-type .description p {
+.menuDiv section .food-type .description h4,
+.menuDiv section .food-type .description p {
   color: black !important;
   margin-bottom: 0;
   margin-top: 0;
@@ -422,6 +507,17 @@ article {
 
 .menuDiv section .food-type .description p {
   font-size: small;
+}
+
+.menuDiv section .food-type .description h3 {
+  color: red;
+  margin-bottom: 0;
+}
+
+.menuDiv section .food-type img {
+  width: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 800px) {
@@ -435,12 +531,43 @@ article {
   }
 }
 
-* {
-  font-family: 'Mirza', cursive;
-  line-height: 1.6;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+.logInForm {
+  width: 100%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
   color: #ebebeb;
+}
+
+.logInForm input {
+  width: 40%;
+  font-size: large;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.logInForm input[type="submit"] {
+  width: 30%;
+  padding: 10px;
+  background-color: #ff2020;
+  color: #ebebeb;
+}
+
+* {
+  font-family: "Mirza", cursive;
+  line-height: 1.6;
 }
 
 *::-moz-selection {

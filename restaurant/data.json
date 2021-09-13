@@ -1,0 +1,124 @@
+[
+    {
+        "id": "sandwiches",
+        "name": "Sandwiches",
+        "info": [
+            {
+                "id": "0",
+                "title": "Small Sandwich",
+                "para": "Small tasty shawerma sandwich! ",
+                "price": 0.6,
+                "path": "./img/sandwich.jpg"
+            },
+            {
+                "id": "1",
+                "title": "Large Sandwich",
+                "para": "Lorem ipsum dolor sit amet, qui minism labore.",
+                "price": 2.5,
+                "path": "./img/largesandwich.jpg"
+            }
+        ]
+    },
+    {
+        "id": "shMeals",
+        "name": "Shawerma Meals",
+        "info": [
+            {
+                "id": "2",
+                "title": "Personal Shawerma Meal",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "price": 0.6,
+                "path": "./img/meal.jpg"
+            },
+            {
+                "id": "3",
+                "title": "Super Shawerma Meal",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "price": 0.6,
+                "path": "./img/meal.jpg"
+            },
+            {
+                "id": "4",
+                "title": "Double Shawerma Meal",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "price": 0.6,
+                "path": "./img/meal.jpg"
+            },
+            {
+                "id": "5",
+                "title": "Triple Shawerma Meal",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "price": 0.6,
+                "path": "./img/meal.jpg"
+            },
+            {
+                "id": "6",
+                "title": "Family Shawerma Meal",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "price": 0.6,
+                "path": "./img/familyMeal.jpg"
+            }
+        ]
+    },
+    {
+        "id": "snacks",
+        "name": "Snacks",
+        "info": [
+            {
+                "id": "7",
+                "title": "Italian Shawerma Meal",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "price": 0.6,
+                "path": "./img/italiMeal.jpg"
+            }
+        ]
+    },
+    {
+        "id": "drinks",
+        "name": "Cold Drinks",
+        "info": [
+            {
+                "id": "8",
+                "title": "Pepsi",
+                "para": "",
+                "price": 0.6,
+                "path": "./img/drinks/pepsi.jpg"
+            },
+            {
+                "id": "9",
+                "title": "Mirinda",
+                "para": "",
+                "price": 0.6,
+                "path": "./img/drinks/mirinda.jpg"
+            },
+            {
+                "id": "10",
+                "title": "7Up",
+                "para": "",
+                "price": 0.6,
+                "path": "./img/drinks/sevenUp.jpg"
+            },
+            {
+                "id": "11",
+                "title": "Fanta",
+                "para": "",
+                "price": 0.6,
+                "path": "./img/drinks/fanta.jpg"
+            },
+            {
+                "id": "12",
+                "title": "Sprite",
+                "para": "",
+                "price": 0.6,
+                "path": "./img/drinks/sprite.jpg"
+            },
+            {
+                "id": "13",
+                "title": "CocaCola",
+                "para": "",
+                "price": 0.6,
+                "path": "./img/drinks/cocaCola.jpg"
+            }
+        ]
+    }
+]

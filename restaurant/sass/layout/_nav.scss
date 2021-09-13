@@ -1,55 +1,66 @@
-.headerNav{
-    margin-left: 150px;
+.headerNav {
+    margin-left        : 150px;
     // background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
+    display            : flex;
+    justify-content    : center;
+    align-items        : center;
 
-    ul{
-        display: flex;
+
+
+    ul {
+        display        : flex;
         justify-content: center;
 
-        li{
-            cursor: pointer;
-            list-style: none;
-            padding: 15px;
-            display: flex;
-            align-items: center;
+        li {
+            cursor         : pointer;
+            list-style     : none;
+            display        : flex;
+            align-items    : center;
             justify-content: center;
-            
+            padding        : 15px;
 
-            a{
+
+            a {
                 text-decoration: none;
-                color: white;
-
+                color          : white;
             }
 
-            &:hover a{
+            &:hover a {
                 color: red;
             }
-            
+
         }
 
-        .logIn{
-            margin-left: 30px;
-            border: 2px solid white;
+        .logIn,
+        .logInA {
+            margin-left  : 30px;
+            border       : 2px solid white;
             border-radius: 20px;
-            padding: 10px;
-            padding-left: 30px;
+            padding      : 10px;
+            padding-left : 30px;
             padding-right: 30px;
 
-            &:hover{
+            &:hover {
                 background-color: white;
             }
 
-            &:active{
+            &:active {
                 background-color: unset;
             }
         }
 
-        .activeLi{
+        .logInA {
+            background-color: white;
+            border          : unset;
+
+
+            a {
+                color: red;
+            }
+        }
+
+
+        .activeLi {
             color: red;
         }
     }
@@ -57,49 +68,49 @@
 
 
 
-.foodNav{
+.foodNav {
     // margin-left: 150px;
-    z-index: 1;
+    z-index         : 1;
     background-color: white;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    box-shadow: 0px 5px 14px -13px black;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    overflow-x: scroll;
+    width           : 100%;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    border-radius   : 15px;
+    box-shadow      : 0px 5px 14px -13px black;
+    position        : -webkit-sticky;
+    position        : sticky;
+    top             : 0;
+    overflow-x      : scroll;
 
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
         display: none;
     }
-    
 
-    ul{
-        display: flex;
+
+    ul {
+        display        : flex;
         justify-content: center;
 
-        li{
-            cursor: pointer;
-            list-style: none;
-            display: flex;
-            align-items: center;
+        li {
+            cursor         : pointer;
+            list-style     : none;
+            display        : flex;
+            align-items    : center;
             justify-content: center;
-            
 
-            a{
+
+            a {
                 text-decoration: none;
-                color: black;
-                padding: 15px;
+                color          : black;
+                padding        : 15px;
 
             }
 
-            &:hover a{
+            &:hover a {
                 color: red;
             }
-            
+
         }
 
 
@@ -107,13 +118,14 @@
     }
 }
 
-@media screen and (max-width: 800px) { 
-    .headerNav{
+@media screen and (max-width: 800px) {
+    .headerNav {
         margin-left: unset;
     }
-    .foodNav{
-        &::-webkit-scrollbar{
+
+    .foodNav {
+        &::-webkit-scrollbar {
             display: unset;
-        }        
+        }
     }
 }
