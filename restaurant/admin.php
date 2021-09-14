@@ -1,16 +1,39 @@
 <?php
+// Start the session
+session_start();
 
-if (isset($_POST['editData'])) {
-    $newdata =  $_POST['dataInput'];
-    $filename = 'data.json';
-
-    // header("Content-Type: application/octet-stream");
-    // header("Content-Transfer-Encoding: Binary");
-    // header("Content-disposition: attachment; filename=\"".$filename."\"");
-    file_put_contents('data.json', $newdata);
-    header("Refresh:0");
-
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: index.html');
+	exit;
 }
+
+function getIPAddress() {  
+    //whether ip is from the share internet  
+     if(!empty($_SERVER['HTTP_CLIENT_IP'])) {  
+                $ip = $_SERVER['HTTP_CLIENT_IP'];  
+        }  
+    //whether ip is from the proxy  
+    elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {  
+                $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];  
+     }  
+//whether ip is from the remote address  
+    else{  
+             $ip = $_SERVER['REMOTE_ADDR'];  
+     }  
+     return $ip;  
+}  
+$ip = getIPAddress();  
+
+date_default_timezone_set("Asia/Amman");
+
+$fp = fopen('log.txt', 'a');//opens file in append mode  
+fwrite($fp, "New Access!\n====================\n");
+fwrite($fp, "IP Adderess: ". $ip. "\n". "Date: ". date('j-n-Y'). "\n". "Time: ". date('h:i A'). "\n". $_SERVER['PHP_SELF']."\n".$_SERVER['SERVER_NAME']."\n".$_SERVER['HTTP_HOST']."\n".$_SERVER['HTTP_USER_AGENT']."\n".$_SERVER['SCRIPT_NAME']."\n=====================================================\n");
+fclose($fp);  
+
+
+
 
 ?>
 
@@ -22,7 +45,7 @@ if (isset($_POST['editData'])) {
     <script src="./jquery/jquery-ui.js"></script>
     <title>Data</title>
 </head>
-<body>
+<body style="background-color: red;">
     
 <article class="data-php">
 
@@ -30,22 +53,20 @@ if (isset($_POST['editData'])) {
 // Read JSON file
 $json = file_get_contents('./data.json');
 
-//Decode JSON
-// $data = json_decode($json,true);
+
 
 echo "
 <form action='' method='POST'>
     <textarea id='dataInput' name='dataInput' type='text'>$json</textarea><br>
     <input id='editData' name='editData' type='submit' value='Save'>
-    <a id='logout' href='./index.html'>Logout</a>
+    <a id='logout' href='./logout.php'>Logout</a>
 
 </form>
-
-
 ";
 
 
-
+// //Decode JSON
+// $data = json_decode($json,true);
 
 // //Print data
 // for ($i=0; $i < count($data); $i++) { 
@@ -78,7 +99,7 @@ echo "
 
 
 <script>
-    console.log();
+    console.log("yoo");
 
     $(function () {
         $('#editData').hide();
@@ -86,20 +107,6 @@ echo "
             $('#editData').show();
 
         });
-
-        // $('#editData').on('submit',function(e){
-
-        //     let newData = $('#dataInput').html();
-
-        //     $.post("readData.php", $form.serialize(),
-        //         function (data, textStatus, jqXHR) {
-                    
-        //         },
-                
-        //     );
-
-        // });
-
     });
 </script>
 </body>

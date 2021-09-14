@@ -1,12 +1,16 @@
 <?php
-if (isset($_POST['logInSubmit'])) {
-    if ($_POST['username'] == "admin" && $_POST['password'] == "admin") {
-        header('Location: admin.php');
+session_start();
 
-    } else {
+if (isset($_POST['logInSubmit'])) {
+    if ($_POST['username'] == "admin" && $_POST['password'] == "abcd1234") {
+        // Logged in!
+        $_SESSION['loggedin'] = TRUE;
+        header('Location: ./admin.php');
+    } 
+    else {
         echo "
         <script>
-        alert('The username or Password are wrong')
+        alert('Incorrect username and/or password!')
         </script>";
         header('refresh:0.1;url=login.php');
     }
