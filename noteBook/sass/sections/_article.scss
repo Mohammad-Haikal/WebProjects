@@ -1,11 +1,11 @@
-.toolsBar{
-    position: relative;
+.toolsBar {
+    position           : relative;
     display            : flex;
     flex-direction     : column;
-    align-items: center;
+    align-items        : center;
     transition-duration: 0.3s;
 }
 
-.toolsBarA{
-    background-color   : #020e14b4;
+.toolsBarA {
+    background-color: #020e14b4;
 }

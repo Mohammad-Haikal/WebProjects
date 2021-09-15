@@ -8,8 +8,7 @@ html,
 body {
   margin: 0;
   height: 100%;
-  background-image: -webkit-gradient(linear, left top, right top, from(#b73ee7), to(#2b75ff));
-  background-image: linear-gradient(90deg, #b73ee7, #2b75ff);
+  background-image: linear-gradient(45deg, #b73ee7, #2b75ff);
   background-attachment: fixed;
 }
 
@@ -27,29 +26,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-header {
-  padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header img {
-  width: 100px;
-  height: 100px;
-}
-
-header h1 {
-  color: #ffffff;
-  font-weight: bolder;
 }
 
 form input,
@@ -305,12 +281,6 @@ form input[type=submit]:active {
   .login-form {
     width: 90%;
   }
-}
-
-footer {
-  height: 50px;
-  width: 100%;
-  background-color: #131313;
 }
 
 .toolsBar {

@@ -48,10 +48,6 @@ if (!isset($_SESSION['loggedin'])) {
         <!-- Notes Container -->
         <section id="notesContainer" class="notesContainer"></section>
 
-        <!-- Footer -->
-        <footer>
-
-        </footer>
     </article>
 
     <!-- Import Javascript -->
