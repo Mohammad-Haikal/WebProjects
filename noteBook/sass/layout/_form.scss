@@ -1,0 +1,244 @@
+form {
+
+    input,
+    textarea,
+    select {
+        font-size: 15px;
+    }
+
+    input {
+        width           : 70%;
+        background-color: $form-input;
+        border          : none;
+        padding         : 15px;
+        outline         : none;
+        border-radius   : 15px;
+    }
+
+    textarea {
+        width           : 100%;
+        border-radius   : 7px;
+        padding         : 8px;
+        border          : none;
+        margin          : 1px;
+        text-align      : justify;
+        background-color: $form-input;
+        outline         : none;
+    }
+
+
+
+    input[type=submit] {
+        margin-top         : 30px;
+        margin-bottom      : -5px;
+        border-radius      : unset;
+        width              : 100%;
+        background-color   : $form-button;
+        color              : $txt-secondary;
+        box-shadow         : 0px 0px 8px $shadow;
+        transition-duration: 0.3s;
+
+        &:hover {
+            background-color: $form-button-hover;
+        }
+
+        &:active {
+            background-color: $form-button-active;
+        }
+    }
+
+}
+
+
+// Login form ---------------------------
+.login-form {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    width           : 50%;
+    background-color: $form-bg;
+    border-radius   : 15px;
+    overflow        : hidden;
+    box-shadow      : 0px 0px 15px $shadow;
+}
+
+// Add new note form --------------------
+#newNoteForm {
+    padding         : 20px;
+    background-color: $form-bg;
+    border-radius   : 10px;
+    text-align      : center;
+
+
+    #addBtn {
+        margin-top      : 20px;
+        width           : 65%;
+        background-color: $form-button;
+        border-radius   : 20px;
+
+        &:hover {
+            background-color: $form-button-hover;
+        }
+
+        &:active {
+            background-color: $form-button-active;
+        }
+    }
+}
+
+
+// Settings form --------------------
+#settingsForm {
+    width        : 100%;
+    padding      : 30px;
+    border-radius: 10px;
+    padding-top  : 20px;
+    text-align   : center;
+
+    fieldset {
+        margin       : auto;
+        color        : white;
+        border-radius: 10px;
+        width        : 90%;
+
+        div {
+            height        : 200px;
+            display       : flex;
+            flex-direction: column;
+            text-align    : justify;
+            margin-bottom : 30px;
+            overflow-y    : scroll;
+        }
+
+        legend {
+            text-align: center;
+        }
+
+        span {
+            margin: 7px;
+
+            label {
+                padding      : 5px;
+                border-radius: 5px;
+                font-size    : 15px;
+            }
+
+            input {
+                width: unset;
+            }
+        }
+
+
+        .setBtn {
+            align-self         : center;
+            margin             : auto;
+            margin-top         : 20px;
+            width              : 50%;
+            background-color   : #2b75ff;
+            border             : none;
+            color              : white;
+            border-radius      : 30px;
+            padding            : 10px;
+            transition-duration: 0.2s;
+
+            &:hover {
+                background-color: #2b75ffc4;
+            }
+
+            &:active {
+                background-color: #2b75ff;
+            }
+        }
+    }
+}
+
+///////////////////////////////
+.noteBox {
+    display         : flex;
+    flex-direction  : column;
+    text-align      : center;
+    background-image: linear-gradient(33deg, #e2bfff, #97c0ff);
+    margin          : 5px;
+    border-radius   : 15px;
+    padding         : 10px;
+
+    box-shadow: 10px 10px 10px -2px #00000057;
+
+
+    textarea {
+        background: none;
+    }
+
+    .title {
+        font-weight: bolder;
+        max-height : 50px;
+    }
+
+    .note {
+        min-height   : 170px;
+        padding-bottom  : 20px;
+        border-bottom: 0.5px dotted rgba(31, 31, 31, 0.411);
+        border-radius: unset;
+    }
+
+
+    .rowBtns {
+        display       : flex;
+        flex-direction: row;
+        flex-wrap     : wrap;
+    }
+
+
+    .editBtn {
+        display            : none;
+        margin             : auto;
+        margin-bottom      : 10px;
+        width              : 100%;
+        background-color   : $form-button;
+        border-radius      : 30px;
+        transition-duration: unset;
+        padding            : 10px;
+
+        &:hover {
+            background-color: $form-button-hover;
+        }
+
+        &:active {
+            background-color: $form-button-hover;
+        }
+    }
+
+
+
+    .editBtnA {
+        display: block;
+    }
+
+    .delBtn {
+        margin             : auto;
+        background         : none;
+        border             : none;
+        transition-duration: 0.2s;
+        width              : fit-content;
+        padding            : unset;
+
+        &:hover {
+
+            opacity: 0.8;
+        }
+
+        img {
+            width : 30px;
+            height: auto;
+        }
+
+    }
+
+}
+
+
+@media screen and(max-width: 800px) {
+    .login-form {
+        width: 90%;
+    }
+}

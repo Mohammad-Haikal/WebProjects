@@ -1,0 +1,21 @@
+* {
+    scroll-behavior: smooth;
+    box-sizing     : border-box;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-image: linear-gradient(90deg, $secondary, $primary);
+    background-attachment: fixed;
+
+}
+
+
+.index {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : center;
+}

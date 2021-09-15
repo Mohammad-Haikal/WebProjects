@@ -1,0 +1,14 @@
+button {
+    color              : $txt-secondary;
+    border             : none;
+    font-size          : 15px;
+    padding            : 15px;
+    transition-duration: 0.3s;
+}
+
+input[type=submit],
+button,
+a {
+    cursor            : pointer;
+    -webkit-appearance: none;
+}

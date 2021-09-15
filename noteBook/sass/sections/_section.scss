@@ -1,0 +1,101 @@
+.addNote {
+    z-index         : 1;
+    display         : flex;
+    justify-content : space-evenly;
+    align-items     : center;
+    flex-wrap       : wrap;
+    position        : sticky;
+    top             : 0;
+    width           : 100%;
+    padding-top     : 20px;
+    padding-bottom  : 20px;
+    background-color: $fourly;
+
+    .newBtn {
+        background-image: linear-gradient(33deg, $primary, $secondary);
+        width           : 50%;
+        color           : $txt-secondary;
+        border-radius   : 25px;
+        box-shadow      : 0px 0px 8px $shadow;
+
+        &:hover {
+            box-shadow: 0px 0px 5px 5px $shadow;
+        }
+    }
+
+    .newBtnA,
+    .newBtnA:hover {
+        box-shadow: 0px 0px 10px 10px $shadow;
+    }
+
+    #settingsBtn {
+        cursor             : pointer;
+        width              : 50px;
+        height             : 50px;
+        transition-duration: 0.5s;
+    }
+
+    .settingsBtnA {
+        transform: rotate(90deg);
+    }
+}
+
+///////////////////////////////
+.configuration,
+.settings {
+    display   : none;
+    position  : fixed;
+    top       : 100px;
+    width     : 80%;
+    margin-top: 20px;
+}
+
+///////////////////////////////
+.settings {
+    align-self                   : flex-end;
+    margin-right                 : 10px;
+    display                      : none;
+    width                        : 30%;
+    flex-direction               : column;
+    justify-content              : center;
+    align-items                  : center;
+    background                   : $fourly;
+    text-align                   : center;
+    border-bottom-left-radius    : 15px;
+    border-bottom-right-radius   : 15px;
+    overflow                     : hidden;
+    padding                      : 10px;
+    top                          : 80px;
+    margin-top                   : unset;
+    // transform                 : translateY(100%);
+
+    .logout {
+        width           : 100%;
+        margin-top      : 10px;
+        background-color: $logoutBtn;
+        font-size       : 15px;
+        padding         : 13px;
+        border-radius   : 10px;
+        text-decoration : none;
+        color           : white;
+        
+
+        &:hover {
+            background-color: $logoutBtn-hover;
+        }
+    }
+}
+
+.settingsA {
+    display: flex;
+}
+
+
+///////////////////////////////
+.notesContainer {
+    display        : flex;
+    justify-content: center;
+    flex-wrap      : wrap-reverse;
+    padding-top    : 50px;
+    padding-bottom : 50px;
+}
