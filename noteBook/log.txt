@@ -1,23 +1,22 @@
 
-New Access!
-====================
+===== New Access! =====
 muhhl
-
-Date: 15-9-2021
-Time: 01:00 pm
-====================
-
-Logged out
-====================
-muhhl
-
-Date: 15-9-2021
-Time: 01:00 pm
-====================
-
-
-====================
-Wrong Access!!!!
 IP Address: ::1
-User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
-====================
+Date: 16/9/2021
+Time: 05:44 pm
+=======================
+
+===== Logged out =====
+muhhl
+IP Address: ::1
+Date: 16/9/2021
+Time: 05:49 pm
+======================
+
+
+===== New Access! =====
+muhhl
+IP Address: ::1
+Date: 16/9/2021
+Time: 05:49 pm
+=======================
