@@ -87,6 +87,8 @@ header h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .headerNav ul li {
@@ -207,6 +209,15 @@ header h1 {
 
 @media screen and (max-width: 800px) {
   .headerNav {
+    margin-left: unset;
+  }
+  .headerNav ul {
+    margin-left: unset;
+    padding-left: unset;
+  }
+  .headerNav ul .logIn,
+  .headerNav ul .logInA {
+    width: 100%;
     margin-left: unset;
   }
   .foodNav::-webkit-scrollbar {
@@ -402,6 +413,35 @@ article {
   height: 150px;
 }
 
+.menu-conatiner .checkoutBtn {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+.menu-conatiner .checkoutBtn:hover {
+  background-color: #ff2525;
+}
+
+.menu-conatiner .checkoutBtn:active {
+  background-color: red;
+}
+
+.menu-conatiner .checkoutBtn #sum {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
 .background {
   z-index: -1;
   position: fixed;
@@ -425,6 +465,46 @@ article {
           filter: blur(1);
   -webkit-filter: brightness(0.2);
           filter: brightness(0.2);
+}
+
+#checkoutMenu {
+  display: none;
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 20px;
+  width: 90%;
+  height: 90%;
+  overflow-y: scroll;
+}
+
+#checkoutMenu h1, #checkoutMenu p {
+  color: black;
+}
+
+#checkoutMenu h1 strong, #checkoutMenu p strong {
+  color: red;
+}
+
+#checkoutMenu #closeBtn {
+  position: absolute;
+  top: 5px;
+  left: 95%;
+}
+
+#checkoutMenu #closeBtn img {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+#checkoutMenu #closeBtn img:hover {
+  -webkit-box-shadow: 0px 0px 5px red;
+          box-shadow: 0px 0px 5px red;
 }
 
 .menuDiv {
@@ -461,18 +541,14 @@ article {
 }
 
 .menuDiv section .food-type {
-  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   margin: auto auto 15px;
   width: 100%;
-  background-color: #f3f3f3;
-  -webkit-box-shadow: 0 0 3px gray;
-          box-shadow: 0 0 3px gray;
+  border: 2px dotted black;
   border-radius: 10px;
-  border-bottom: 3px solid gray;
   padding: 15px;
   text-align: justify;
   -webkit-transition-duration: 0.1s;
@@ -486,19 +562,15 @@ article {
       flex-wrap: wrap;
 }
 
-.menuDiv section .food-type:active {
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
-  border-bottom: 1px solid gray;
-}
-
 .menuDiv section .food-type .description {
   width: 50%;
   padding: 20px;
 }
 
 .menuDiv section .food-type .description h4,
-.menuDiv section .food-type .description p {
+.menuDiv section .food-type .description p,
+.menuDiv section .food-type .description label,
+.menuDiv section .food-type .description span {
   color: black !important;
   margin-bottom: 0;
   margin-top: 0;
@@ -583,5 +655,17 @@ h1 {
 
 li {
   font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+input[type=submit],
+button,
+a {
+  cursor: pointer;
+  -webkit-appearance: none;
 }
 /*# sourceMappingURL=root.css.map */
