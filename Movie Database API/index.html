@@ -7,22 +7,40 @@
     <script src="./jquery/jquery.js"></script>
     <script src="./jquery/jquery-ui.js"></script>
     <link rel="stylesheet" type="text/css" href="./sass/root.css">  
+    <link rel="stylesheet" href="vendor/aos/aos.css">
     <title>Document</title>
 </head>
 <body>
-    <label>Search Movie: </label>
-    <input type="text" onkeyup="changeMovieName(value)">
-    <label>Page: </label>
-    <input type="number" value="1" onkeyup="changePage(value)">
-    <div id="container">
+    <div class="searchBar">
+        <input id="aa" type="text" placeholder="Search Movie..." onkeyup="changeMovieName(value)">
+    </div>
 
+    <div id="container">
+        <!-- AJAX CALL -->
+    </div>
+
+    <div class="pagesRadio">
+        <input type="radio" id="r1" value="1" name="radioB" checked onclick="changePage(value)">
+        <label for="r1">Page 1</label>
+        <input type="radio" id="r2" value="2" name="radioB" onchange="changePage(value)">
+        <label for="r2">Page 2</label>
+        <input type="radio" id="r3" value="3" name="radioB" onclick="changePage(value)">
+        <label for="r3">Page 3</label>
+        <input type="radio" id="r4" value="4" name="radioB" onclick="changePage(value)">
+        <label for="r4">Page 4</label>
+        <input type="radio" id="r5" value="5" name="radioB" onclick="changePage(value)">
+        <label for="r5">Page 5</label>
     </div>
 
 
 
-
     
-    <script src="./js/vue.js"></script>
+    <script src="./vendor/aos/aos.js"></script>
     <script src="./js/script.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>

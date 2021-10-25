@@ -1,11 +1,44 @@
-html, body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+body {
+  background-color: #f0f0f0;
+}
+
+.searchBar {
+  text-align: center;
+  padding: 30px;
+  background-color: white;
+}
+
+.searchBar input {
+  border: dashed 1px grey;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  min-height: 500px;
+}
+
 article {
-  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,18 +46,34 @@ article {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: #e2ffff;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 8px 0px #9b9b9b;
+          box-shadow: 0px 0px 8px 0px #9b9b9b;
+  border-radius: 3px;
   padding: 20px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  width: 70%;
+  margin: 5px;
+  width: 20%;
+}
+
+article img {
+  width: 100%;
+}
+
+.pagesRadio {
+  background-color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
 .adult {

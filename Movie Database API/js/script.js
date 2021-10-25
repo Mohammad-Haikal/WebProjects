@@ -6,6 +6,8 @@ var adultMessage;
 
 
 function changeMovieName(value){
+    $('#aa').css('background-color', value);
+
     movieName = value;
     searchMovie(movieName);
 }
@@ -21,19 +23,26 @@ function searchMovie(searchQuery){
         page = 1;
     }
 
-    $('#container').html("");
     $.ajax({
         type: "GET",
         url: `https://api.themoviedb.org/3/search/movie?api_key=${movieDBKey}&query=${searchQuery}&page=${page}&include_adult=false`,
         dataType: "json",
         caches: false,
+
         success: function (response) {
-            console.log(response)
+            $("img").ready(function () {
+                $('#container').html("");
+                console.log(response)
+                
+                for (const key in response.results) {
+                    $('#container').append(`<article data-aos="zoom-in"> <img src="https://image.tmdb.org/t/p/original${response.results[key].backdrop_path}"><h1>${response.results[key].title}</h1><h4>Released: ${response.results[key].release_date}</h4><p>${response.results[key].overview}</p></article>`);                
+                }
+
+            });
+
             
-            for (const key in response.results) {
-                $('#container').append(`<article> <img src="https://image.tmdb.org/t/p/w500${response.results[key].backdrop_path}"><h1>${response.results[key].title}</h1><h4>Released: ${response.results[key].release_date}</h4><p>${response.results[key].overview}</p></article>`);                
-            }
         }
+        
     });
 
 }
