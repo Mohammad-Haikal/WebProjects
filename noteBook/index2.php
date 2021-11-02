@@ -4,6 +4,7 @@ if (!isset($_SESSION['loggedin'])) {
     header('location: index.php');
     exit();
 }
+
 ?>
 
 
@@ -50,7 +51,21 @@ if (!isset($_SESSION['loggedin'])) {
 
     </article>
 
+    
+
     <!-- Import Javascript -->
     <script src="./js/script.js"></script>
+    <?php
+    if ($_SESSION['username'] == "muhhl") {
+        echo '
+        <script type="text/JavaScript">
+            $("#settings").append(`
+            <a class="clearLog" target="_blank" href="./log.txt">View Log</a>
+            <a id="clearLog" class="clearLog">Clear Log</a>
+            `);
+        </script>
+        ';
+    }
+    ?>
 </body>
 </html>

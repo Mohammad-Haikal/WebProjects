@@ -69,7 +69,7 @@
     margin-top                   : unset;
     // transform                 : translateY(100%);
 
-    .logout {
+    .logout, .clearLog{
         width           : 100%;
         margin-top      : 10px;
         background-color: $logoutBtn;
@@ -84,6 +84,14 @@
             background-color: $logoutBtn-hover;
         }
     }
+    .clearLog{
+        background-color: $form-button;
+        &:hover {
+            background-color: $form-button-hover;
+        }
+
+    }
+
 }
 
 .settingsA {

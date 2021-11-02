@@ -393,7 +393,7 @@ form input[type=submit]:active {
   margin-top: unset;
 }
 
-.settings .logout {
+.settings .logout, .settings .clearLog {
   width: 100%;
   margin-top: 10px;
   background-color: #e00000;
@@ -404,8 +404,16 @@ form input[type=submit]:active {
   color: white;
 }
 
-.settings .logout:hover {
+.settings .logout:hover, .settings .clearLog:hover {
   background-color: #fd1919;
+}
+
+.settings .clearLog {
+  background-color: #2b75ff;
+}
+
+.settings .clearLog:hover {
+  background-color: #2b75ffd5;
 }
 
 .settingsA {

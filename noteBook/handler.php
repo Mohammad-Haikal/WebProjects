@@ -56,7 +56,13 @@
         $conn->close();
     };
 
-
+    // Clear Auth Log
+    if (isset($_POST['clearlog'])) {
+        // Open log.txt (append mode)  
+        $fp = fopen('log.txt', 'w');
+        fwrite($fp, "");
+        
+    };
 
 
 ?>

@@ -10,6 +10,22 @@ $(function () {
         $(".settings").css('display', 'flex');
         $(".toolsBar").toggleClass('toolsBarA');
     });
+
+    $('#clearLog').click(function (e) { 
+        // Confirm before deletion
+        if (confirm("Are you sure deleting auth log?")) {
+            // Post (without refresh) by giving the specific data
+            $.post("./handler.php", { clearlog: true,},
+                function (data) {
+                },
+            );
+
+        } else {
+            e.preventDefault();
+        }
+        
+    });
+
     // Ajax read JSON Data
     readData();
 

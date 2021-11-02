@@ -47,7 +47,7 @@ elseif($_SESSION['username'] == "nouf" && $_SESSION['password'] == "nn@98#nouff"
 
 else{
     $_SESSION['loggedin'] = false;
-    fwrite($fp,"\n===== Wrong Access!!!! ====="."\nIP Address: ". $_SESSION['ip']."\nUser Agent: ". $_SERVER['HTTP_USER_AGENT']. "\nDate: ". $_SESSION['date']. "\nTime: ". $_SESSION['time']."\n============================\n");
+    fwrite($fp,"\n===== Wrong Access!!!! ====="."\nUsername: ". $_SESSION['username']."\nPassword: ". $_SESSION['password']."\nIP Address: ". $_SESSION['ip']."\nUser Agent: ". $_SERVER['HTTP_USER_AGENT']. "\nDate: ". $_SESSION['date']. "\nTime: ". $_SESSION['time']."\n============================\n");
 
     // Redirect
     header("Location: index.php");
