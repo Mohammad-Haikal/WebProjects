@@ -27,7 +27,7 @@ $(function () {
 
             $.ajax({
                 type: "get",
-                url: "./read_data.php",
+                url: './read_data.php',
                 dataType: 'json',
                 success: function (response) {
                     $('#container').html("");
@@ -36,7 +36,7 @@ $(function () {
                         if (response[key].imgPath != null) {
                             movieImgPath = `https://image.tmdb.org/t/p/original${response[key].imgPath}`;
                         } else {
-                            movieImgPath = `./img/nopic.jpg`
+                            movieImgPath = `../img/nopic.jpg`
                         }
 
                         $('#container').append(`<article data-aos="zoom-in"><i id=${response[key].movieId} class="fa fa-minus favBtn favBtn-active"></i> <img src="${movieImgPath}"><h1>${response[key].title}</h1><h4>Released: ${response[key].release_date}</h4><p class="description">${response[key].overview}</p></article>`);
@@ -55,7 +55,7 @@ $(function () {
                             if ($(this).hasClass('favBtn-active')) {
                                 $(this).hide(100);
 
-                                $.getJSON("./handler", { "removedFromFav": true, "userId": userId, ready },
+                                $.getJSON("./jsonhandler.php", { "removedFromFav": true, "userId": userId, ready },
                                     function (data, textStatus, jqXHR) {
                                     }
                                 );
@@ -121,7 +121,7 @@ function showResuts(response) {
         if (response.results[key].backdrop_path != null) {
             movieImgPath = `https://image.tmdb.org/t/p/original${response.results[key].backdrop_path}`;
         } else {
-            movieImgPath = `./img/nopic.jpg`
+            movieImgPath = `../img/nopic.jpg`
         }
 
         $('#container').append(`<article data-aos="zoom-in"><i id=${response.results[key].id} class="fa fa-plus favBtn"></i> <img src="${movieImgPath}"><h1>${response.results[key].title}</h1><h4>Released: ${response.results[key].release_date}</h4><p class="description">${response.results[key].overview}</p></article>`);
@@ -140,7 +140,7 @@ function showResuts(response) {
 
             let ready = JSON.stringify(movieObject);
 
-            $.getJSON("./handler", { "addedToFav": true, "userId": userId, ready },
+            $.getJSON('./jsonhandler.php', { "addedToFav": true, "userId": userId, ready },
                 function (data, textStatus, jqXHR) {
                 }
             );
