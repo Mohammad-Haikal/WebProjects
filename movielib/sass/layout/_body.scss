@@ -1,3 +1,7 @@
+*{
+    -webkit-appearance: none;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -11,4 +15,5 @@ body {
 body {
     position: relative;
     background-color: #f0f0f0;
+    
 }

@@ -39,7 +39,7 @@ $(function () {
                             movieImgPath = `./img/nopic.jpg`
                         }
 
-                        $('#container').append(`<article data-aos="zoom-in"><div id=${response[key].movieId} class="favBtn favBtn-active"></div> <img src="${movieImgPath}"><h1>${response[key].title}</h1><h4>Released: ${response[key].release_date}</h4><p class="description">${response[key].overview}</p></article>`);
+                        $('#container').append(`<article data-aos="zoom-in"><i id=${response[key].movieId} class="fa fa-minus favBtn favBtn-active"></i> <img src="${movieImgPath}"><h1>${response[key].title}</h1><h4>Released: ${response[key].release_date}</h4><p class="description">${response[key].overview}</p></article>`);
                         $(`.favBtn#${response[key].movieId}`).click(function (e) {
 
                             let movieObject = {
@@ -53,7 +53,6 @@ $(function () {
                             let ready = JSON.stringify(movieObject);
                             
                             if ($(this).hasClass('favBtn-active')) {
-                                $(this).removeClass('favBtn-active');
                                 $(this).hide(100);
 
                                 $.getJSON("./handler", { "removedFromFav": true, "userId": userId, ready },
@@ -125,7 +124,7 @@ function showResuts(response) {
             movieImgPath = `./img/nopic.jpg`
         }
 
-        $('#container').append(`<article data-aos="zoom-in"><div id=${response.results[key].id} class="favBtn"></div> <img src="${movieImgPath}"><h1>${response.results[key].title}</h1><h4>Released: ${response.results[key].release_date}</h4><p class="description">${response.results[key].overview}</p></article>`);
+        $('#container').append(`<article data-aos="zoom-in"><i id=${response.results[key].id} class="fa fa-plus favBtn"></i> <img src="${movieImgPath}"><h1>${response.results[key].title}</h1><h4>Released: ${response.results[key].release_date}</h4><p class="description">${response.results[key].overview}</p></article>`);
 
         $(`.favBtn#${response.results[key].id}`).click(function (e) {
             e.preventDefault();

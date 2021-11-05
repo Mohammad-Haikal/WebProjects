@@ -13,7 +13,7 @@
 <body>
     <header class="indexHeader">
         <img src="./img/logo.png" alt="Logo">
-        <h1 class="logoTitle">Movie Library</h1> 
+        <h1 class="logoTitle">Movie Library</h1>
     </header>
 
     <main class="formsDiv">
@@ -38,12 +38,12 @@
             <h1>Signup</h1>
             <div>
                 <img src="./img/username.png" alt="">
-                <input type="text" name="newUsername" placeholder="Username" autocomplete="off" required>
+                <input type="text" name="newUsername" placeholder="Username" required autocomplete="off" value="">
             </div>
 
             <div>
                 <img src="./img/password.png" alt="">
-                <input type="password" name="newPassword" placeholder="Password" autocomplete="off" required>
+                <input type="password" name="newPassword" placeholder="Password" required autocomplete="off" value="">
             </div>
 
             <div>
