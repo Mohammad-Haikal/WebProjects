@@ -20,7 +20,8 @@ else{
         <script src="./jquery/jquery-ui.js"></script>
         <link rel="stylesheet" type="text/css" href="./sass/root.css">
         <link rel="stylesheet" href="vendor/aos/aos.css">
-        <title>Document</title>
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <title>Movie Library</title>
     </head>
     <body>
 

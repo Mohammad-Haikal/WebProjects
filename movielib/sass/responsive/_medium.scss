@@ -1,0 +1,47 @@
+@media screen and (max-width: 800px) {
+
+    .indexHeader {
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+
+    .formsDiv {
+        transform: unset;
+
+        form {
+            margin-left : unset;
+            margin-right: unset;
+            margin      : 30px;
+            width       : 100%;
+        }
+    }
+
+    header {
+        justify-content: flex-start;
+
+        .profileInfo {
+            margin-left: 5%;
+        }
+
+        .searchBar {
+            width : 100%;
+            margin: 30px;
+        }
+
+        .fav {
+            margin: auto;
+        }
+    }
+
+    main {
+        #container {
+            width: 65%;
+
+            article {
+                width: 100%;
+            }
+        }
+    }
+
+
+}

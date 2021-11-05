@@ -10,14 +10,15 @@ header {
     .profileInfo {
         display    : flex;
         align-items: center;
-        a{
+
+        a {
             color: black;
         }
 
         img {
             width  : 50px;
             height : 50px;
-            padding: 5px;
+            padding: 10px;
         }
     }
 
@@ -43,30 +44,20 @@ header {
         }
     }
 
-    
 
-    .fav{
-        cursor: pointer;
-        user-select: none;
+
+    .fav {
+        cursor             : pointer;
+        user-select        : none;
         transition-duration: 0.09s;
-        &:hover{
-            color: #6b6b6b;
-        }
-
-        &:active{
-            color: black;
-        }
+        box-shadow         : 1px 1px 2px 0px #888888;
+        padding            : 10px;
+        border-radius      : 10px;
+        transition-duration: 0.2s;
+        color              : #0F92F3;
     }
 
-    .fav-active{
-        color: #0f92f3;
-        text-shadow: 1px 1px 2px #0f92f385;
-        &:hover{
-            color: #30a2f8;
-        }
-
-        &:active{
-            color: #0f92f3;
-        }
+    .fav-active {
+        box-shadow: inset 1px 1px 2px 0px #888888;
     }
 }

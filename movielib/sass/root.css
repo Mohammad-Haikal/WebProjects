@@ -47,7 +47,7 @@ header .profileInfo a {
 header .profileInfo img {
   width: 50px;
   height: 50px;
-  padding: 5px;
+  padding: 10px;
 }
 
 header .searchBar {
@@ -83,27 +83,18 @@ header .fav {
           user-select: none;
   -webkit-transition-duration: 0.09s;
           transition-duration: 0.09s;
-}
-
-header .fav:hover {
-  color: #6b6b6b;
-}
-
-header .fav:active {
-  color: black;
+  -webkit-box-shadow: 1px 1px 2px 0px #888888;
+          box-shadow: 1px 1px 2px 0px #888888;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  color: #0F92F3;
 }
 
 header .fav-active {
-  color: #0f92f3;
-  text-shadow: 1px 1px 2px #0f92f385;
-}
-
-header .fav-active:hover {
-  color: #30a2f8;
-}
-
-header .fav-active:active {
-  color: #0f92f3;
+  -webkit-box-shadow: inset 1px 1px 2px 0px #888888;
+          box-shadow: inset 1px 1px 2px 0px #888888;
 }
 
 main {
@@ -252,8 +243,24 @@ main #container article .description::-webkit-scrollbar-thumb {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-transform: translateY(-30%);
           transform: translateY(-30%);
+}
+
+.formsDiv h4 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.formsDiv h4::before {
+  content: "---- ";
+}
+
+.formsDiv h4::after {
+  content: " ----";
 }
 
 .formsDiv form {
@@ -272,14 +279,30 @@ main #container article .description::-webkit-scrollbar-thumb {
   -webkit-box-shadow: 0px 0px 5px grey;
           box-shadow: 0px 0px 5px grey;
   width: 30%;
-  background-color: #f5f5f5;
-  border-radius: 5px;
+  background-color: #ffffff;
+  border-radius: 15px;
   padding: 20px;
 }
 
 .formsDiv form h1 {
   text-align: center;
   margin-bottom: 30px;
+}
+
+.formsDiv form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formsDiv form div img {
+  padding-right: 10px;
+  width: 30px;
+  height: 30px;
 }
 
 .formsDiv form input {
@@ -294,15 +317,27 @@ main #container article .description::-webkit-scrollbar-thumb {
   margin-top: 20px;
   border-radius: 10px;
   border: none;
-  background-color: #2079ff;
   color: white;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
   width: 100%;
+  font-size: 17px;
 }
 
-.formsDiv form input[type=submit]:hover {
+.formsDiv form #login {
+  background-color: #2079ff;
+}
+
+.formsDiv form #login:hover {
   background-color: #5e9eff;
+}
+
+.formsDiv form #signup {
+  background-color: #ff4444;
+}
+
+.formsDiv form #signup:hover {
+  background-color: #ff7e7e;
 }
 
 * {
@@ -324,7 +359,23 @@ h4 {
   margin: 0;
 }
 
-.logoTitle {
+.indexHeader {
+  background-color: white;
+  padding-bottom: 150px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.indexHeader img {
+  width: 50px;
+  height: 50px;
+}
+
+.indexHeader .logoTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,9 +387,47 @@ h4 {
           align-items: center;
   text-align: center;
   font-size: 40px;
-  padding: 60px;
-  padding-bottom: 150px;
-  background-color: white;
   margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .indexHeader {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 60px;
+  }
+  .formsDiv {
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  .formsDiv form {
+    margin-left: unset;
+    margin-right: unset;
+    margin: 30px;
+    width: 100%;
+  }
+  header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  header .profileInfo {
+    margin-left: 5%;
+  }
+  header .searchBar {
+    width: 100%;
+    margin: 30px;
+  }
+  header .fav {
+    margin: auto;
+  }
+  main #container {
+    width: 65%;
+  }
+  main #container article {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=root.css.map */
