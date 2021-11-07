@@ -10,20 +10,20 @@
     ul {
         display        : flex;
         justify-content: center;
-        flex-wrap      : wrap;
 
         li {
             cursor         : pointer;
             list-style     : none;
+            padding        : 15px;
             display        : flex;
             align-items    : center;
             justify-content: center;
-            padding        : 15px;
 
 
             a {
                 text-decoration: none;
                 color          : white;
+
             }
 
             &:hover a {
@@ -32,8 +32,7 @@
 
         }
 
-        .logIn,
-        .logInA {
+        .logIn {
             margin-left  : 30px;
             border       : 2px solid white;
             border-radius: 20px;
@@ -49,17 +48,6 @@
                 background-color: unset;
             }
         }
-
-        .logInA {
-            background-color: white;
-            border          : unset;
-
-
-            a {
-                color: red;
-            }
-        }
-
 
         .activeLi {
             color: red;
@@ -122,17 +110,6 @@
 @media screen and (max-width: 800px) {
     .headerNav {
         margin-left: unset;
-
-        ul {
-            margin-left : unset;
-            padding-left: unset;
-
-            .logIn,
-            .logInA {
-                width      : 100%;
-                margin-left: unset;
-            }
-        }
     }
 
     .foodNav {

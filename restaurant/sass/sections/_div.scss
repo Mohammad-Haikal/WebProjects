@@ -14,51 +14,6 @@
     }
 }
 
-.blurred {
-    filter: blur(1);
-    filter: brightness(0.2);
-}
-
-
-#checkoutMenu {
-    display         : none;
-    z-index         : 2;
-    position        : fixed;
-    top             : 50%;
-    left            : 50%;
-    transform       : translate(-50%, -50%);
-    background-color: white;
-    border-radius   : 20px;
-    width           : 90%;
-    height          : 90%;
-    overflow-y: scroll;
-
-    h1, p{
-        color: black;
-        strong{
-            color: red;
-        }
-    }
-
-    #closeBtn {
-        position: absolute;
-        top     : 5px;
-        left    : 95%;
-
-        img {
-            cursor: pointer;
-            width : 30px;
-            height: 30px;
-
-            &:hover {
-                box-shadow: 0px 0px 5px rgb(255, 0, 0);
-            }
-        }
-        
-    }
-}
-
-
 .menuDiv {
     // background-color: red;
     width          : 100%;
@@ -78,33 +33,32 @@
         flex-direction: column;
 
         .food-type {
-            // cursor             : pointer;
-            user-select           : none;
-            margin                : auto auto 15px;
-            width                 : 100%;
-            border                : 2px dotted black;
-            // box-shadow         : 0 0 3px gray;
-            border-radius         : 10px;
-            padding               : 15px;
-            text-align            : justify;
-            transition-duration   : 0.1s;
-            display               : flex;
-            justify-content       : space-around;
-            flex-wrap             : wrap;
+            cursor             : pointer;
+            user-select        : none;
+            margin             : auto auto 15px;
+            width              : 100%;
+            background-color   : rgb(243, 243, 243);
+            box-shadow         : 0 0 3px gray;
+            border-radius      : 10px;
+            border-bottom      : 3px solid gray;
+            padding            : 15px;
+            text-align         : justify;
+            transition-duration: 0.1s;
+            display            : flex;
+            justify-content    : space-around;
+            flex-wrap          : wrap;
 
-            // &:active {
-            //     transform    : translateY(2px);
-            //     border-bottom: 1px solid gray;
-            // }
+            &:active {
+                transform    : translateY(2px);
+                border-bottom: 1px solid gray;
+            }
 
             .description {
                 width  : 50%;
                 padding: 20px;
 
                 h4,
-                p,
-                label,
-                span {
+                p {
                     color        : black !important;
                     margin-bottom: 0;
                     margin-top   : 0;

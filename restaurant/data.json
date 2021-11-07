@@ -6,20 +6,16 @@
             {
                 "id": "0",
                 "title": "Small Sandwich",
-                "para": "Small tasty shawerma sandwich! ",
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
                 "price": 0.6,
-                "path": "./img/sandwich.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "path": "./img/sandwich.jpg"
             },
             {
                 "id": "1",
                 "title": "Large Sandwich",
-                "para": "Lorem ipsum dolor sit amet, qui minism labore.",
-                "price": 2.5,
-                "path": "./img/largesandwich.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "para": "Lorem ipsum dolor sit amet, qui minim labore.",
+                "price": 1.2,
+                "path": "./img/largesandwich.jpg"
             }
         ]
     },
@@ -32,45 +28,35 @@
                 "title": "Personal Shawerma Meal",
                 "para": "Lorem ipsum dolor sit amet, qui minim labore.",
                 "price": 0.6,
-                "path": "./img/meal.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "path": "./img/meal.jpg"
             },
             {
                 "id": "3",
                 "title": "Super Shawerma Meal",
                 "para": "Lorem ipsum dolor sit amet, qui minim labore.",
                 "price": 0.6,
-                "path": "./img/meal.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "path": "./img/meal.jpg"
             },
             {
                 "id": "4",
                 "title": "Double Shawerma Meal",
                 "para": "Lorem ipsum dolor sit amet, qui minim labore.",
                 "price": 0.6,
-                "path": "./img/meal.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "path": "./img/meal.jpg"
             },
             {
                 "id": "5",
                 "title": "Triple Shawerma Meal",
                 "para": "Lorem ipsum dolor sit amet, qui minim labore.",
                 "price": 0.6,
-                "path": "./img/meal.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "path": "./img/meal.jpg"
             },
             {
                 "id": "6",
                 "title": "Family Shawerma Meal",
                 "para": "Lorem ipsum dolor sit amet, qui minim labore.",
                 "price": 0.6,
-                "path": "./img/familyMeal.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "path": "./img/familyMeal.jpg"
             }
         ]
     },
@@ -83,9 +69,7 @@
                 "title": "Italian Shawerma Meal",
                 "para": "Lorem ipsum dolor sit amet, qui minim labore.",
                 "price": 0.6,
-                "path": "./img/italiMeal.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "path": "./img/italiMeal.jpg"
             }
         ]
     },
@@ -98,54 +82,42 @@
                 "title": "Pepsi",
                 "para": "",
                 "price": 0.6,
-                "path": "./img/drinks/pepsi.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "path": "./img/drinks/pepsi.jpg"
             },
             {
                 "id": "9",
                 "title": "Mirinda",
                 "para": "",
                 "price": 0.6,
-                "path": "./img/drinks/mirinda.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "path": "./img/drinks/mirinda.jpg"
             },
             {
                 "id": "10",
                 "title": "7Up",
                 "para": "",
                 "price": 0.6,
-                "path": "./img/drinks/sevenUp.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "path": "./img/drinks/sevenUp.jpg"
             },
             {
                 "id": "11",
                 "title": "Fanta",
                 "para": "",
                 "price": 0.6,
-                "path": "./img/drinks/fanta.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "path": "./img/drinks/fanta.jpg"
             },
             {
                 "id": "12",
                 "title": "Sprite",
                 "para": "",
                 "price": 0.6,
-                "path": "./img/drinks/sprite.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "path": "./img/drinks/sprite.jpg"
             },
             {
                 "id": "13",
                 "title": "CocaCola",
                 "para": "",
                 "price": 0.6,
-                "path": "./img/drinks/cocaCola.jpg",
-                "quantity": 0,
-                "sumPrice": 0
+                "path": "./img/drinks/cocaCola.jpg"
             }
         ]
     }

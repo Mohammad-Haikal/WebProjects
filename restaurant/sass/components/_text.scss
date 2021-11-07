@@ -1,8 +1,10 @@
 * {
     @import url("https://fonts.googleapis.com/css2?family=Almarai&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=Mirza&display=swap");
+    // font-family: 'Lobster Two', cursive;
     font-family       : "Mirza", cursive;
     line-height       : 1.6;
+    color             : #ebebeb;
 
     &::selection {
         background-color: red;
@@ -15,9 +17,4 @@ h1 {
 
 li {
     font-size: 18px;
-}
-
-a{
-    text-decoration: none;
-    color: white;
 }
