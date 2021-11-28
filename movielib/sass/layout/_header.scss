@@ -1,38 +1,30 @@
 header {
+    z-index         : 1;
+    position        : fixed;
+    width           : calc(100% - 257px);
     display         : flex;
     flex-wrap       : wrap;
     justify-content : space-around;
     align-items     : center;
     padding-top     : 30px;
     padding-bottom  : 30px;
-    background-color: white;
+    background-color: #f0f0f0;
+    margin-left     : 257px;
 
-    .profileInfo {
-        display    : flex;
-        align-items: center;
 
-        a {
-            color: black;
-        }
 
-        img {
-            width  : 50px;
-            height : 50px;
-            padding: 10px;
-        }
-    }
-
-    .searchBar {
+    #searchBar {
         display        : flex;
         justify-content: center;
-        width          : 50%;
+        width          : 80%;
 
         input {
-            border            : dotted 2px #9b9b9b;
-            border-radius     : 10px;
-            padding           : 10px;
-            -webkit-appearance: none;
-            width             : 100%;
+            border                   : dotted 2px #9b9b9b;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius   : 10px;
+            padding                  : 10px;
+            -webkit-appearance       : none;
+            width                    : 100%;
 
             &:focus {
                 outline   : none;
@@ -40,24 +32,29 @@ header {
                 box-shadow: 0px 0px 4px 0px #0f92f3;
 
             }
+        }
 
+        .searchBtn {
+            background-color          : #0F92F3;
+            color                     : white;
+            border                    : none;
+            border-top-right-radius   : 10px;
+            border-bottom-right-radius: 10px;
+            width                     : 150px;
+            margin-left               : 2px;
+            transition-duration       : 0.3s;
+
+            &:hover {
+                background-color: #4db2ff;
+            }
+
+            &:active {
+                background-color: #0F92F3;
+            }
         }
     }
 
 
 
-    .fav {
-        cursor             : pointer;
-        user-select        : none;
-        transition-duration: 0.09s;
-        box-shadow         : 1px 1px 2px 0px #888888;
-        padding            : 10px;
-        border-radius      : 10px;
-        transition-duration: 0.2s;
-        color              : #0F92F3;
-    }
 
-    .fav-active {
-        box-shadow: inset 1px 1px 2px 0px #888888;
-    }
 }

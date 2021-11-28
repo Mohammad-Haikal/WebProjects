@@ -7,7 +7,6 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin']) {
     exit();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,18 +25,53 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin']) {
 
 <body>
     <input id="userId" type="text" value="<?php echo $_SESSION['userId'] ?>" disabled hidden>
-    <header>
+
+    <nav>
+        <div class="logo">
+            <img src="./img/logo.png" alt="">
+            <h1>MovieLib</h1>
+        </div>
+
         <div class="profileInfo">
             <img src="./img/profile.png" alt="Profile">
-            <a href="./logout.php" title="Logout">
-                <h4><?php echo $_SESSION['username'] ?></h4>
-            </a>
+            <h2><?php echo $_SESSION['firstName'] . " " . $_SESSION['lastName'] ?></h2>
         </div>
-        <div class="searchBar">
-            <input id="aa" dir="auto" type="text" placeholder="Search Movie...">
+        <h4 class="searchPage selected"> Search Movies</h4>
+        <h4 class="fav">Favorites</h4>
+        <h4 id="settingsBtn">Settings</h4>
+        <a class="logout" href="./logout.php">Logout</a>
+    </nav>
+
+    <div class="fadeBox" hidden>
+        <i style="font-size:24px" class="fa" id="closeBtn">&#xf00d;</i>
+        <h1>Settings</h1>
+        <details>
+            <summary>Change Your Name</summary>
+            <form action="./handler.php" class="settingsForm" method="POST">
+                <input type="text" name="changeFname" placeholder="First Name" required>
+                <input type="text" name="changeLname" placeholder="Last Name" required>
+                <input type="submit" name="updateName" value="Save">
+            </form>
+        </details>
+
+
+        <details class="redbg">
+            <summary>Update Your Password</summary>
+            <form action="./handler.php" class="settingsForm" method="POST">
+                <input type="password" name="changePassword" placeholder="New Password" required>
+                <input type="password" name="changeRePassword" placeholder="Re-Enter Password" required>
+                <input type="submit" name="updatePassword" value="Save">
+            </form>
+        </details>
+    </div>
+
+    <header>
+        <div id="searchBar">
+            <input id="aa" dir="auto" type="text" placeholder="Search Movie Name...">
+            <button class="searchBtn">Search</button>
         </div>
-        <h1 class="fav">Favorites</h1>
     </header>
+
 
     <main>
         <div id="container">

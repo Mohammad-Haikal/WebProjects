@@ -5,79 +5,83 @@ var page = 1;
 const genres = [{ "id": 28, "name": "Action" }, { "id": 12, "name": "Adventure" }, { "id": 16, "name": "Animation" }, { "id": 35, "name": "Comedy" }, { "id": 80, "name": "Crime" }, { "id": 99, "name": "Documentary" }, { "id": 18, "name": "Drama" }, { "id": 10751, "name": "Family" }, { "id": 14, "name": "Fantasy" }, { "id": 36, "name": "History" }, { "id": 27, "name": "Horror" }, { "id": 10402, "name": "Music" }, { "id": 9648, "name": "Mystery" }, { "id": 10749, "name": "Romance" }, { "id": 878, "name": "Science Fiction" }, { "id": 10770, "name": "TV Movie" }, { "id": 53, "name": "Thriller" }, { "id": 10752, "name": "War" }, { "id": 37, "name": "Western" }]
 
 $(function () {
+    $('#settingsBtn').click(function (e) { 
+        e.preventDefault();
+        $('.fadeBox').fadeIn(100);
+        $('#closeBtn').click(function (e) { 
+            e.preventDefault();
+            $('.fadeBox').fadeOut(100);
+        });
+    });
+    $('.searchPage').click(function (e) {
+        e.preventDefault();
+        $(this).addClass('selected');
+        $('.fav').removeClass('selected');
+        $('#container').html("");
+        $('#searchBar').show(200);
+        $('.pagesOptions').show();
+
+    });
     $('.fav').click(function (e) {
         e.preventDefault();
-        if ($(this).hasClass('fav-active')) {
-            $(this).removeClass('fav-active');
-            $('#aa').toggle(100);
-            $('.pagesOptions').toggle();
+        $('#searchBar').hide(200);
+        $('.pagesOptions').hide();
+        $('#container').html("");
+        $('.searchPage').removeClass('selected');
+        $(this).addClass('selected');
 
-            // Calling Function
-            searchMovie($('#aa').val())
+        let movieImgPath;
+
+        $.ajax({
+            type: "get",
+            url: './read_data.php',
+            dataType: 'json',
+            success: function (response) {
+                $('#container').html("");
+                for (const key in response) {
+
+                    if (response[key].imgPath != null) {
+                        movieImgPath = `https://image.tmdb.org/t/p/original${response[key].imgPath}`;
+                    } else {
+                        movieImgPath = `./img/nopic.jpg`
+                    }
+
+                    $('#container').append(`<article data-aos="zoom-in"><i id=${response[key].movieId} class="fa fa-minus favBtn favBtn-active"></i> <img src="${movieImgPath}"><h1>${response[key].title}</h1><p class="genres${response[key].movieId}"></p><h4>Released: ${response[key].release_date}</h4><p class="description">${response[key].overview}</p></article>`);
+
+                    /////////////////////////////////////
+                    $(`.genres${response[key].movieId}`).html(response[key].genres.join(" | "));
+                    /////////////////////////////////////
 
 
-        }
-        else {
-            $(this).addClass('fav-active');
-            $('#aa').toggle(100);
-            $('.pagesOptions').toggle();
-            $('#container').html("");
 
-            let movieImgPath;
+                    $(`.favBtn#${response[key].movieId}`).click(function (e) {
 
-            $.ajax({
-                type: "get",
-                url: './read_data.php',
-                dataType: 'json',
-                success: function (response) {
-                    $('#container').html("");
-                    for (const key in response) {
-
-                        if (response[key].imgPath != null) {
-                            movieImgPath = `https://image.tmdb.org/t/p/original${response[key].imgPath}`;
-                        } else {
-                            movieImgPath = `../img/nopic.jpg`
+                        let movieObject = {
+                            "movieId": response[key].movieId,
+                            "imgPath": response[key].imgPath,
+                            "title": response[key].title,
+                            "genres": response[key].genres,
+                            "release_date": response[key].release_date,
+                            "overview": response[key].overview
                         }
 
-                        $('#container').append(`<article data-aos="zoom-in"><i id=${response[key].movieId} class="fa fa-minus favBtn favBtn-active"></i> <img src="${movieImgPath}"><h1>${response[key].title}</h1><p class="genres${response[key].movieId}"></p><h4>Released: ${response[key].release_date}</h4><p class="description">${response[key].overview}</p></article>`);
+                        let ready = JSON.stringify(movieObject);
 
-                        /////////////////////////////////////
-                        $(`.genres${response[key].movieId}`).html(response[key].genres.join(" | "));
-                        /////////////////////////////////////
+                        if ($(this).hasClass('favBtn-active')) {
+                            $(this).hide(100);
 
+                            $.getJSON("./jsonhandler.php", { "removedFromFav": true, "userId": userId, ready },
+                                function (data, textStatus, jqXHR) {
+                                }
+                            );
 
-
-                        $(`.favBtn#${response[key].movieId}`).click(function (e) {
-
-                            let movieObject = {
-                                "movieId": response[key].movieId,
-                                "imgPath": response[key].imgPath,
-                                "title": response[key].title,
-                                "genres": response[key].genres,
-                                "release_date": response[key].release_date,
-                                "overview": response[key].overview
-                            }
-
-                            let ready = JSON.stringify(movieObject);
-
-                            if ($(this).hasClass('favBtn-active')) {
-                                $(this).hide(100);
-
-                                $.getJSON("./jsonhandler.php", { "removedFromFav": true, "userId": userId, ready },
-                                    function (data, textStatus, jqXHR) {
-                                    }
-                                );
-
-                            }
+                        }
 
 
-                        });
-                    }
+                    });
                 }
-            });
-        }
-
-
+            }
+        });
 
     });
 
@@ -96,6 +100,11 @@ $(function () {
 
         // Calling Function
         searchMovie(movieName)
+    });
+
+    $('.searchBtn').click(function (e) { 
+        e.preventDefault();
+        searchMovie($('#aa').val());
     });
 
     function searchMovie(movieName) {
@@ -129,11 +138,11 @@ function showResuts(response) {
         if (response.results[key].backdrop_path != null) {
             movieImgPath = `https://image.tmdb.org/t/p/original${response.results[key].backdrop_path}`;
         } else {
-            movieImgPath = `../img/nopic.jpg`
+            movieImgPath = `./img/nopic.jpg`
         }
 
         $('#container').append(`<article data-aos="zoom-in"><i id=${response.results[key].id} class="fa fa-plus favBtn"></i> <img src="${movieImgPath}"><h1>${response.results[key].title}</h1><p class="genres${response.results[key].id}"></p><h4>Released: ${response.results[key].release_date}</h4><p class="description">${response.results[key].overview}</p></article>`);
-        
+
         /////////////////////////////////////
         let movieGenres = [];
         for (const j in response.results[key].genre_ids) {
@@ -146,7 +155,7 @@ function showResuts(response) {
 
         $(`.genres${response.results[key].id}`).html(movieGenres.join(" | "));
         /////////////////////////////////////
-        
+
         $(`.favBtn#${response.results[key].id}`).click(function (e) {
             e.preventDefault();
             $(this).hide(100);

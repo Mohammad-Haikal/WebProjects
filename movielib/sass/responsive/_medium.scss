@@ -1,50 +1,50 @@
-@media screen and (max-width: 800px) {
+// @media screen and (max-width: 800px) {
 
-    .indexHeader {
-        flex-direction: column;
-        padding-bottom: 60px;
-    }
+//     .indexHeader {
+//         flex-direction: column;
+//         padding-bottom: 60px;
+//     }
 
-    .formsDiv {
-        transform: unset;
+//     .formsDiv {
+//         transform: unset;
 
-        form {
-            margin-left : unset;
-            margin-right: unset;
-            margin      : 30px;
-            width       : 100%;
-        }
-    }
+//         form {
+//             margin-left : unset;
+//             margin-right: unset;
+//             margin      : 30px;
+//             width       : 100%;
+//         }
+//     }
 
-    header {
-        justify-content: flex-start;
+//     header {
+//         justify-content: flex-start;
 
-        .profileInfo {
-            margin-left: 5%;
-        }
+//         .profileInfo {
+//             margin-left: 5%;
+//         }
 
-        .searchBar {
-            width : 100%;
-            margin: 30px;
-            input{
-                font-size: 17px;
-            }
-        }
+//         #searchBar {
+//             width : 100%;
+//             margin: 30px;
+//             input{
+//                 font-size: 17px;
+//             }
+//         }
 
-        .fav {
-            margin: auto;
-        }
-    }
+//         .fav {
+//             margin: auto;
+//         }
+//     }
 
-    main {
-        #container {
-            width: 65%;
+//     main {
+//         #container {
+//             width: 65%;
 
-            article {
-                width: 100%;
-            }
-        }
-    }
+//             article {
+//                 width: 100%;
+//             }
+//         }
+//     }
 
 
-}
+// }

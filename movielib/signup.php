@@ -3,7 +3,9 @@ session_start();
 include 'db_connect.php';
 
 if (isset($_POST['signupSubmit'])) {
-   
+
+    $newFirstName = ucwords($_POST['newFirstName']);
+    $newLastName = ucwords($_POST['newLastName']);
     $newUsername = $_POST['newUsername'];
     $newPassword = $_POST['newPassword'];
     $newRePassword = $_POST['newRePassword'];
@@ -29,8 +31,8 @@ if (isset($_POST['signupSubmit'])) {
         };
     }
     
-    try {
-        $insertValues = mysqli_query($conn, "INSERT INTO moviedb(`username`, `pass`) VALUES ('$newUsername', '$newPassword')");
+    try {///////////////////////////////////////
+        $insertValues = mysqli_query($conn, "INSERT INTO moviedb(`username`, `pass` ,`fname`, `lname`) VALUES ('$newUsername', '$newPassword', '$newFirstName', '$newLastName')");
         
         $getId = mysqli_query($conn, "SELECT id FROM `moviedb` WHERE username = '$newUsername'");
         $idResult = mysqli_fetch_assoc($getId);
@@ -38,6 +40,10 @@ if (isset($_POST['signupSubmit'])) {
 
         $_SESSION['userId'] = $id;
         $_SESSION['username'] = $newUsername;
+        //////////////////////////////////////
+        $_SESSION['firstName'] = $newFirstName;
+        $_SESSION['lastName'] = $newLastName;
+
         $_SESSION['signedUp'] = true;
         
         file_put_contents("./users/$id.json", '[]'); 

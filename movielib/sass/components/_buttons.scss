@@ -1,2 +1,29 @@
+details{
+    cursor: pointer;
+    user-select: none;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
 
+    summary ~*{
+        animation: sweep 0.3s ease-in-out;
+    }
     
+}
+.redbg{
+    background-color: rgb(255, 205, 205);
+
+}
+
+@keyframes sweep {
+    0% {
+        opacity    : 0;
+        margin-left: -10px
+    }
+
+    100% {
+        opacity    : 1;
+        margin-left: 0px
+    }
+}

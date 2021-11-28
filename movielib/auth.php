@@ -37,10 +37,16 @@ if (isset($_POST['loginSubmit'])){
         
         if ($row['username'] == $username && $row['pass'] == $password) {
             $userFound = true;
-
+            // Get Id of this user
             $getId = mysqli_query($conn, "SELECT id FROM `moviedb` WHERE username = '$username'");
             $idResult = mysqli_fetch_assoc($getId);
             $id = intval($idResult['id']);
+
+            // Get fname and lname of this Id
+            $getFname = mysqli_query($conn, "SELECT fname FROM `moviedb` WHERE id = $id");
+            $_SESSION['firstName'] = mysqli_fetch_assoc($getFname)['fname'];
+            $getLname = mysqli_query($conn, "SELECT lname FROM `moviedb` WHERE id = $id");
+            $_SESSION['lastName'] = mysqli_fetch_assoc($getLname)['lname'];
 
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $password;
@@ -50,6 +56,8 @@ if (isset($_POST['loginSubmit'])){
             
             $_SESSION['userId'] = $id;
             $_SESSION['loggedin'] = true;
+            
+            
 
             
             fwrite($fp,"\n===== New Access! =====\n". $username. "\nIP Address: ". $_SESSION['ip']. "\nDate: ". $_SESSION['date']. "\nTime: ". $_SESSION['time']."\n=======================\n");
