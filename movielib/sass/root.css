@@ -9,7 +9,6 @@ html {
 
 html,
 body {
-  height: 100%;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -35,7 +34,7 @@ header {
           align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #f0f0f0;
+  background-color: #F0F2F5;
   margin-left: 257px;
 }
 
@@ -86,6 +85,7 @@ header #searchBar .searchBtn:active {
 }
 
 nav {
+  z-index: 3;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,7 +98,7 @@ nav {
   height: 100vh;
   width: 257px;
   overflow: auto;
-  background-color: #f0f0f0;
+  background-color: #F0F2F5;
   font-weight: 700;
 }
 
@@ -170,6 +170,8 @@ nav .fav {
 nav .logout {
   color: red;
   text-decoration: none;
+  padding: unset;
+  width: 100%;
 }
 
 main {
@@ -179,6 +181,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 257px;
 }
 
 main #container {
@@ -191,7 +194,6 @@ main #container {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   min-height: 500px;
-  margin-left: 257px;
   margin-top: 100px;
   padding: 20px;
 }
@@ -428,11 +430,12 @@ details summary ~ * {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .formsDiv form {
@@ -470,7 +473,18 @@ details summary ~ * {
 }
 
 .formsDiv form .sInput {
-  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 20px;
+}
+
+.formsDiv form .sInput input {
+  width: 80%;
 }
 
 .formsDiv form input[type=submit] {
@@ -487,6 +501,10 @@ details summary ~ * {
 
 .formsDiv form input[type=submit]:hover {
   background-color: #5e9eff;
+}
+
+.formsDiv h4 {
+  color: white;
 }
 
 .settingsForm {
@@ -529,19 +547,19 @@ details summary ~ * {
 
 .indexBody {
   position: relative;
-}
-
-.indexBody .bg {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  -webkit-filter: blur(1px);
-          filter: blur(1px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px;
 }
 
 .indexBody form img {
@@ -550,21 +568,14 @@ details summary ~ * {
 }
 
 .rect {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 2;
   width: 80%;
-  height: 90%;
+  padding: 20px;
   border: 3px white solid;
   background-color: rgba(0, 0, 0, 0.541);
 }
 
 .indexHeader {
   padding: 50px;
-  margin-bottom: 100px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -590,7 +601,66 @@ details summary ~ * {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  font-size: 40px;
   margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .formsDiv {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .formsDiv form {
+    width: 80%;
+  }
+  .formsDiv h4 {
+    margin: 10px;
+  }
+  nav {
+    display: none;
+  }
+  header,
+  main,
+  .pagesOptions {
+    width: 100%;
+    margin-left: unset;
+  }
+  header .menuBtn {
+    display: inline-block;
+    cursor: pointer;
+  }
+  header .menuBtn .bar1,
+  header .menuBtn .bar2,
+  header .menuBtn .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  header .menuBtnActive .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  header .menuBtnActive .bar2 {
+    opacity: 0;
+  }
+  header .menuBtnActive .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+  }
+  main #container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  main #container article {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=root.css.map */

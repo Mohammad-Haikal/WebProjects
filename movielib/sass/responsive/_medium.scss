@@ -1,50 +1,71 @@
-// @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
 
-//     .indexHeader {
-//         flex-direction: column;
-//         padding-bottom: 60px;
-//     }
+    .formsDiv {
+        flex-direction: column;
 
-//     .formsDiv {
-//         transform: unset;
+        form {
+            width: 80%;
+        }
+        h4{
+            margin: 10px;
+        }
+    }
 
-//         form {
-//             margin-left : unset;
-//             margin-right: unset;
-//             margin      : 30px;
-//             width       : 100%;
-//         }
-//     }
+    nav {
+        display: none;
+    }
 
-//     header {
-//         justify-content: flex-start;
+    header,
+    main,
+    .pagesOptions {
+        width      : 100%;
+        margin-left: unset;
+    }
 
-//         .profileInfo {
-//             margin-left: 5%;
-//         }
+    header {
+        .menuBtn {
+            display: inline-block;
+            cursor : pointer;
 
-//         #searchBar {
-//             width : 100%;
-//             margin: 30px;
-//             input{
-//                 font-size: 17px;
-//             }
-//         }
+            .bar1,
+            .bar2,
+            .bar3 {
+                width           : 35px;
+                height          : 5px;
+                background-color: #333;
+                margin          : 6px 0;
+                transition      : 0.4s;
+            }
+        }
 
-//         .fav {
-//             margin: auto;
-//         }
-//     }
+        .menuBtnActive {
+            .bar1 {
+                transform: rotate(-45deg) translate(-9px, 6px);
+            }
 
-//     main {
-//         #container {
-//             width: 65%;
+            .bar2 {
+                opacity: 0;
+            }
 
-//             article {
-//                 width: 100%;
-//             }
-//         }
-//     }
+            .bar3 {
+                transform: rotate(45deg) translate(-8px, -8px);
+            }
+        }
+
+    }
+
+    main{
+        #container{
+            flex-direction: column;
+            align-content: center;
+            article {
+                width           : 80%;
+            }
+        }
+    }
 
 
-// }
+
+
+
+}

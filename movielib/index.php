@@ -11,15 +11,14 @@
 </head>
 
 <body class="indexBody">
-    
-    <img class="bg" src="./img/bg.jpg" alt="background">
 
     <div class="rect">
         <div class="indexHeader">
             <h1 class="logoTitle"><img src="./img/logo.png" alt="Logo"> Movie Library</h1>
         </div>
 
-        <main class="formsDiv">
+        <div class="formsDiv">
+            
             <form class="login-form" method="post" action="auth.php">
                 <h1>Login</h1>
                 <div>
@@ -40,9 +39,11 @@
             <form class="signup-form" method="post" action="signup.php" autocomplete="off">
                 <h1>Signup</h1>
 
-                <div>
-                    <input type="text" class="sInput" name="newFirstName" placeholder="First Name" autocomplete="off" required>
-                    <input type="text" class="sInput" name="newLastName" placeholder="Last Name" autocomplete="off">
+                <div class="sInput">
+                    <label for="">First Name</label>
+                    <input type="text" name="newFirstName" autocomplete="off" required>
+                    <label for="">Last Name</label>
+                    <input type="text" name="newLastName" autocomplete="off">
                 </div>
 
                 <div>
@@ -62,9 +63,12 @@
 
                 <input id="signup" type="submit" name="signupSubmit" value="Signup">
             </form>
-        </main>
+        </div>
     </div>
-    
+    <!-- </div> -->
+
+
+
 
 
 

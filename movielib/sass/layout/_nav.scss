@@ -1,4 +1,5 @@
 nav {
+    z-index         : 3;
     position        : fixed;
     display         : flex;
     flex-direction  : column;
@@ -6,7 +7,7 @@ nav {
     height          : 100vh;
     width           : 257px;
     overflow        : auto;
-    background-color: #f0f0f0;
+    background-color: #F0F2F5;
     font-weight     : 700;
 
     .logo {
@@ -67,6 +68,10 @@ nav {
     .logout {
         color          : red;
         text-decoration: none;
+        padding        : unset;
+        width: 100%;
     }
+    
+    
 
 }

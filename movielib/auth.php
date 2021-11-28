@@ -56,27 +56,25 @@ if (isset($_POST['loginSubmit'])){
             
             $_SESSION['userId'] = $id;
             $_SESSION['loggedin'] = true;
-            
-            
 
-            
             fwrite($fp,"\n===== New Access! =====\n". $username. "\nIP Address: ". $_SESSION['ip']. "\nDate: ". $_SESSION['date']. "\nTime: ". $_SESSION['time']."\n=======================\n");
 
             // Redirect
             header("Location: home.php");
             exit;
         }
+        else{
+            $_SESSION['loggedin'] = false;
+            fwrite($fp,"\n===== Wrong Access!!!! ====="."\nUsername: ". $username."\nPassword: ". $password."\nIP Address: ". $_SESSION['ip']."\nUser Agent: ". $_SERVER['HTTP_USER_AGENT']. "\nDate: ". $_SESSION['date']. "\nTime: ". $_SESSION['time']."\n============================\n");
+            echo "<script>
+            alert('Wrong username or password');
+            window.location.href='index.php';
+            </script>";
+            exit;
+        }
     }
 
-    if (!$userFound) {
-        $_SESSION['loggedin'] = false;
-        fwrite($fp,"\n===== Wrong Access!!!! ====="."\nUsername: ". $username."\nPassword: ". $password."\nIP Address: ". $_SESSION['ip']."\nUser Agent: ". $_SERVER['HTTP_USER_AGENT']. "\nDate: ". $_SESSION['date']. "\nTime: ". $_SESSION['time']."\n============================\n");
-        echo "<script>
-        alert('Wrong username or password');
-        window.location.href='index.php';
-        </script>";
-        die;
-    }
+    
     
 }
 

@@ -39,7 +39,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin']) {
         <h4 class="searchPage selected"> Search Movies</h4>
         <h4 class="fav">Favorites</h4>
         <h4 id="settingsBtn">Settings</h4>
-        <a class="logout" href="./logout.php">Logout</a>
+        <a class="logout" href="./logout.php"><h4>Logout</h4></a>
     </nav>
 
     <div class="fadeBox" hidden>
@@ -66,6 +66,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin']) {
     </div>
 
     <header>
+        <div class="menuBtn">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
         <div id="searchBar">
             <input id="aa" dir="auto" type="text" placeholder="Search Movie Name...">
             <button class="searchBtn">Search</button>

@@ -1,7 +1,8 @@
 .formsDiv {
     display  : flex;
-    transform: translateY(-30%);
+    // transform: translateY(-30%);
     align-items: center;
+    justify-content: center;
 
     form {
         display         : flex;
@@ -31,7 +32,12 @@
         }
 
         .sInput{
-            width: 40%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            input{
+                width: 80%;
+            }
         }
 
         input[type=submit] {
@@ -50,6 +56,11 @@
             }
         }
     }
+    h4{
+        color: white;
+    }
+
+    
 }
 
 .settingsForm {
