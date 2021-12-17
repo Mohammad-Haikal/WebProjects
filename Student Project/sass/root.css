@@ -1,0 +1,463 @@
+* {
+  font-family: sans-serif;
+}
+
+* h2 {
+  font-size: 24px;
+  color: #DC9F40;
+  margin-bottom: 0;
+}
+
+* hr {
+  width: 10%;
+  background-color: #EE9A06;
+  border: solid 2px #EE9A06;
+}
+
+html,
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+}
+
+.slider .mySlides {
+  display: none;
+  width: 100%;
+  max-height: 90vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider .mainTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.slider .mainTitle h4,
+.slider .mainTitle p {
+  margin-bottom: 10px;
+  font-size: 28px;
+  text-align: center;
+  color: #E55935;
+}
+
+.slider .mainTitle h4 span,
+.slider .mainTitle p span {
+  color: #DC9F40;
+}
+
+.slider .mainTitle p {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  -webkit-animation: typing 2s steps(40, end);
+          animation: typing 2s steps(40, end);
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #333333;
+  padding: 10px;
+  overflow: hidden;
+}
+
+nav #logo {
+  font-size: 28px;
+  color: white;
+  margin: 0;
+  padding-left: 20px;
+}
+
+nav #logo span:nth-child(1) {
+  border: solid white 3px;
+  background-color: #505050;
+}
+
+nav #logo span:nth-child(2) {
+  color: #DC9F40;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  padding: 20px;
+}
+
+nav ul li a:hover {
+  background-color: #DC9F40;
+}
+
+.aboutUs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 50px;
+}
+
+.aboutUs article {
+  width: 50%;
+}
+
+.aboutUs article h2 {
+  margin-bottom: 0;
+}
+
+.aboutUs article p {
+  text-align: justify;
+  color: #333333;
+}
+
+.aboutUs img {
+  width: 30vw;
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 50px;
+  background-color: #EEEEEE;
+}
+
+.skills article {
+  width: 50%;
+}
+
+.skills article p {
+  text-align: justify;
+  color: #333333;
+}
+
+.skills article .contactBtn {
+  padding: 10px;
+  background-color: transparent;
+  color: #36db91;
+  border: 2px solid #36db91;
+  font-weight: 600;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  text-decoration: none;
+}
+
+.skills article .contactBtn:hover {
+  color: white;
+  background-color: #36db91;
+}
+
+.skills .bars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.skills .bars .bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  background-color: white;
+  margin: 5px;
+}
+
+.skills .bars .bar label {
+  font-size: small;
+  padding: 10px;
+}
+
+.skills .bars .bar progress[value] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 20vw;
+}
+
+.skills .bars .bar progress[value]::-webkit-progress-bar {
+  background-color: #EEEEEE;
+  border-radius: 3px;
+}
+
+.skills .bars .bar progress[value]::-webkit-progress-value {
+  background-color: #EE9A06;
+  border-radius: 3px;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projects .images div {
+  position: relative;
+  border: solid 3px #e6e6e6;
+  margin: 10px;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.projects .images div img {
+  width: 350px;
+  height: 100%;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.projects .images div h4 {
+  opacity: 0;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.projects .images div:hover {
+  background-color: #EE9A06;
+}
+
+.projects .images div:hover img {
+  opacity: 0.3;
+}
+
+.projects .images div:hover h4 {
+  opacity: 1;
+}
+
+.customers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #EEEEEE;
+}
+
+.customers section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.customers section .customerCard {
+  text-align: center;
+  width: 30%;
+  padding: 20px;
+}
+
+.customers section .customerCard img {
+  width: 100px;
+  height: 100px;
+  border: solid 2px #EE9A06;
+  border-radius: 50%;
+  opacity: 0.6;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.customers section .customerCard img:hover {
+  opacity: 1;
+}
+
+.customers section .customerCard h3 {
+  color: #4D3A7A;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #EEEEEE;
+  background-image: url(../../img/map3.jpg);
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 80px;
+}
+
+.contact form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50vh;
+}
+
+.contact form div input {
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  background-color: #DBDBDB;
+}
+
+.contact form div button {
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  color: white;
+  background-color: #EE9A06;
+}
+
+.contact form textarea {
+  margin: 5px;
+  padding: 5px;
+  width: 50vh;
+  border: none;
+  background-color: #DBDBDB;
+}
+
+footer {
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #333333;
+  color: white;
+  text-align: center;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=root.css.map */
