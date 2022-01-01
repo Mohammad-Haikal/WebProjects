@@ -1,0 +1,190 @@
+main {
+    display        : flex;
+    justify-content: center;
+}
+
+.boxContainer {
+    position        : relative;
+    width           : 500px;
+    display         : flex;
+    flex-direction  : column;
+    text-align      : center;
+    background-color: white;
+    border          : 2px solid #DBDBDB;
+    border-radius   : 5px;
+    padding         : 40px;
+
+    p {
+        font-size: 15px;
+    }
+
+    article {
+        padding   : 30px 0px 10px 0px;
+        text-align: justify;
+    }
+
+    form {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+        margin-top    : 20px;
+
+        input {
+            width        : 80%;
+            margin       : 5px 0px 30px 0px;
+            border       : 1px solid #919191;
+            padding      : 5px;
+            border-radius: 5px;
+        }
+
+        button {
+            text-align      : center;
+            text-decoration : none;
+            padding         : 10px;
+            background-color: $primaryColor;
+            color           : white;
+            border          : none;
+            border-radius   : 5px;
+            width           : 100%;
+
+            &:hover {
+                opacity: 0.9;
+            }
+
+            &:active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .questionsForm {
+        .questions {
+            width: 100%;
+
+            .question {
+                text-align   : justify;
+                margin-bottom: 30px;
+
+                div {
+                    display    : flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    .randomBtn {
+                        width              : 20px;
+                        height             : 20px;
+                        border-radius      : 50%;
+                        padding            : 5px;
+                        transition-duration: 0.1s;
+
+                        &:hover {
+                            background-color: #ebebeb;
+                        }
+
+                        &:active {
+                            background-color: #d1d1d1;
+                        }
+                    }
+                }
+
+
+
+                .answers {
+                    width: 100%;
+
+                    .answer {
+                        width          : 100%;
+                        align-items    : center;
+                        justify-content: flex-start;
+
+                        
+
+                        .checkBox {
+                            cursor          : pointer;
+                            width              : 20px;
+                            height             : 20px;
+                            margin-right       : 20px;
+                            background-color   : #e2e2e2;
+                            border-radius      : 50%;
+                            transition-duration: 0.1s;
+
+                            &:hover {
+                                background-color: $primaryColorHovered;
+                            }
+                            &:active {
+                                background-color: $primaryColorActivated;
+                            }
+                        }
+
+                        .checkBoxA {
+                            background-color: $primaryColor;
+                            &:hover {
+                                background-color: $primaryColor;
+                            }
+
+                        }
+
+                        .checkBoxWrong {
+                            background-color: red;
+                            &:hover {
+                                background-color: red;
+                            }
+
+                        }
+
+                        display: flex;
+                    }
+                }
+
+                hr {
+                    width: 100%;
+                }
+
+            }
+
+            .delIcon {
+                cursor          : pointer;
+                margin-left        : auto;
+                font-size          : 20px;
+                color              : $secondaryColor;
+                border-radius      : 50%;
+                padding            : 5px 7px 5px 7px;
+                transition-duration: 0.1s;
+
+                &:hover {
+                    background-color: #eeeeee;
+                }
+
+                &:active {
+                    background-color: #e2e2e2;
+                }
+            }
+            
+        }
+
+
+
+        .addAn,
+        .addQs {
+            background-color   : transparent;
+            border             : dashed 1px #919191;
+            color              : black;
+            transition-duration: 0.1s;
+            margin             : 10px 0px 10px 0px;
+
+            &:hover {
+                background-color: $secondaryColor;
+                color           : white;
+                border-color    : #00000000;
+            }
+        }
+
+        .addAn {
+            margin-top: 0px;
+            width     : 50%;
+        }
+
+
+    }
+
+}

@@ -1,12 +1,12 @@
 .indexBody {
-    position           : relative;
-    display            : flex;
-    justify-content    : center;
-    align-items        : center;
-    background-image   : url('../img/bg.jpg');
-    background-size    : cover;
-    background-repeat  : no-repeat;
-    padding: 30px;
+    position         : relative;
+    display          : flex;
+    justify-content  : center;
+    align-items      : center;
+    background-image : url('../img/bg.jpg');
+    background-size  : cover;
+    background-repeat: no-repeat;
+    padding          : 30px;
 
     form {
         img {
@@ -20,14 +20,18 @@
     width           : 80%;
     padding         : 20px;
     border          : 3px rgb(255, 255, 255) solid;
-    background-color: rgba(0, 0, 0, 0.541);
+    background-color: rgba(0, 0, 0, 0.76);
+    // border-radius: 5px;
+    // box-shadow: 0px 0px 5px 3px #000000b5;
 }
 
 .indexHeader {
-    padding           : 50px;
-    justify-content   : center;
-    align-items       : center;
-    color             : white;
+    width          : 100%;
+    margin-top     : 50px;
+    margin-bottom  : 50px;
+    justify-content: center;
+    align-items    : center;
+    color          : white;
 
     img {
         width : 50px;
@@ -35,12 +39,11 @@
     }
 
     .logoTitle {
-        display           : flex;
-        justify-content   : center;
-        align-items       : center;
-        text-align        : center;
-        margin            : 0;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        text-align     : center;
+        margin         : 0;
     }
 
 }
-

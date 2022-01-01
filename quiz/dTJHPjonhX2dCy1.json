@@ -1,0 +1,29 @@
+[
+    {
+        "question": "What is Ahmad favorite country?",
+        "answers": [
+            "aaa",
+            "sss",
+            "ddd"
+        ],
+        "correctAnswer": "sss"
+    },
+    {
+        "question": "What is Mohammad's favorite food?",
+        "answers": [
+            "123",
+            "asfg123",
+            "fff"
+        ],
+        "correctAnswer": "123"
+    },
+    {
+        "question": "What is Mohammad's favorite drink in the summer?",
+        "answers": [
+            "1",
+            "2",
+            "red"
+        ],
+        "correctAnswer": "red"
+    }
+]

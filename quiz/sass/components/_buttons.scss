@@ -1,0 +1,19 @@
+#copyBtn {
+    margin          : 10px;
+    width           : 70%;
+    text-align      : center;
+    text-decoration : none;
+    padding         : 10px;
+    background-color: $secondaryColor;
+    color           : white;
+    border          : none;
+    border-radius   : 5px;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &:active {
+        opacity: 1;
+    }
+}

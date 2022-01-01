@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500&display=swap");
+html, body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #FAFAFA;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #0E3D67;
+}
+
+header a {
+  text-decoration: none;
+  color: #09AFEB;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.boxContainer {
+  position: relative;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background-color: white;
+  border: 2px solid #DBDBDB;
+  border-radius: 5px;
+  padding: 40px;
+}
+
+.boxContainer p {
+  font-size: 15px;
+}
+
+.boxContainer article {
+  padding: 30px 0px 10px 0px;
+  text-align: justify;
+}
+
+.boxContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.boxContainer form input {
+  width: 80%;
+  margin: 5px 0px 30px 0px;
+  border: 1px solid #919191;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.boxContainer form button {
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #09AFEB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.boxContainer form button:hover {
+  opacity: 0.9;
+}
+
+.boxContainer form button:active {
+  opacity: 1;
+}
+
+.boxContainer .questionsForm .questions {
+  width: 100%;
+}
+
+.boxContainer .questionsForm .questions .question {
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.boxContainer .questionsForm .questions .question div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.boxContainer .questionsForm .questions .question div .randomBtn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 5px;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+.boxContainer .questionsForm .questions .question div .randomBtn:hover {
+  background-color: #ebebeb;
+}
+
+.boxContainer .questionsForm .questions .question div .randomBtn:active {
+  background-color: #d1d1d1;
+}
+
+.boxContainer .questionsForm .questions .question .answers {
+  width: 100%;
+}
+
+.boxContainer .questionsForm .questions .question .answers .answer {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.boxContainer .questionsForm .questions .question .answers .answer .checkBox {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  background-color: #e2e2e2;
+  border-radius: 50%;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+.boxContainer .questionsForm .questions .question .answers .answer .checkBox:hover {
+  background-color: #c5c5c5;
+}
+
+.boxContainer .questionsForm .questions .question .answers .answer .checkBox:active {
+  background-color: #9b9b9b;
+}
+
+.boxContainer .questionsForm .questions .question .answers .answer .checkBoxA {
+  background-color: #09AFEB;
+}
+
+.boxContainer .questionsForm .questions .question .answers .answer .checkBoxA:hover {
+  background-color: #09AFEB;
+}
+
+.boxContainer .questionsForm .questions .question .answers .answer .checkBoxWrong {
+  background-color: red;
+}
+
+.boxContainer .questionsForm .questions .question .answers .answer .checkBoxWrong:hover {
+  background-color: red;
+}
+
+.boxContainer .questionsForm .questions .question hr {
+  width: 100%;
+}
+
+.boxContainer .questionsForm .questions .delIcon {
+  cursor: pointer;
+  margin-left: auto;
+  font-size: 20px;
+  color: #0E3D67;
+  border-radius: 50%;
+  padding: 5px 7px 5px 7px;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+.boxContainer .questionsForm .questions .delIcon:hover {
+  background-color: #eeeeee;
+}
+
+.boxContainer .questionsForm .questions .delIcon:active {
+  background-color: #e2e2e2;
+}
+
+.boxContainer .questionsForm .addAn,
+.boxContainer .questionsForm .addQs {
+  background-color: transparent;
+  border: dashed 1px #919191;
+  color: black;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  margin: 10px 0px 10px 0px;
+}
+
+.boxContainer .questionsForm .addAn:hover,
+.boxContainer .questionsForm .addQs:hover {
+  background-color: #0E3D67;
+  color: white;
+  border-color: #00000000;
+}
+
+.boxContainer .questionsForm .addAn {
+  margin-top: 0px;
+  width: 50%;
+}
+
+* {
+  font-family: 'Bitter', serif;
+}
+
+h1 {
+  width: 200;
+  font-weight: 500;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+  margin: 10px 0px 10px 0px;
+}
+
+p {
+  line-height: 20px;
+  font-weight: 300;
+}
+
+p {
+  margin: 5px 0px 5px 0px;
+}
+
+#errorMessage {
+  color: red;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+#copyBtn {
+  margin: 10px;
+  width: 70%;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #0E3D67;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#copyBtn:hover {
+  opacity: 0.9;
+}
+
+#copyBtn:active {
+  opacity: 1;
+}
+
+.finish {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.finish input {
+  width: 80%;
+}
+/*# sourceMappingURL=root.css.map */

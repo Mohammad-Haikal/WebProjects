@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500&display=swap');
+
+* {
+    font-family: 'Bitter', serif;
+
+}
+
+h1 {
+    width      : 200;
+    font-weight: 500;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 400;
+    margin: 10px 0px 10px 0px
+}
+
+
+
+p {
+    line-height: 20px;
+    font-weight: 300;
+}
+
+
+p {
+    margin: 5px 0px 5px 0px;
+}
+
+#errorMessage{
+    color: red;
+    animation-duration: 0.5s;
+}
