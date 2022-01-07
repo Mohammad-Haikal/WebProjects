@@ -1,14 +1,16 @@
 <?php
 session_start();
-$token = $_COOKIE["token"];
-$_SESSION["link"] = "http://localhost/quiz/start.php?token=$token";
+include 'connectDB.php';
 
-$quizFile = fopen("$token.json", "w") or die("Unable to reach the quiz!");
+$token = $_COOKIE["token"];
+$username = $_COOKIE["username"];
+$mark = intval($_COOKIE["mark"]);
+
+$quizFile = fopen("./tokens/$token.json", "w") or die("Unable to reach the quiz!");
 fwrite($quizFile, $_COOKIE["data"]);
 fclose($quizFile);
 
-
+$query =  mysqli_query($conn, "INSERT INTO data(token, creator, mark) VALUES ('$token', '$username', $mark)");
 
 header("location: ./finish.php")
-
 ?>

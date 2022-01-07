@@ -1,5 +1,4 @@
 function generate_token(length){
-    //edit the token allowed characters
     var a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".split("");
     var b = [];  
     for (var i=0; i<length; i++) {

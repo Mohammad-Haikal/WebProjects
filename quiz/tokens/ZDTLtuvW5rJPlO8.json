@@ -1,0 +1,31 @@
+[
+    {
+        "question": "What is Fadi Haikal's favorite day of the week?",
+        "answers": [
+            "Saturday",
+            "Zbi",
+            "New Answer"
+        ],
+        "correctAnswer": "Zbi"
+    },
+    {
+        "question": "What is Fadi Haikal's favorite color?",
+        "answers": [
+            "Blue",
+            "Green",
+            "Red",
+            "Yellow"
+        ],
+        "correctAnswer": "Blue"
+    },
+    {
+        "question": "What is Fadi Haikal's favorite animal?",
+        "answers": [
+            "Dog",
+            "Cat",
+            "Bird",
+            "حيوان منوي"
+        ],
+        "correctAnswer": "حيوان منوي"
+    }
+]

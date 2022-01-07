@@ -11,12 +11,12 @@
     </head>
     <body>
         <header>
-            <h1>MateQuiz</h1>
-            <a href="#">My Quizzes</a>
+            <a id="logo" href="./index.html"><h1>Friendly Quiz</h1></a> 
+            <a href="./myQuiz.php">My Quiz</a>
         </header>
         <main>
             <div class="boxContainer">
-                <h2>Welcome to MateQuiz</h2>
+                <h2>Welcome to Friendly Quiz</h2>
                 <p>Test your friendship rate with your friends!</p>
 
                 <form action="#">
@@ -50,10 +50,8 @@
                 e.preventDefault();
 
                 setCookie("username", $('#username').val(), 30);
-
-                if (readCookie('token') == null) {
-                    setCookie("token", generate_token(15), 30);
-                }
+                setCookie("token", generate_token(15), 30);
+                
 
                 window.location = "./home.html"
             });

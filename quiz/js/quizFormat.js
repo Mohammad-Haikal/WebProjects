@@ -1,16 +1,19 @@
+var score = 0;
+var token = readCookie('token');
 $(function () {
     $.ajax({
-        type: "post",
-        url: "./getData.php",
+        type: "GET",
+        url: "./getQuiz.php",
         success: function (response) {
             response = JSON.parse(response);
             var response = response;
-
             prepareQuiz(response);
+        },
+
+        error: function (request, status, error) {
+            document.location = "./error.html";
         }
     });
-
-
 });
 
 
@@ -51,8 +54,8 @@ function prepareQuiz(response) {
                 answer = $(`#radio${i}${j}`)[0].nextElementSibling.innerHTML;
 
                 if (correctAnswer == answer) {
+                    score++;
                     $(this).addClass('checkBoxA');
-
                 }
                 else {
                     $(this).addClass('checkBoxWrong');
@@ -63,11 +66,21 @@ function prepareQuiz(response) {
 
             });
 
+
         }
-
     }
-
-
 
 }
 
+
+
+$('.questionsForm').submit(function (e) {
+    e.preventDefault();
+
+    var peerName = $('#peerName').val();
+    
+    setCookie('peername', peerName, 30);
+    setCookie('score', score, 30);
+    e.currentTarget.submit();
+	
+});

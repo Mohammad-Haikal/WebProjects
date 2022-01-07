@@ -1,11 +1,12 @@
 <?php
 if (!isset($_GET['token'])) {
-    http_response_code(404);
+    header("location: ./error.html");
     die;
 }
 else{
     session_start();
     $_SESSION['token'] = $_GET['token'];
+    $_COOKIE['token'] = $_GET['token'];
 }
 
 ?>
@@ -26,14 +27,16 @@ else{
     <body>
         <script src="./js/setAndReadCookie.js"></script>
         <header>
-            <h1>MateQuiz</h1>
-            <a href="#">My Quizzes</a>
-        </header>
+        <a id="logo" href="./index.html"><h1>Friendly Quiz</h1></a> 
+        <a href="./myQuiz.php">My Quiz</a>
+    </header>
         <main>
             <div class="boxContainer">
-                <form action="#" class="questionsForm">
+                <!-- <h4 id="createdBy"></h4> -->
+                <form action="./storePeer.php" method="POST" class="questionsForm">
+                    <label for="peerName">What's your name</label>
+                    <input id="peerName" type="text" name="peerName" required>
                     <div class="questions"></div>
-
                     <button type="submit">Finish</button>
                 </form>
             </div>

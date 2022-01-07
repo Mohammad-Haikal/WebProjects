@@ -1,4 +1,5 @@
 var username = readCookie('username');
+var token = readCookie('token');
 var mark = 0;
 
 var randomQuestions = [
@@ -84,7 +85,7 @@ for (const i in myQuestions) {
 				<h4 contenteditable="true">${myQuestions[i].answers[j]}</h4>
 				<i id="delete${i}${j}" onclick="deleteRadio(${i}, ${j})" class="fa fa-remove delIcon"></i>
 			</div>
-			<hr>
+
 			`
 		);
 
@@ -130,7 +131,6 @@ function appendQs() {
 					<h4 contenteditable="true">${myQuestions[myQuestionsLngth].answers[0]}</h4>
 					<i id="delete${myQuestionsLngth}${0}" onclick="deleteRadio(${myQuestionsLngth}, ${0})" class="fa fa-remove delIcon"></i>
 				</div>
-				<hr>
 			</section>
 			<button type="button" class="addAn" onclick="appendAn(${myQuestionsLngth})">+ Add Answer</button>
 		</div>
@@ -161,7 +161,6 @@ function appendAn(i) {
 				<h4 contenteditable="true">${myQuestions[i].answers[answersLngth]}</h4>
 				<i id="delete${i}${answersLngth}" onclick="deleteRadio(${i}, ${answersLngth})" class="fa fa-remove delIcon"></i>
 			</div>
-			<hr>
 			`
 	);
 
@@ -186,12 +185,11 @@ function correctRadio(i, j) {
 
 
 function deleteRadio(i, j) {
-	$(`#delete${i}${j}`)[0].parentNode.nextElementSibling.remove();
+	// $(`#delete${i}${j}`)[0].parentNode.nextElementSibling.remove();
 	$(`#delete${i}${j}`)[0].parentNode.remove();
 
 	var index = myQuestions[i].answers.indexOf(myQuestions[i].answers[j]);
 	myQuestions[i].answers.splice(index, 1);
-
 }
 
 function deleteQs(i) {
@@ -231,11 +229,11 @@ $('.questionsForm').submit(function (e) {
 	
 	if (validateAnswers()) {
 		setCookie('data', JSON.stringify(myQuestions), 30)
+		setCookie('mark', mark, 30)
 		e.currentTarget.submit();
 	}
 	else{
 		e.preventDefault();
 	}
-	
 	
 });

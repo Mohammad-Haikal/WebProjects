@@ -1,8 +1,3 @@
-<?php
-session_start()
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,13 +15,14 @@ session_start()
 <body>
     <script src="./js/setAndReadCookie.js"></script>
     <header>
-        <h1>MateQuiz</h1>
-        <a href="#">My Quizzes</a>
+        <a id="logo" href="./index.html"><h1>Friendly Quiz</h1></a> 
+        <a href="./myQuiz.php">My Quiz</a>
     </header>
     <main class="finish">
         <h1>FINISHED</h1>
-        <p>Link</p>
+        <p>Your link is ready!</p>
         <input type="text" id="linkInput">
+        <p class="copied">Copied!</p>
         <button id="copyBtn">Copy</button>
     </main>
 
@@ -34,12 +30,10 @@ session_start()
         var urlBase = `${location.href.substring(0, location.href.lastIndexOf("/")+1)}start.php?token=<?php echo $_COOKIE['token'] ?>`;
         $("#linkInput").val(urlBase);
 
-        $('#copyBtn').click(function(event) {
-            // const targetInput = document.getElementById('copyable');
+        $('#copyBtn').click(function(e) {
             $('#linkInput').select();
             document.execCommand('copy');
-            //navigator.clipboard.writeText(targetInput.getAttribute('data-url'));
-            alert("Link Copied");
+            $('.copied').fadeIn(100);
         });
     </script>
 </body>
