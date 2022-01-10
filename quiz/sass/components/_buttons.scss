@@ -1,10 +1,10 @@
 #copyBtn {
-    margin          : 30px;
+    margin          : 10px;
     width           : 50%;
     text-align      : center;
     text-decoration : none;
     padding         : 10px;
-    background-color: $secondaryColor;
+    background-color: var(--primaryColor);
     color           : white;
     border          : none;
     border-radius   : 5px;
@@ -16,4 +16,28 @@
     &:active {
         opacity: 1;
     }
+}
+
+.copySent{
+    padding         : 5px;
+    background-color: var(--primaryColor);
+    color           : white;
+    border          : none;
+    border-radius   : 5px;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &:active {
+        opacity: 1;
+    }
+}
+#createBtn{
+    background-color: var(--primaryColor);
+}
+
+.deleteQuiz{
+    margin: 10px;
+    width: 20px;
 }

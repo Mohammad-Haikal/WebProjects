@@ -11,5 +11,5 @@ var_dump($peername);
 var_dump("INSERT INTO peers(token, peername, score) VALUES ('$token', '$peername', $score)");
 $query =  mysqli_query($conn, "INSERT INTO peers(token, peername, score) VALUES ('$token', '$peername', $score)");
 
-header("location: ./showScores.php?token=$token")
+header("location: ./showScores.php?token=$token");
 ?>

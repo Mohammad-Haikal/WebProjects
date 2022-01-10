@@ -1,6 +1,19 @@
 var username = readCookie('username');
-var token = readCookie('token');
 var mark = 0;
+var tokensArray = [];
+
+// var color1 = "#";
+// var color2 = "#";
+// var root = document.documentElement;
+// function changeTheme(c1, c2){
+// 	color1 = c1;
+// 	color2 = c2;
+// 	root.style.setProperty('--primaryColor', c1);
+// 	root.style.setProperty('--secondaryColor', c2);
+// }
+$(function () {
+	$('#createdBy').html(`${username}'s Quiz`);
+});
 
 var randomQuestions = [
 	`What is ${username}'s best friend's name?`,
@@ -68,7 +81,7 @@ for (const i in myQuestions) {
 				<p>Question ${parseInt(i) + 1}</p>
 				<img id="randomBtn${i}" class="randomBtn" src="./img/random.png">
 			</div>
-			<h3 id="q${i}" contenteditable="true">${myQuestions[i].question} </h3>
+			<h3 dir="auto" id="q${i}" contenteditable="true">${myQuestions[i].question} </h3>
 			<section id="answers${i}" class="answers">
 				
 			</section>
@@ -82,7 +95,7 @@ for (const i in myQuestions) {
 			`
 			<div class="answer">
 				<div id="radio${i}${j}" class="checkBox r${i}" onclick="correctRadio(${i}, ${j})"></div>
-				<h4 contenteditable="true">${myQuestions[i].answers[j]}</h4>
+				<h4 dir="auto" contenteditable="true">${myQuestions[i].answers[j]}</h4>
 				<i id="delete${i}${j}" onclick="deleteRadio(${i}, ${j})" class="fa fa-remove delIcon"></i>
 			</div>
 
@@ -124,11 +137,11 @@ function appendQs() {
 				<img id="randomBtn${myQuestionsLngth}" class="randomBtn" src="./img/random.png">
 				<i id="delete${myQuestionsLngth}" onclick="deleteQs(${myQuestionsLngth})" class="fa fa-remove delIcon"></i>
 			</div>
-			<h3 id="q${myQuestionsLngth}" contenteditable="true">${myQuestions[myQuestionsLngth].question} </h3>
+			<h3 dir="auto" id="q${myQuestionsLngth}" contenteditable="true">${myQuestions[myQuestionsLngth].question} </h3>
 			<section id="answers${myQuestionsLngth}" class="answers">
 				<div class="answer">
 					<div id="radio${myQuestionsLngth}${0}" class="checkBox r${myQuestionsLngth}" onclick="correctRadio(${myQuestionsLngth}, ${0})"></div>
-					<h4 contenteditable="true">${myQuestions[myQuestionsLngth].answers[0]}</h4>
+					<h4 dir="auto" contenteditable="true">${myQuestions[myQuestionsLngth].answers[0]}</h4>
 					<i id="delete${myQuestionsLngth}${0}" onclick="deleteRadio(${myQuestionsLngth}, ${0})" class="fa fa-remove delIcon"></i>
 				</div>
 			</section>
@@ -149,7 +162,7 @@ function appendQs() {
 
 function appendAn(i) {
 
-	myQuestions[i].answers.push("New Answer");
+	myQuestions[i].answers.push(`New Answer ${myQuestions[i].answers.length+1}`);
 
 	let answersLngth = myQuestions[i].answers.length - 1;
 
@@ -158,7 +171,7 @@ function appendAn(i) {
 		`
 			<div class="answer">
 				<div id="radio${i}${answersLngth}" class="checkBox r${i}" onclick="correctRadio(${i}, ${answersLngth})"></div>
-				<h4 contenteditable="true">${myQuestions[i].answers[answersLngth]}</h4>
+				<h4 dir="auto" contenteditable="true">${myQuestions[i].answers[answersLngth]}</h4>
 				<i id="delete${i}${answersLngth}" onclick="deleteRadio(${i}, ${answersLngth})" class="fa fa-remove delIcon"></i>
 			</div>
 			`
@@ -187,9 +200,11 @@ function correctRadio(i, j) {
 function deleteRadio(i, j) {
 	// $(`#delete${i}${j}`)[0].parentNode.nextElementSibling.remove();
 	$(`#delete${i}${j}`)[0].parentNode.remove();
-
+	$(`.r${i}`).removeClass('checkBoxA');
+	
 	var index = myQuestions[i].answers.indexOf(myQuestions[i].answers[j]);
 	myQuestions[i].answers.splice(index, 1);
+	myQuestions[i].correctAnswer = null;
 }
 
 function deleteQs(i) {
@@ -224,12 +239,22 @@ function validateAnswers() {
 }
 
 
+
+
 $('.questionsForm').submit(function (e) {
 	e.preventDefault();
 	
 	if (validateAnswers()) {
-		setCookie('data', JSON.stringify(myQuestions), 30)
-		setCookie('mark', mark, 30)
+		setCookie("token", generate_token(15), 30);
+		
+		if (readCookie('tokensArray') != null) {
+			tokensArray = JSON.parse(readCookie('tokensArray'));
+		}
+		tokensArray.push(readCookie('token'));
+		setCookie("tokensArray", JSON.stringify(tokensArray), 30);
+
+		setCookie('data', JSON.stringify(myQuestions), 30);
+		setCookie('mark', mark, 30);
 		e.currentTarget.submit();
 	}
 	else{

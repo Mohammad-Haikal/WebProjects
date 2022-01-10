@@ -1,9 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500&display=swap");
+:root {
+  --primaryColor: #0291ff;
+  --secondaryColor: #D123DD;
+  --primaryColorHovered: #c5c5c5;
+  --primaryColorActivated: #9b9b9b;
+}
+
 html, body {
+  position: relative;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #FAFAFA;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
@@ -21,12 +43,48 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #0E3D67;
+  color: var(--secondaryColor);
 }
 
 header a {
   text-decoration: none;
-  color: #09AFEB;
+  color: var(--secondaryColor);
+  font-size: larger;
+}
+
+header a img {
+  padding: 20px;
+  height: 60px;
+}
+
+footer {
+  padding: 10px 0px 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f0f0f0;
+}
+
+footer h4 {
+  text-align: center;
+  color: #1a1a1a;
+}
+
+footer h4 a {
+  color: var(--primaryColor);
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+footer h4 a:hover {
+  opacity: 0.9;
+}
+
+footer h4 a:active {
+  opacity: 1;
 }
 
 main {
@@ -36,6 +94,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 50px;
 }
 
 .boxContainer {
@@ -90,7 +149,7 @@ main {
   text-align: center;
   text-decoration: none;
   padding: 10px;
-  background-color: #09AFEB;
+  background-color: var(--secondaryColor);
   color: white;
   border: none;
   border-radius: 5px;
@@ -172,19 +231,19 @@ main {
 }
 
 .boxContainer .questionsForm .questions .question .answers .answer .checkBox:hover {
-  background-color: #c5c5c5;
+  background-color: var(--primaryColorHovered);
 }
 
 .boxContainer .questionsForm .questions .question .answers .answer .checkBox:active {
-  background-color: #9b9b9b;
+  background-color: var(--primaryColorActivated);
 }
 
 .boxContainer .questionsForm .questions .question .answers .answer .checkBoxA {
-  background-color: #09AFEB;
+  background-color: var(--primaryColor);
 }
 
 .boxContainer .questionsForm .questions .question .answers .answer .checkBoxA:hover {
-  background-color: #09AFEB;
+  background-color: var(--primaryColor);
 }
 
 .boxContainer .questionsForm .questions .question .answers .answer .checkBoxWrong {
@@ -203,7 +262,7 @@ main {
   cursor: pointer;
   margin-left: auto;
   font-size: 20px;
-  color: #0E3D67;
+  color: var(--secondaryColor);
   border-radius: 50%;
   padding: 5px 7px 5px 7px;
   -webkit-transition-duration: 0.1s;
@@ -230,7 +289,7 @@ main {
 
 .boxContainer .questionsForm .addAn:hover,
 .boxContainer .questionsForm .addQs:hover {
-  background-color: #0E3D67;
+  background-color: var(--primaryColor);
   color: white;
   border-color: #00000000;
 }
@@ -240,8 +299,100 @@ main {
   width: 50%;
 }
 
+.linkDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.linkDiv input {
+  padding: 5px;
+  margin: 5px;
+}
+
+.slided {
+  -webkit-animation: slideInfinite 2s cubic-bezier(0, 0, 0, 0) infinite;
+          animation: slideInfinite 2s cubic-bezier(0, 0, 0, 0) infinite;
+}
+
+.slideUp {
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-animation: slideUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+          animation: slideUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@-webkit-keyframes slideInfinite {
+  0% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+@keyframes slideInfinite {
+  0% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 * {
   font-family: 'Bitter', serif;
+}
+
+*::-moz-selection {
+  background-color: var(--primaryColor);
+}
+
+*::selection {
+  background-color: var(--primaryColor);
 }
 
 h1 {
@@ -260,10 +411,16 @@ h5 {
 p {
   line-height: 20px;
   font-weight: 300;
+  margin: 5px 0px 5px 0px;
 }
 
-p {
-  margin: 5px 0px 5px 0px;
+a {
+  text-decoration: none;
+  color: var(--secondaryColor);
+}
+
+strong {
+  color: var(--primaryColor);
 }
 
 #errorMessage {
@@ -274,17 +431,22 @@ p {
 
 .copied {
   display: none;
-  color: #ff3a5b;
+  color: var(--primaryColor);
   font-weight: 800;
 }
 
+#linkInput {
+  border: 1px solid #dfdfdf;
+  padding: 5px;
+}
+
 #copyBtn {
-  margin: 30px;
+  margin: 10px;
   width: 50%;
   text-align: center;
   text-decoration: none;
   padding: 10px;
-  background-color: #0E3D67;
+  background-color: var(--primaryColor);
   color: white;
   border: none;
   border-radius: 5px;
@@ -298,8 +460,33 @@ p {
   opacity: 1;
 }
 
+.copySent {
+  padding: 5px;
+  background-color: var(--primaryColor);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.copySent:hover {
+  opacity: 0.9;
+}
+
+.copySent:active {
+  opacity: 1;
+}
+
+#createBtn {
+  background-color: var(--primaryColor);
+}
+
+.deleteQuiz {
+  margin: 10px;
+  width: 20px;
+}
+
 #scoreTable {
-  margin: 30px 0px 100px 0px;
+  margin: 0px 0px 100px 0px;
   border-collapse: collapse;
   border-style: hidden;
 }
@@ -331,11 +518,28 @@ p {
   width: 80%;
 }
 
+.finish h2 {
+  margin: 0;
+}
+
 @media screen and (max-width: 800px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header a:not(#logo) {
+    padding: 20px;
+  }
   #scoreTable,
   #scoreTable th,
   #scoreTable td {
     padding: 5px 20px 5px 20px;
+  }
+  main {
+    padding: 10px;
+    margin-bottom: 50px;
   }
 }
 /*# sourceMappingURL=root.css.map */

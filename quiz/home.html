@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="auto">
 
     <head>
         <meta charset="UTF-8">
@@ -9,17 +9,17 @@
         <script src="./jquery/jquery-ui.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="./sass/root.css">
-        <title>Quiz</title>
+        <title>Friendly Quiz</title>
     </head>
 
     <body>
-        <script src="./js/setAndReadCookie.js"></script>
         <header>
-            <a id="logo" href="./index.html"><h1>Friendly Quiz</h1></a> 
-            <a href="./myQuiz.php">My Quiz</a>
+            <a id="logo" href="./index.html"><img src="./img/logo.png"></img></a> 
+            <a href="./myQuizzes.php">My Quizzes</a>
         </header>
         <main>
             <div class="boxContainer">
+                <h2 id="createdBy"></h2>
                 <form action="./storeData.php" class="questionsForm">
                     <div class="questions" onkeyup="updateData()"></div>
                     <h4 id="errorMessage"></h4>
@@ -29,10 +29,13 @@
                 </form>
             </div>
         </main>
+        <footer>
+            <h4>Contact the developer <a href="https://wa.me/+962790580502">Mohammad Haikal</a></h4>
+        </footer>
 
+        <script src="./js/tokenGenerator.js"></script>
         <script src="./js/setAndReadCookie.js"></script>
         <script src="./js/script.js"></script>
-
     </body>
 
 </html>

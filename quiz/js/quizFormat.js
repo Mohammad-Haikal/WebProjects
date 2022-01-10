@@ -27,7 +27,7 @@ function prepareQuiz(response) {
                 <div>
                     <p>Question ${parseInt(i) + 1}</p>
                 </div>
-                <h3 id="q${i}">${response[i].question} </h3>
+                <h3 dir="auto" id="q${i}">${response[i].question} </h3>
                 <section id="answers${i}" class="answers">
                     
                 </section>
@@ -40,29 +40,35 @@ function prepareQuiz(response) {
                 `
                 <div class="answer">
                     <div id="radio${i}${j}" class="checkBox r${i}"></div>
-                    <h4>${response[i].answers[j]}</h4>
+                    <h4 dir="auto" >${response[i].answers[j]}</h4>
                 </div>
-                <hr>
                 `
             );
 
             $(`#radio${i}${j}`).click(function (e) {
                 e.preventDefault();
-
+                $(`.r${i}`).unbind("click");
 
                 correctAnswer = response[i].correctAnswer;
                 answer = $(`#radio${i}${j}`)[0].nextElementSibling.innerHTML;
 
-                if (correctAnswer == answer) {
+                if (answer == correctAnswer) {
                     score++;
                     $(this).addClass('checkBoxA');
                 }
                 else {
                     $(this).addClass('checkBoxWrong');
 
+                    for (let k = 0; k < $(`.r${i}`).length; k++) {
+                        if($(`.r${i}`)[k].nextElementSibling.innerHTML == correctAnswer){
+                            $(`.r${i}`)[k].classList.add("checkBoxA");
+                        }
+                        
+                    }
+
                 }
 
-                $(`.r${i}`).unbind("click");
+                
 
             });
 

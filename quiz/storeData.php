@@ -12,5 +12,5 @@ fclose($quizFile);
 
 $query =  mysqli_query($conn, "INSERT INTO data(token, creator, mark) VALUES ('$token', '$username', $mark)");
 
-header("location: ./finish.php")
+header("location: ./finish.php");
 ?>

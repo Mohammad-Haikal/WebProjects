@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="auto">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,56 +7,51 @@
         <script src="./jquery/jquery.js"></script>
         <script src="./jquery/jquery-ui.js"></script>
         <link rel="stylesheet" type="text/css" href="./sass/root.css">
-        <title>Quiz</title>
+        <title>Friendly Quiz</title>
     </head>
     <body>
         <header>
-            <a id="logo" href="./index.html"><h1>Friendly Quiz</h1></a> 
-            <a href="./myQuiz.php">My Quiz</a>
+            <a id="logo" href="./index.html"><img src="./img/logo.png"></img></a> 
+            <a href="./myQuizzes.php">My Quizzes</a>
         </header>
         <main>
             <div class="boxContainer">
                 <h2>Welcome to Friendly Quiz</h2>
-                <p>Test your friendship rate with your friends!</p>
+                <p>Test your friendship rate with your bestfriends!</p>
 
                 <form action="#">
                     <h3>What's Your name?</h3>
-                    <input type="text" id="username"><br>
+                    <input dir="auto" type="text" id="username" required>
                     <button id="createBtn" type="submit">Create Yours!</button>
                 </form>
 
                 <article>
                     <h3>How it Works:</h3>
                     <p>
-                        1. Answer questions about yourself.<br>
+                        1. Create & answer questions about yourself.<br>
                         2. Your quiz link will be created.<br>
-                        3. Send link to your friends.<br>
-                        4. Come back to see their results.
+                        3. Copy & Send the link to your bestfriends.<br>
+                        4. Come back to see their results in <a href="./myQuizzes.php">My Quizzes</a> Page.
                     </p>
                 </article>
             </div>
         </main>
+        <footer>
+            <h4>Contact the developer <a href="https://wa.me/+962790580502">Mohammad Haikal</a></h4>
+        </footer>
 
-        <script src="./js/tokenGenerator.js"></script>
+
         <script src="./js/setAndReadCookie.js"></script>
         <script>
-
-
             $(function () {
                 $('#username').val(readCookie('username'))
+            
+                $('form').submit(function (e) {
+                    e.preventDefault();
+                    setCookie("username", $('#username').val(), 30);
+                    window.location = "./home.html"
+                });
             });
-
-            $('form').submit(function (e) {
-                e.preventDefault();
-
-                setCookie("username", $('#username').val(), 30);
-                setCookie("token", generate_token(15), 30);
-                
-
-                window.location = "./home.html"
-            });
-
-
         </script>
     </body>
 </html>

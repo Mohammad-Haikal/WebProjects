@@ -2,10 +2,15 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: $secondaryColor;
+    color: var(--secondaryColor);
 
     a{
         text-decoration: none;
-        color: $primaryColor;
+        color: var(--secondaryColor);
+        font-size: larger;
+        img{
+            padding: 20px;
+            height: 60px;
+        }
     }
 }
