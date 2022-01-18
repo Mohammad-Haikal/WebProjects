@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500&display=swap");
 html, body {
   margin: 0;
   height: 100%;
@@ -13,9 +14,8 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -28,13 +28,11 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 5%;
 }
 
 .header ul li {
-  font-size: 25px;
   list-style: none;
-  padding: 0px 20px;
+  margin: 8px;
 }
 
 .stickyHeader {
@@ -81,10 +79,10 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ffb443;
-  height: 100px;
+  text-align: center;
+  background-color: #3a86ff;
   color: white;
-  font-size: x-large;
+  padding: 15px;
 }
 
 #homeSect {
@@ -107,16 +105,17 @@ footer {
 
 #homeSect article {
   text-align: justify;
-  font-size: x-large;
   padding: 20px;
 }
 
-#homeSect article h1, #homeSect article p {
+#homeSect article h1,
+#homeSect article p {
   margin: 0;
 }
 
 #homeSect .imgDiv {
   max-width: 400px;
+  margin-top: 50px;
 }
 
 #homeSect .imgDiv img {
@@ -133,23 +132,35 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
-  padding: 50px;
+  padding: 100px;
   padding-top: 70px;
   text-align: justify;
-  font-size: x-large;
 }
 
-#contact {
-  text-align: center;
+section ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: start;
+  padding: 5px;
+}
+
+section ul li a {
+  font-weight: 400;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+section ul li a:hover {
+  color: #3a86ff;
 }
 
 .coloredSec {
-  background-color: #ffebcd;
+  background-color: #f4f8ff;
 }
 
 .whiteSec {
-  background-color: #fff8ee;
+  background-color: #e2edff;
   z-index: 5;
 }
 
@@ -168,8 +179,39 @@ section {
     padding-top: 100px;
   }
   #homeSect .imgDiv {
+    margin-top: unset;
     max-width: 85%;
   }
+  section {
+    padding: 50px;
+  }
+}
+
+* {
+  font-family: 'Bitter', serif;
+}
+
+h1 {
+  width: 200;
+  font-weight: 500;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+  margin: 10px 0px 10px 0px;
+}
+
+p {
+  line-height: 20px;
+  font-weight: 300;
+  margin: 5px 0px 5px 0px;
+}
+
+a {
+  text-decoration: none;
 }
 
 a {
@@ -178,9 +220,7 @@ a {
 
 #homeTitle {
   color: white;
-  font-size: 32px;
   font-weight: bold;
-  padding-left: 5%;
   text-decoration: none;
 }
 
@@ -192,11 +232,11 @@ a {
 }
 
 .navA:hover {
-  color: #e7971f;
+  color: #3075e2;
 }
 
 .activeA {
-  border-bottom: dotted 3px #e7971f;
+  border-bottom: dotted 3px #3075e2;
 }
 
 @media screen and (max-width: 800px) {
@@ -208,7 +248,7 @@ a {
 .rectangle {
   z-index: -1;
   position: absolute;
-  background-color: #ffb443;
+  background-color: #3a86ff;
   width: 70%;
   height: 100%;
 }
@@ -244,9 +284,20 @@ a {
 }
 
 .socialDiv img {
-  width: 60px;
-  height: 60px;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  margin: 5px;
   background: none;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  -webkit-box-shadow: 1px 1px 6px #00000038;
+          box-shadow: 1px 1px 6px #00000038;
+}
+
+.socialDiv img:hover {
+  -webkit-box-shadow: 0px 0px 3px #00000038;
+          box-shadow: 0px 0px 3px #00000038;
 }
 
 @media screen and (max-width: 800px) {

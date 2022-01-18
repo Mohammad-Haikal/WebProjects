@@ -1,9 +1,9 @@
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    text-align: center;
     background-color: $primary;
-    height: 100px;
-    color: white;
-    font-size: x-large;
+    color           : white;
+    padding         : 15px;
 }
