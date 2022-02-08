@@ -1,0 +1,48 @@
+[
+    {
+        "question": "What is ahmad's best friend's name? ",
+        "answers": [
+            "Rere",
+            "Lovey ",
+            "Lolo"
+        ],
+        "correctAnswer": "Lovey 🙂"
+    },
+    {
+        "question": "What is ahmad's favorite animal? ",
+        "answers": [
+            "Dog",
+            "Cat",
+            "Bird",
+            "Tiger",
+            "Lion",
+            "Elephant",
+            "Panda",
+            "Giraffe"
+        ],
+        "correctAnswer": "Tiger"
+    },
+    {
+        "question": "What is ahmad's best friend's name? ",
+        "answers": [
+            "Rere",
+            "Lovey",
+            "Lolo"
+        ],
+        "correctAnswer": "Lovey"
+    },
+    {
+        "question": "What is ahmad's favorite animal?",
+        "answers": [
+            "Dog",
+            "Cat",
+            "Bird",
+            "Tiger",
+            "Lion",
+            "Elephant",
+            "Panda",
+            "Giraffe"
+        ],
+        "correctAnswer": "Lion"
+    }
+]

@@ -1,8 +1,11 @@
 main {
-    display          : flex;
-    justify-content  : center;
-    margin-bottom: 50px;
-
+    display        : flex;
+    justify-content: center;
+    margin-bottom  : 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
 }
 
 .boxContainer {
@@ -73,11 +76,14 @@ main {
                     justify-content: space-between;
 
                     .randomBtn {
-                        width              : 20px;
-                        height             : 20px;
+                        cursor             : pointer;
+                        width              : 25px;
+                        height             : 25px;
                         border-radius      : 50%;
+                        margin-left        : auto;
                         padding            : 5px;
                         transition-duration: 0.1s;
+                        background-color   : #f3f3f3;
 
                         &:hover {
                             background-color: #ebebeb;
@@ -96,19 +102,20 @@ main {
 
                     .answer {
                         width          : 100%;
+                        display        : flex;
                         align-items    : center;
                         justify-content: flex-start;
 
 
 
                         .checkBox {
-                            cursor             : pointer;
-                            width              : 20px;
-                            height             : 20px;
-                            margin-right       : 20px;
-                            background-color   : #e2e2e2;
-                            border-radius      : 50%;
-                            transition-duration: 0.1s;
+                            cursor                : pointer;
+                            width                 : 20px;
+                            height                : 20px;
+                            // margin-right       : 20px;
+                            background-color      : #e2e2e2;
+                            border-radius         : 50%;
+                            transition-duration   : 0.1s;
 
                             &:hover {
                                 background-color: var(--primaryColorHovered);
@@ -137,7 +144,6 @@ main {
 
                         }
 
-                        display: flex;
                     }
                 }
 
@@ -149,7 +155,6 @@ main {
 
             .delIcon {
                 cursor             : pointer;
-                margin-left        : auto;
                 font-size          : 20px;
                 color              : var(--secondaryColor);
                 border-radius      : 50%;
@@ -176,17 +181,21 @@ main {
             color              : black;
             transition-duration: 0.1s;
             margin             : 10px 0px 10px 0px;
-
-            &:hover {
-                background-color: var(--primaryColor);
-                color           : white;
-                border-color    : #00000000;
-            }
+            background-color: var(--secondaryColor);
+            color           : white;
+            border-color    : #00000000;
+            width: 80%;
         }
 
         .addAn {
             margin-top: 0px;
             width     : 50%;
+            background-color: var(--primaryColor);
+        }
+
+        button[type=submit]{
+            background-color: unset;
+            background: linear-gradient(10deg, var(--primaryColor), var(--secondaryColor));
         }
 
 
@@ -210,9 +219,23 @@ main {
 }
 
 .slideUp {
-    opacity  : 0;
-    transform: translateY(200px);
-    animation: slideUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    position        : fixed;
+    bottom          : 59px;
+    left            : 50%;
+    display         : flex;
+    align-items     : center;
+    width           : 90%;
+    text-align      : center;
+    transform       : translate(-50%, 0%);
+    flex-direction  : column;
+    background-color: white;
+    border          : solid 1px #DBDBDB;
+    opacity         : 0;
+    animation       : slideUp 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+
+    h3 {
+        margin: 20px;
+    }
 }
 
 
@@ -234,11 +257,11 @@ main {
 @keyframes slideUp {
     0% {
         opacity  : 0;
-        transform: translateY(200px);
+        transform: translate(-50%, 100%);
     }
 
     100% {
         opacity  : 1;
-        transform: translateY(0px);
+        transform: translate(-50%, 0%);
     }
 }

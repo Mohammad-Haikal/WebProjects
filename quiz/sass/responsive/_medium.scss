@@ -1,25 +1,39 @@
 @media screen and (max-width: 800px) {
-    header{
+    header {
         flex-direction: column;
-        a:not(#logo){
+
+        a{
+            width: 80%;
+            text-align: center;
+        }
+
+        #logo{
+            border-bottom: solid 2px #dbdbdb;
+        }
+
+        a:not(#logo) {
             padding: 20px;
         }
     }
-    
+
     #scoreTable {
+
         &,
         th,
         td {
-            padding      : 5px 20px 5px 20px;
+            padding: 5px 20px 5px 20px;
         }
-    
+
     }
 
-    
 
-    main{
-        padding: 10px;
+
+    main {
         margin-bottom: 50px;
+        padding      : 10px;
     }
 
+    .boxContainer {
+        width: 85%;
+    }
 }

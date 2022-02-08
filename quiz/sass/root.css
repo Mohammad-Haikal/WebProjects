@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500&display=swap");
 :root {
-  --primaryColor: #0291ff;
+  --primaryColor: #1098ff;
   --secondaryColor: #D123DD;
   --primaryColorHovered: #c5c5c5;
   --primaryColorActivated: #9b9b9b;
@@ -12,6 +12,8 @@ html, body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #FAFAFA;
+  overflow: auto;
+  min-height: 100%;
 }
 
 body {
@@ -43,6 +45,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
   color: var(--secondaryColor);
 }
 
@@ -58,6 +61,7 @@ header a img {
 }
 
 footer {
+  margin-bottom: 0;
   padding: 10px 0px 10px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,6 +99,17 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 50px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .boxContainer {
@@ -186,12 +201,15 @@ main {
 }
 
 .boxContainer .questionsForm .questions .question div .randomBtn {
-  width: 20px;
-  height: 20px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
+  margin-left: auto;
   padding: 5px;
   -webkit-transition-duration: 0.1s;
           transition-duration: 0.1s;
+  background-color: #f3f3f3;
 }
 
 .boxContainer .questionsForm .questions .question div .randomBtn:hover {
@@ -208,22 +226,21 @@ main {
 
 .boxContainer .questionsForm .questions .question .answers .answer {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .boxContainer .questionsForm .questions .question .answers .answer .checkBox {
   cursor: pointer;
   width: 20px;
   height: 20px;
-  margin-right: 20px;
   background-color: #e2e2e2;
   border-radius: 50%;
   -webkit-transition-duration: 0.1s;
@@ -260,7 +277,6 @@ main {
 
 .boxContainer .questionsForm .questions .delIcon {
   cursor: pointer;
-  margin-left: auto;
   font-size: 20px;
   color: var(--secondaryColor);
   border-radius: 50%;
@@ -285,18 +301,21 @@ main {
   -webkit-transition-duration: 0.1s;
           transition-duration: 0.1s;
   margin: 10px 0px 10px 0px;
-}
-
-.boxContainer .questionsForm .addAn:hover,
-.boxContainer .questionsForm .addQs:hover {
-  background-color: var(--primaryColor);
+  background-color: var(--secondaryColor);
   color: white;
   border-color: #00000000;
+  width: 80%;
 }
 
 .boxContainer .questionsForm .addAn {
   margin-top: 0px;
   width: 50%;
+  background-color: var(--primaryColor);
+}
+
+.boxContainer .questionsForm button[type=submit] {
+  background-color: unset;
+  background: linear-gradient(10deg, var(--primaryColor), var(--secondaryColor));
 }
 
 .linkDiv {
@@ -320,11 +339,32 @@ main {
 }
 
 .slideUp {
+  position: fixed;
+  bottom: 59px;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  text-align: center;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  border: solid 1px #DBDBDB;
   opacity: 0;
-  -webkit-transform: translateY(200px);
-          transform: translateY(200px);
-  -webkit-animation: slideUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
-          animation: slideUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  -webkit-animation: slideUp 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+          animation: slideUp 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.slideUp h3 {
+  margin: 20px;
 }
 
 @-webkit-keyframes slideInfinite {
@@ -360,26 +400,26 @@ main {
 @-webkit-keyframes slideUp {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
+    -webkit-transform: translate(-50%, 100%);
+            transform: translate(-50%, 100%);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
   }
 }
 
 @keyframes slideUp {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
+    -webkit-transform: translate(-50%, 100%);
+            transform: translate(-50%, 100%);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
   }
 }
 
@@ -435,9 +475,36 @@ strong {
   font-weight: 800;
 }
 
+.qTitle {
+  color: var(--primaryColor);
+  font-weight: 400;
+}
+
 #linkInput {
   border: 1px solid #dfdfdf;
   padding: 5px;
+}
+
+textarea {
+  border: none;
+  resize: vertical;
+  min-width: 70%;
+  max-width: 70%;
+  font-size: medium;
+  background-color: #fafafa;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 7px;
+  -webkit-text-fill-color: black;
+  opacity: 1;
+  /* required on iOS */
+}
+
+.questionTextarea {
+  min-width: 90%;
+  max-width: 90%;
+  font-size: large;
 }
 
 #copyBtn {
@@ -477,7 +544,7 @@ strong {
 }
 
 #createBtn {
-  background-color: var(--primaryColor);
+  background: linear-gradient(10deg, var(--primaryColor), var(--secondaryColor));
 }
 
 .deleteQuiz {
@@ -529,6 +596,13 @@ strong {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  header a {
+    width: 80%;
+    text-align: center;
+  }
+  header #logo {
+    border-bottom: solid 2px #dbdbdb;
+  }
   header a:not(#logo) {
     padding: 20px;
   }
@@ -538,8 +612,11 @@ strong {
     padding: 5px 20px 5px 20px;
   }
   main {
-    padding: 10px;
     margin-bottom: 50px;
+    padding: 10px;
+  }
+  .boxContainer {
+    width: 85%;
   }
 }
 /*# sourceMappingURL=root.css.map */

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html dir="auto">
     <head>
+        <link rel="icon" href="logo.ico"/>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="./jquery/jquery.js"></script>
-        <script src="./jquery/jquery-ui.js"></script>
+        <script type="text/javascript" src="./jquery/jquery.js"></script>
+        <script type="text/javascript" src="./jquery/jquery-ui.js"></script>
         <link rel="stylesheet" type="text/css" href="./sass/root.css">
         <title>Friendly Quiz</title>
     </head>
@@ -17,7 +18,7 @@
         <main>
             <div class="boxContainer">
                 <h2>Welcome to Friendly Quiz</h2>
-                <p>Test your friendship rate with your bestfriends!</p>
+                <p class="qTitle">Test your friendship rate with your bestfriends!</p>
 
                 <form action="#">
                     <h3>What's Your name?</h3>
@@ -41,7 +42,7 @@
         </footer>
 
 
-        <script src="./js/setAndReadCookie.js"></script>
+        <script type="text/javascript" src="./js/setAndReadCookie.js"></script>
         <script>
             $(function () {
                 $('#username').val(readCookie('username'))

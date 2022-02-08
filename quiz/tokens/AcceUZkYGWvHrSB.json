@@ -1,0 +1,249 @@
+[
+    {
+        "randomQuestions": [
+            {
+                "question": "What is Mohammad's favorite day of the week?",
+                "answers": [
+                    "Saturday",
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite color?",
+                "answers": [
+                    "Black",
+                    "Blue",
+                    "Green",
+                    "Red",
+                    "Yellow",
+                    "Orange"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite animal?",
+                "answers": [
+                    "Dog",
+                    "Cat",
+                    "Turtle"
+                ]
+            },
+            {
+                "question": "What is Mohammad's best friend's name?",
+                "answers": [
+                    "Rere",
+                    "Lovey",
+                    "Lolo"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite country?",
+                "answers": [
+                    "France",
+                    "Spain",
+                    "United States",
+                    "China"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite drink in the summer?",
+                "answers": [
+                    "Pepsi",
+                    "Fruit Juice",
+                    "Coconut Water",
+                    "Lemonade"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite food?",
+                "answers": [
+                    "Burger",
+                    "Fruits",
+                    "Shawerma",
+                    "Pizza"
+                ]
+            }
+        ],
+        "random": 2,
+        "question": "What is Mohammad's favorite animal?  ",
+        "answers": [
+            "Dog",
+            "Cat",
+            "Turtle"
+        ],
+        "correctAnswer": "Dog"
+    },
+    {
+        "randomQuestions": [
+            {
+                "question": "What is Mohammad's favorite day of the week?",
+                "answers": [
+                    "Saturday",
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite color?",
+                "answers": [
+                    "Black",
+                    "Blue",
+                    "Green",
+                    "Red",
+                    "Yellow",
+                    "Orange"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite animal?",
+                "answers": [
+                    "Dog",
+                    "Cat",
+                    "Bird",
+                    "Tiger",
+                    "Lion",
+                    "Elephant",
+                    "Panda",
+                    "Giraffe"
+                ]
+            },
+            {
+                "question": "What is Mohammad's best friend's name?",
+                "answers": [
+                    "Rere",
+                    "Lovey",
+                    "Lolo"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite country?",
+                "answers": [
+                    "France",
+                    "Spain",
+                    "United States",
+                    "China"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite drink in the summer?",
+                "answers": [
+                    "Pepsi",
+                    "Fruit Juice",
+                    "Coconut Water",
+                    "Lemonade"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite food?",
+                "answers": [
+                    "Burger",
+                    "Fruits",
+                    "Shawerma",
+                    "Pizza"
+                ]
+            }
+        ],
+        "random": 1,
+        "question": "What is Mohammad's favorite color?  ",
+        "answers": [
+            "Black",
+            "Blue",
+            "Green",
+            "Red",
+            "Yellow",
+            "Orange"
+        ],
+        "correctAnswer": "Black"
+    },
+    {
+        "randomQuestions": [
+            {
+                "question": "What is Mohammad's favorite day of the week?",
+                "answers": [
+                    "Saturday",
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite color?",
+                "answers": [
+                    "Black",
+                    "Blue",
+                    "Green",
+                    "Red",
+                    "Yellow",
+                    "Orange"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite animal?",
+                "answers": [
+                    "Dog",
+                    "Cat",
+                    "Bird",
+                    "Tiger",
+                    "Lion",
+                    "Elephant",
+                    "Panda",
+                    "Giraffe"
+                ]
+            },
+            {
+                "question": "What is Mohammad's best friend's name?",
+                "answers": [
+                    "Rere",
+                    "Lovey",
+                    "Nofi"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite country?",
+                "answers": [
+                    "France",
+                    "Spain",
+                    "United States",
+                    "China"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite drink in the summer?",
+                "answers": [
+                    "Pepsi",
+                    "Fruit Juice",
+                    "Coconut Water",
+                    "Lemonade"
+                ]
+            },
+            {
+                "question": "What is Mohammad's favorite food?",
+                "answers": [
+                    "Burger",
+                    "Fruits",
+                    "Shawerma",
+                    "Pizza"
+                ]
+            }
+        ],
+        "random": 3,
+        "question": "What is Mohammad's best friend's name? ",
+        "answers": [
+            "Rere",
+            "Lovey",
+            "Nofi"
+        ],
+        "correctAnswer": "Nofi"
+    }
+]

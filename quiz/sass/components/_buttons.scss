@@ -34,7 +34,7 @@
     }
 }
 #createBtn{
-    background-color: var(--primaryColor);
+    background: linear-gradient(10deg, var(--primaryColor), var(--secondaryColor));
 }
 
 .deleteQuiz{

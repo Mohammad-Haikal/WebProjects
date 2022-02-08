@@ -1,0 +1,61 @@
+[
+    {
+        "question": "What is ahmad's favorite day of the week?",
+        "answers": [
+            "Saturday",
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+        ],
+        "correctAnswer": "Saturday"
+    },
+    {
+        "question": "What is ahmad's favorite country?",
+        "answers": [
+            "France",
+            "Spain",
+            "United States",
+            "China"
+        ],
+        "correctAnswer": "China"
+    },
+    {
+        "question": "What is ahmad's favorite drink in the summer?",
+        "answers": [
+            "Pepsi",
+            "Fruit Juice",
+            "Coconut Water",
+            "Lemonade"
+        ],
+        "correctAnswer": "Lemonade"
+    },
+    {
+        "question": "What is ahmad's favorite animal?",
+        "answers": [
+            "Dog",
+            "Cat",
+            "Bird",
+            "Tiger",
+            "Lion",
+            "Elephant",
+            "Panda",
+            "Giraffe"
+        ],
+        "correctAnswer": "Giraffe"
+    },
+    {
+        "question": "What is ahmad's favorite color?",
+        "answers": [
+            "Black",
+            "Blue",
+            "Green",
+            "Red",
+            "Yellow",
+            "Orange"
+        ],
+        "correctAnswer": "Yellow"
+    }
+]

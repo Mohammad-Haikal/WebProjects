@@ -20,21 +20,22 @@ else{
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html dir="auto">
 
 <head>
+    <link rel="icon" href="logo.ico"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./jquery/jquery.js"></script>
-    <script src="./jquery/jquery-ui.js"></script>
+    <script type="text/javascript" src="./jquery/jquery.js"></script>
+    <script type="text/javascript" src="./jquery/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./sass/root.css">
     <title>Friendly Quiz</title>
 </head>
 
 <body>
-    <script src="./js/setAndReadCookie.js"></script>
+    <script type="text/javascript" src="./js/setAndReadCookie.js"></script>
     <header>
         <a id="logo" href="./index.html"><img src="./img/logo.png"></img></a> 
         <a href="./myQuizzes.php">My Quizzes</a>
@@ -68,10 +69,11 @@ else{
 
         </tbody>
         </table>
-
-        <h4 class="slideUp">Now it's your turn!!!<br>Create a quiz about yoursef and send it to your friends!</h4>
-        <a id="copyBtn" class="slideUp" href="./index.html">Create Quiz!</a>
-        
+        <div class="slideUp">
+        <h3>Now it's your turn!!!</h3>
+        <h4>Create a quiz about yoursef and send it to your friends!</h4>
+        <a id="copyBtn" href="./index.html">Create Quiz!</a>
+        </div>
     </main>
     <footer>
         <h4>Contact the developer <a href="https://wa.me/+962790580502">Mohammad Haikal</a></h4>

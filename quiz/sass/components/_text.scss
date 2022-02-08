@@ -2,7 +2,8 @@
 
 * {
     font-family: 'Bitter', serif;
-    &::selection{
+
+    &::selection {
         background-color: var(--primaryColor);
     }
 }
@@ -17,7 +18,7 @@ h3,
 h4,
 h5 {
     font-weight: 400;
-    margin: 10px 0px 10px 0px
+    margin     : 10px 0px 10px 0px
 }
 
 
@@ -25,30 +26,58 @@ h5 {
 p {
     line-height: 20px;
     font-weight: 300;
-    margin: 5px 0px 5px 0px;
+    margin     : 5px 0px 5px 0px;
 }
 
-a{
+a {
     text-decoration: none;
-    color: var(--secondaryColor);
+    color          : var(--secondaryColor);
 }
 
-strong{
+strong {
     color: var(--primaryColor);
 }
 
-#errorMessage{
-    color: red;
+#errorMessage {
+    color             : red;
     animation-duration: 0.5s;
 }
 
-.copied{
-    display: none;
-    color: var(--primaryColor);
+.copied {
+    display    : none;
+    color      : var(--primaryColor);
     font-weight: 800;
 }
 
-#linkInput{
-    border: 1px solid rgb(223, 223, 223);
+.qTitle {
+    color      : var(--primaryColor);
+    font-weight: 400;
+}
+
+#linkInput {
+    border : 1px solid rgb(223, 223, 223);
     padding: 5px;
+}
+
+textarea {
+    border                 : none;
+    resize                 : vertical;
+    min-width              : 70%;
+    max-width              : 70%;
+    font-size              : medium;
+    background-color       : #fafafa;
+    color                  : black;
+    border-radius          : 10px;
+    padding                : 10px;
+    margin                 : 7px;
+    -webkit-text-fill-color: black;
+    opacity                : 1; /* required on iOS */
+    
+}
+
+.questionTextarea {
+    min-width: 90%;
+    max-width: 90%;
+    font-size: large;
+
 }
