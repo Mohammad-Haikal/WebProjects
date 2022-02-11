@@ -18,8 +18,8 @@ class Question {
 
 var random = [];
 var i = 0;
-while (random.length < 6) {
-	var r = Math.floor(Math.random() * 7);
+while (random.length < 12) {
+	var r = Math.floor(Math.random() * 13);
 	if (random.indexOf(r) === -1) random.push(r);
 }
 
@@ -50,18 +50,41 @@ function createNewQs() {
 			answers: ["Pepsi", "Fruit Juice", "Coconut Water", "Lemonade"]
 		},
 		{
+			question: `Is ${username} easy or hard to love?`,
+			answers: ["Easy", "Hard"]
+		},
+		{
+			question: `What is ${username}'s favorite type of music?`,
+			answers: ["Rock", "Pop", "Hip Hop", "Popular"]
+		},
+		{
+			question: `What is ${username}'s favorite season of the year?`,
+			answers: ["Spring","Summer", "Fall", "Winter"]
+		},
+		{
 			question: `What is ${username}'s favorite food?`,
 			answers: ["Burger", "Fruits", "Shawerma", "Pizza"]
-		}
+		},
+		{
+			question: `What super power would ${username} want to have?`,
+			answers: ["Invisibility", "Telepathy", "Magic", "Flight", "Immortality"]
+		},
+		{
+			question: `What can ${username} cook?`,
+			answers: ["Chicken Noodles", "Popcorn Bhel", "Broccoli Pasta", "Pizza"]
+		},
+		{
+			question: `What is ${username} friend afraid of?`,
+			answers: ["Fire", "Dogs", "The dark", "Hard Work", "Tomorrow", "Snakes"]
+		},
 	]
 
 
 
 
-	if (i == 6) {
+	if (i == 12) {
 		i = 0;
 	}
-	console.log(random[i])
 	let question = randomQuestions[random[i]].question;
 	let answers = randomQuestions[random[i]].answers;
 	let q = new Question(question, answers);

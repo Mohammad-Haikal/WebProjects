@@ -18,12 +18,15 @@
     }
 }
 
-.copySent{
+.copySent,
+.deleteSent {
+    cursor          : pointer;
     padding         : 5px;
     background-color: var(--primaryColor);
     color           : white;
     border          : none;
     border-radius   : 5px;
+    font-size       : 13px;
 
     &:hover {
         opacity: 0.9;
@@ -33,11 +36,18 @@
         opacity: 1;
     }
 }
-#createBtn{
+
+.deleteSent {
+    background-color: unset;
+    color           : red;
+
+}
+
+#createBtn {
     background: linear-gradient(10deg, var(--primaryColor), var(--secondaryColor));
 }
 
-.deleteQuiz{
+.deleteQuiz {
     margin: 10px;
-    width: 20px;
+    width : 20px;
 }

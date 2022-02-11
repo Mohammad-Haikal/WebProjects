@@ -26,6 +26,8 @@ if (!isset($_GET['token'])) {
 <head>
     <link rel="icon" href="logo.ico"/>
     <meta charset="UTF-8">
+    <meta name="author" content="Muhammad Haikal">
+    <meta name="description" content="Create a quiz to know how well your best friends know you!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="./jquery/jquery.js"></script>
@@ -53,7 +55,7 @@ if (!isset($_GET['token'])) {
         </div>
     </main>
     <footer>
-        <h4>Contact the developer <a href="https://wa.me/+962790580502">Mohammad Haikal</a></h4>
+        <h4>Contact the developer <a href="https://wa.me/+962790580502">Muhammad Haikal</a></h4>
     </footer>
     
     <script type="text/javascript" src="./js/quizFormat.js"></script>

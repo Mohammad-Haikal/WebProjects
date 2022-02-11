@@ -334,8 +334,9 @@ main {
 }
 
 .slided {
-  -webkit-animation: slideInfinite 2s cubic-bezier(0, 0, 0, 0) infinite;
-          animation: slideInfinite 2s cubic-bezier(0, 0, 0, 0) infinite;
+  -webkit-animation: slideInfinite 4s cubic-bezier(0, 0, 0, 0) infinite;
+          animation: slideInfinite 4s cubic-bezier(0, 0, 0, 0) infinite;
+  color: var(--primaryColor);
 }
 
 .slideUp {
@@ -460,7 +461,9 @@ a {
 }
 
 strong {
-  color: var(--primaryColor);
+  color: var(--secondaryColor);
+  -webkit-animation: typing 3s forwards;
+          animation: typing 3s forwards;
 }
 
 #errorMessage {
@@ -507,6 +510,47 @@ textarea {
   font-size: large;
 }
 
+#welcomeMsg {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  -webkit-animation: typing 3s forwards;
+          animation: typing 3s forwards;
+  margin-bottom: 10px;
+}
+
+.peersName {
+  color: var(--primaryColor);
+  font-weight: 500;
+}
+
+.peersScore {
+  color: var(--secondaryColor);
+  font-weight: 500;
+}
+
+@-webkit-keyframes typing {
+  from {
+    opacity: 0.5;
+    width: 0%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    opacity: 0.5;
+    width: 0%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
 #copyBtn {
   margin: 10px;
   width: 50%;
@@ -527,20 +571,30 @@ textarea {
   opacity: 1;
 }
 
-.copySent {
+.copySent,
+.deleteSent {
+  cursor: pointer;
   padding: 5px;
   background-color: var(--primaryColor);
   color: white;
   border: none;
   border-radius: 5px;
+  font-size: 13px;
 }
 
-.copySent:hover {
+.copySent:hover,
+.deleteSent:hover {
   opacity: 0.9;
 }
 
-.copySent:active {
+.copySent:active,
+.deleteSent:active {
   opacity: 1;
+}
+
+.deleteSent {
+  background-color: unset;
+  color: red;
 }
 
 #createBtn {
@@ -617,6 +671,7 @@ textarea {
   }
   .boxContainer {
     width: 85%;
+    padding: 25px;
   }
 }
 /*# sourceMappingURL=root.css.map */

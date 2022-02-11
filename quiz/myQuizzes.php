@@ -15,7 +15,7 @@ if (isset($_COOKIE['tokensArray'])) {
                 array_push($mark, $row['mark']);
                 break;     
             }
-        }
+        }        
     }
 }
 
@@ -27,6 +27,8 @@ if (isset($_COOKIE['tokensArray'])) {
 <head>
     <link rel="icon" href="logo.ico"/>
     <meta charset="UTF-8">
+    <meta name="author" content="Muhammad Haikal">
+    <meta name="description" content="Create a quiz to know how well your best friends know you!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="./jquery/jquery.js"></script>
@@ -38,6 +40,7 @@ if (isset($_COOKIE['tokensArray'])) {
 
 <body>
 <script type="text/javascript" src="./js/setAndReadCookie.js"></script>
+
     <header>
         <a id="logo" href="./index.html"><img src="./img/logo.png"></img></a> 
         <a href="#">My Quizzes</a>
@@ -53,11 +56,12 @@ if (isset($_COOKIE['tokensArray'])) {
                     $query =  mysqli_query($conn, "SELECT * FROM `peers`");
                     
                     echo "
-                    <h2><strong>".$creator[$j]."'s quiz</strong></h2>
+                    <h2 class='qTitle'>$creator[$j]'s quiz</h2>
                     <div class='linkDiv' id='div$tokensArray[$j]'>
                         <h4>Link:</h4>
                         <input type='text' id='$tokensArray[$j]'></input>
                         <button class='copySent' id='copySent$tokensArray[$j]'>Copy</button>
+                        <button class='deleteSent' onclick='deleteQz(`$tokensArray[$j]`)'>Delete</button>
                     </div>
                     ";
                     echo "
@@ -76,8 +80,8 @@ if (isset($_COOKIE['tokensArray'])) {
                         if($tokensArray[$j] == $row['token']){
                             echo "
                             <tr>
-                                <td>".$row['peername']."</td>
-                                <td>".$row['score']. " / " .$mark[$j]."</td>
+                                <td class='peersName'>".$row['peername']."</td>
+                                <td class='peersScore'>".$row['score']. " / " .$mark[$j]."</td>
                             </tr>
                             ";
                         }
@@ -98,7 +102,7 @@ if (isset($_COOKIE['tokensArray'])) {
 
     </main>
     <footer>
-        <h4>Contact the developer <a href="https://wa.me/+962790580502">Mohammad Haikal</a></h4>
+        <h4>Contact the developer <a href="https://wa.me/+962790580502">Muhammad Haikal</a></h4>
     </footer>
 
     <script>
@@ -116,6 +120,6 @@ if (isset($_COOKIE['tokensArray'])) {
         });
     </script>
 
-
+<script type="text/javascript" src="./js/deleteQuiz.js"></script>
 </body>
 </html>

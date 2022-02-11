@@ -1,22 +1,20 @@
 #scoreTable {
-    // background-color: white;
-    margin          : 0px 0px 100px 0px;
-    // border       : 1px solid #DBDBDB;
-    
+    margin: 0px 0px 100px 0px;
+
     border-collapse: collapse;
-    border-style: hidden;
+    border-style   : hidden;
 
     &,
     th,
     td {
         border-radius: 5px;
         padding      : 5px 40px 5px 40px;
-        text-align: justify;
+        text-align   : justify;
     }
 
-    thead{
+    thead {
         border-bottom: solid 1px #DBDBDB;
-        
+
     }
 
 }

@@ -2,10 +2,10 @@ main {
     display        : flex;
     justify-content: center;
     margin-bottom  : 50px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    align-items    : center;
+    align-content  : center;
 }
 
 .boxContainer {
@@ -109,13 +109,12 @@ main {
 
 
                         .checkBox {
-                            cursor                : pointer;
-                            width                 : 20px;
-                            height                : 20px;
-                            // margin-right       : 20px;
-                            background-color      : #e2e2e2;
-                            border-radius         : 50%;
-                            transition-duration   : 0.1s;
+                            cursor             : pointer;
+                            width              : 20px;
+                            height             : 20px;
+                            background-color   : #e2e2e2;
+                            border-radius      : 50%;
+                            transition-duration: 0.1s;
 
                             &:hover {
                                 background-color: var(--primaryColorHovered);
@@ -181,21 +180,21 @@ main {
             color              : black;
             transition-duration: 0.1s;
             margin             : 10px 0px 10px 0px;
-            background-color: var(--secondaryColor);
-            color           : white;
-            border-color    : #00000000;
-            width: 80%;
+            background-color   : var(--secondaryColor);
+            color              : white;
+            border-color       : #00000000;
+            width              : 80%;
         }
 
         .addAn {
-            margin-top: 0px;
-            width     : 50%;
+            margin-top      : 0px;
+            width           : 50%;
             background-color: var(--primaryColor);
         }
 
-        button[type=submit]{
+        button[type=submit] {
             background-color: unset;
-            background: linear-gradient(10deg, var(--primaryColor), var(--secondaryColor));
+            background      : linear-gradient(10deg, var(--primaryColor), var(--secondaryColor));
         }
 
 
@@ -215,7 +214,8 @@ main {
 }
 
 .slided {
-    animation: slideInfinite 2s cubic-bezier(0, 0, 0, 0) infinite;
+    animation: slideInfinite 4s cubic-bezier(0, 0, 0, 0) infinite;
+    color    : var(--primaryColor);
 }
 
 .slideUp {

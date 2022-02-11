@@ -20,7 +20,6 @@ $(function () {
 
 function prepareQuiz(response) {
     for (const i in response) {
-
         $('.questions').append(
             `
             <div class="question">
@@ -60,24 +59,15 @@ function prepareQuiz(response) {
                     $(this).addClass('checkBoxWrong');
 
                     for (let k = 0; k < $(`.r${i}`).length; k++) {
-                        if($(`.r${i}`)[k].nextElementSibling.value == correctAnswer){
+                        if ($(`.r${i}`)[k].nextElementSibling.value == correctAnswer) {
                             $(`.r${i}`)[k].classList.add("checkBoxA");
                         }
-                        
                     }
-
                 }
-
-                
-
             });
-
-
         }
     }
-
 }
-
 
 
 $('.questionsForm').submit(function (e) {
@@ -88,5 +78,4 @@ $('.questionsForm').submit(function (e) {
     setCookie('peername', peerName, 30);
     setCookie('score', score, 30);
     e.currentTarget.submit();
-	
 });

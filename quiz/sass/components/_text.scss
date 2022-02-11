@@ -35,7 +35,8 @@ a {
 }
 
 strong {
-    color: var(--primaryColor);
+    color: var(--secondaryColor);
+    animation  : typing 3s forwards;
 }
 
 #errorMessage {
@@ -71,13 +72,43 @@ textarea {
     padding                : 10px;
     margin                 : 7px;
     -webkit-text-fill-color: black;
-    opacity                : 1; /* required on iOS */
-    
+    opacity                : 1;
+    /* required on iOS */
+
 }
 
 .questionTextarea {
     min-width: 90%;
     max-width: 90%;
     font-size: large;
+    
+}
 
+#welcomeMsg {
+    overflow   : hidden;
+    white-space: nowrap;
+    margin     : 0 auto;
+    animation  : typing 3s forwards;
+    margin-bottom: 10px;
+}
+
+.peersName{
+    color: var(--primaryColor);
+    font-weight: 500;
+}
+.peersScore{
+    color: var(--secondaryColor);
+    font-weight: 500;
+}
+
+@keyframes typing {
+    from {
+        opacity: 0.5;
+        width: 0%
+    }
+
+    to {
+        opacity: 1;
+        width: 100%
+    }
 }
