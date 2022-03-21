@@ -1,0 +1,52 @@
+form {
+    padding: 100px;
+
+    div {
+        position     : relative;
+        border-bottom: 1px solid rgb(158, 158, 158);
+
+        #label {
+            position      : absolute;
+            left          : 0px;
+            top           : 0px;
+            pointer-events: none;
+            transition    : 300ms ease;
+        }
+
+        input[type=text] {
+            padding-bottom: 3px;
+            border        : none;
+            background    : none;
+            outline       : none;
+
+            &:focus~#label,
+            &:valid~#label {
+                top      : -15px;
+                font-size: small;
+                color    : #0077ff;
+            }
+
+            &:focus~.bar {
+                width  : 100%;
+                opacity: 1;
+            }
+
+
+        }
+
+        .bar {
+            position        : absolute;
+            top             : 100%;
+            left            : 50%;
+            width           : 0px;
+            height          : 1px;
+            background-color: #0077ff;
+            transition      : 300ms ease;
+            opacity         : 0;
+            transform       : translateX(-50%);
+        }
+    }
+
+
+
+}

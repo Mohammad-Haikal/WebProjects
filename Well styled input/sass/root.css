@@ -1,0 +1,57 @@
+html, body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+form {
+  padding: 100px;
+}
+
+form div {
+  position: relative;
+  border-bottom: 1px solid #9e9e9e;
+}
+
+form div #label {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  pointer-events: none;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+form div input[type=text] {
+  padding-bottom: 3px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+form div input[type=text]:focus ~ #label,
+form div input[type=text]:valid ~ #label {
+  top: -15px;
+  font-size: small;
+  color: #0077ff;
+}
+
+form div input[type=text]:focus ~ .bar {
+  width: 100%;
+  opacity: 1;
+}
+
+form div .bar {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0px;
+  height: 1px;
+  background-color: #0077ff;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+  opacity: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+/*# sourceMappingURL=root.css.map */
