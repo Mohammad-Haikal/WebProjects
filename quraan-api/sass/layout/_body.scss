@@ -1,0 +1,22 @@
+html,
+body {
+    margin    : 0;
+    box-sizing: border-box;
+    height    : 100%;
+
+}
+
+body {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : space-around;
+    background-color: #F1F1F1;
+
+}
+
+// @media screen and (prefers-reduced-motion: no-preference) {
+//     html {
+//         scroll-behavior: smooth;
+//     }
+// }

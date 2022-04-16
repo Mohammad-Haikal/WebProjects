@@ -1,0 +1,17 @@
+.logout {
+    color          : red;
+    text-decoration: none;
+    padding        : 5px 20px 5px 20px;
+    width: 100%;
+    border: 2px solid red;
+    background-color: white;
+    width: fit-content;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+
+    &:hover{
+        color: white;
+        background-color: red;
+    }
+}
+

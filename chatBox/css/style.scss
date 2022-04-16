@@ -1,0 +1,94 @@
+body, html{
+    margin: 0;
+    height: 100%;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #5D8FC9;
+    font-family: sans-serif;
+
+    form{
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        // margin-bottom: 0px;
+        width: 50%;
+        background-color: #FFFFFF;
+        text-align: center;
+        border-radius: 40px;
+
+        h1{
+            margin-top: 0px;
+            margin-bottom: 3rem;  
+            color: #212529;  
+        }
+
+        .input{
+            font-size: 1rem;
+            margin: auto;
+            height: 2rem;
+            border-radius: 30px;
+            width: 70%;
+            background-color: #EBF0FC;
+            border:  none;
+            padding: 10px;
+            outline: none;
+            
+        }
+
+        .subBut{
+            font-size: 1.5rem;
+            margin: auto;
+            border-radius: 30px;
+            width: 90%;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: solid 2px #0F82FF;
+
+            &:hover{
+                background-color: #218afae5;
+                border:solid 2px #218bfcc2;
+            }
+            &:active{
+                transition-duration: 0.3s;
+                background-color: #165394e7;
+                border:solid 2px #218bfcc2;
+            }
+        }
+    }
+
+    .showdataBtn{
+        margin: auto;
+        padding: 20px;
+        width: 50%;
+        text-align: center;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        a{
+            font-size: 1rem;
+            margin: auto;
+            border-radius: 30px;
+            width: 60%;
+            background-color: #ff0800;
+            color: white;
+            padding: 10px;
+            border: solid 2px #ff0800;
+            text-decoration: none;
+
+            &:hover{
+                background-color: #ff0800af;
+                border:solid 2px #ff080094;
+            }
+            &:active{
+                transition-duration: 0.3s;
+                background-color: #ff0800;
+                border:solid 2px #ff0800;
+            }
+        }
+    }
+}

@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500&display=swap");
+html,
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #FAFAFA;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+* {
+  font-family: 'Bitter', serif;
+}
+
+a {
+  text-decoration: none;
+  color: #248ef1;
+}
+
+.logout {
+  color: red;
+  text-decoration: none;
+  padding: 5px 20px 5px 20px;
+  width: 100%;
+  border: 2px solid red;
+  background-color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 8px;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.logout:hover {
+  color: white;
+  background-color: red;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  background-color: white;
+  border: 2px solid #DBDBDB;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+form h1 {
+  margin-bottom: 30px;
+}
+
+form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+}
+
+form input {
+  padding: 7px;
+  border: none;
+  border-bottom: 2px solid #DBDBDB;
+  margin: 8px;
+  background: none;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  width: 100%;
+}
+
+form input:focus {
+  outline: none;
+  background: none;
+  border-bottom: 2px solid #248ef1;
+}
+
+form input[type=submit] {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #2079ff;
+  color: white;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  width: 100%;
+}
+
+form input[type=submit]:hover {
+  background-color: #5e9eff;
+}
+
+.indexBody {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px;
+  text-align: center;
+}
+
+.indexBody form img {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .indexBody {
+    padding-left: unset;
+    padding-right: unset;
+  }
+  .indexBody form {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=root.css.map */

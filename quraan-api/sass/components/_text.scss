@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "hafs";
+    src        : url("../../fonts/hafs.otf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500&display=swap');
+
+* {
+    font-family        : 'Bitter', serif;
+    transition-duration: 0.2s;
+
+    &::selection {
+        background-color: #0095F6;
+    }
+}
+
+h1,
+.aya {
+    cursor: pointer;
+    color : #383838;
+}
+
+.aya {
+    display    : inline;
+    margin     : 5px;
+    font-family: 'hafs' !important;
+    font-weight: 500;
+    font-size  : 20px;
+
+    &:hover {
+        color: #0095F6;
+
+        .aya-num {
+            background-color: #0095F6;
+            color           : white;
+        }
+    }
+}
+
+.aya-num {
+    font-size      : 15px;
+    display        : inline-block;
+    margin         : 0;
+    width          : 30px;
+    height         : 30px;
+    border-radius  : 100%;
+    vertical-align : middle;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    display        : inline-flex;
+    border         : 2px double #0095F6;
+}

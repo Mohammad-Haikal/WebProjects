@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500&display=swap');
+
+* {
+    font-family: 'Bitter', serif !important;
+}
+
+.active a{
+    color: $c3 !important;
+}
+
+hr {
+    width           : 40%;
+    background-color: $c1;
+    height          : 2px;
+}

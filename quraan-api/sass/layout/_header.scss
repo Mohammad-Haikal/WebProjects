@@ -1,0 +1,18 @@
+header {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    width         : 100%;
+
+    select {
+        padding      : 5px;
+        border-radius: 5px;
+        border       : 1px solid #DBDBDB;
+        width        : 70%;
+        font-size  : 19px;
+        option{
+            font-size  : 18px;
+
+        }
+    }
+}

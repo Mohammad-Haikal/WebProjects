@@ -1,0 +1,108 @@
+body, html {
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #5D8FC9;
+  font-family: sans-serif;
+}
+
+.container form {
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  width: 50%;
+  background-color: #FFFFFF;
+  text-align: center;
+  border-radius: 40px;
+}
+
+.container form h1 {
+  margin-top: 0px;
+  margin-bottom: 3rem;
+  color: #212529;
+}
+
+.container form .input {
+  font-size: 1rem;
+  margin: auto;
+  height: 2rem;
+  border-radius: 30px;
+  width: 70%;
+  background-color: #EBF0FC;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+.container form .subBut {
+  font-size: 1.5rem;
+  margin: auto;
+  border-radius: 30px;
+  width: 90%;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  border: solid 2px #0F82FF;
+}
+
+.container form .subBut:hover {
+  background-color: #218afae5;
+  border: solid 2px #218bfcc2;
+}
+
+.container form .subBut:active {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  background-color: #165394e7;
+  border: solid 2px #218bfcc2;
+}
+
+.container .showdataBtn {
+  margin: auto;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.container .showdataBtn a {
+  font-size: 1rem;
+  margin: auto;
+  border-radius: 30px;
+  width: 60%;
+  background-color: #ff0800;
+  color: white;
+  padding: 10px;
+  border: solid 2px #ff0800;
+  text-decoration: none;
+}
+
+.container .showdataBtn a:hover {
+  background-color: #ff0800af;
+  border: solid 2px #ff080094;
+}
+
+.container .showdataBtn a:active {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  background-color: #ff0800;
+  border: solid 2px #ff0800;
+}
+/*# sourceMappingURL=style.css.map */
