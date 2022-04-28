@@ -1,3 +1,7 @@
-.navbar-expand-md .navbar-collapse {
-    justify-content: space-between  !important;
+.navbar{
+    background-color: $c-bg3 !important;
+
+    .navbar-collapse {
+        justify-content: space-between  !important;
+    }
 }

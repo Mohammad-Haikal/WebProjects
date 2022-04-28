@@ -5,280 +5,251 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="./jquery/jquery.js"></script>
-    <script src="./jquery/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./sass/root.css">
     <title>Pet Accessories</title>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark navbar-light">
-        <a class="navbar-brand" href="#">Pet Accessories</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contct Us</a>
-                </li>
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container-fluid pe-5 ps-5">
+            <a class="navbar-brand" href="#">Pet Accessories</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contct Us</a>
+                    </li>
 
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-expanded="false">
-                        Mohammad Haikal
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Account Settings</a>
-                        <a class="dropdown-item" href="#">Logout</a>
-                    </div>
-                </li>
-            </ul>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Mohammad Haikal
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Account Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <!-- Navbar -->
 
+    <!-- Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/main.jpg" class="d-block w-100 img-fluid" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <p>With the many types of pets, having the correct pet supplies for the right pet is essential!</p>
+                    <h1>Caring Loving Pets</h1><br>
+                    <p>Your First Order?</p>
+                    <button class="myCustomBtn">DISCOVER THE COLLECTION</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/pexels-andrew-kota-4083442.jpg" class="d-block w-100 img-fluid" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>FREE SHIPPING ON ALL ORDERS OVER 50 JD!</h1><br>
+                    <p>Your First Order?</p>
+                    <button class="myCustomBtn">DISCOVER THE COLLECTION</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/Categories/dogs.jpg" class="d-block w-100 img-fluid" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Caring Loving Pets</h1><br>
+                    <p>Your First Order?</p>
+                    <button class="myCustomBtn">DISCOVER THE COLLECTION</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Carousel -->
 
-    <main>
-        <img id="main-img" src="./img/Home.jpg" alt="home">
-        <div class="absolute-div">
-            <p>Free Shipping For All Over $80</p>
-            <h1>Caring Loving Pets</h1>
-            <p>Add instant sparkle to your pet's coat!</p>
-            <button>DISCOVER THE COLLECTION</button>
+    <!-- Section -->
+    <section class="d-flex flex-column flex-md-row justify-content-around p-2 pe-5 ps-5">
+        <div class="text-center p-3">
+            <img src="./img/icons/icons8-call-58.png" class="" style="width: 50px;" alt="phone">
+            <h4>+962790580502</h4>
+            <p>Round-the-clock hotline (24/7)</p>
         </div>
-    </main>
-    <section class="section2">
-        <div>
-            <img src="./img/icons/icons8-call-58.png" alt="phone">
-            <h3>+3(800) 2345-6789</h3>
-            <p>Round-the-clock free hotline (24/7)</p>
-        </div>
-        <div>
-            <img src="./img/icons/icons8-clock-100.png" alt="clock">
-            <h3>OPENING HOURS</h3>
+        <div class="text-center p-3">
+            <img src="./img/icons/icons8-clock-100.png" class="" style="width: 50px;" alt="clock">
+            <h4>OPENING HOURS</h4>
             <p>7 days a week from 9:00 am to 7:00 pm</p>
         </div>
-        <div>
-            <img src="./img/icons/icons8-instagram.svg" alt="instagram">
-            <h3>@ws.animal</h3>
+        <div class="text-center p-3">
+            <img src="./img/icons/icons8-instagram.svg" class="" style="width: 50px;" alt="instagram">
+            <h4>@petaccessories</h4>
             <p>Follow us on instagram!</p>
         </div>
     </section>
+    <!-- Section -->
 
-    <section class="section3">
-        <div>
-            <img src="./img/manja-vitolic-bxvrvRNxksg-unsplash.jpg" alt="animal">
-            <img src="./img/curology-A9CUBfntOFQ-unsplash.jpg" alt="animal">
-            <img src="./img/jane-almon-7rriIaBH6JY-unsplash.jpg" alt="animal">
-            <img src="./img/fernanda-matos-tj2OobwXFeA-unsplash.jpg" alt="animal">
-            <img src="./img/pexels-andreas-schmolmueller-3568134.jpg" alt="animal">
-            <img src="./img/ricardo-l-5gpEECJgLII-unsplash.jpg" alt="animal">
+    <!-- Section -->
+    <section class="d-flex flex-row align-items-center p-5">
+        <div class="d-none d-md-flex flex-wrap col-5">
+            <img class="animal m-1" src="./img/products/1.jpg" alt="animal">
+            <img class="animal m-1" src="./img/products/2.jpg" alt="animal">
+            <img class="animal m-1" src="./img/products/3.jpg" alt="animal">
+            <img class="animal m-1" src="./img/products/4.jpg" alt="animal">
+            <img class="animal m-1" src="./img/products/5.jpg" alt="animal">
+            <img class="animal m-1" src="./img/products/6.jpg" alt="animal">
         </div>
-        <div>
+        <div class="col-12 col-md-6 flex-md-grow-1">
             <h1>A PET'S FAVORITE PLACE</h1>
-            <hr>
-            <p>Welcome to WS Animal online shop for pet, home to some of the worlds most renowned international pet
-                brands, we take great pride in curating collections of the best designer dog products and luxury dog
-                accessories the world has to offer.</p>
+            <hr class="col-5">
+            <p>Welcome to Pet Accessories Store, home to some of the world's most renowned international pet brands, we
+                take great pride in curating collections of the best designer pet products and luxury pet accessories
+                the world has to offer.</p>
         </div>
     </section>
+    <!-- Section -->
 
-    <section class="section4">
-        <div>
+    <!-- Section -->
+    <section class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-between p-5">
+        <div class="col-12 col-md-7">
             <p>EVERYTHING YOU NEED FOR YOUR DEAR PET</p>
-            <h2>FREE SHIPPING ON ALL ORDERS OVER $200</h2>
-            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
-                placeat facere possimus, omnis amet voluptas assumenda est, omnis dolor repellendus quis nostrum.
-                Temporibus autem quibusdam et aut officiis debitis aut rerum dolorem necessitatibus saepe eveniet ut et
-                neque porro
-                quisquam est, qui. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-                minus id quod maxime placeat facere possimus cum soluta nobis est eligendi optio cumque nihil impedit
-                quo minus id quod maxime…,</p>
+            <h2>FREE SHIPPING ON ALL ORDERS OVER 50 JD</h2>
+            <p>Our promise to pet owners is commitment, experience, and values built through years to build a better
+                world for pets. Our Pet Advisors work at their best, to help you match your pet's needs to their breed,
+                condition, age, or life stage and get the answers you need.</p>
         </div>
         <div>
-            <img src="./img/home1.jpg" alt="girl">
+            <img width="100%" src="./img/home1.jpg" alt="girl">
         </div>
     </section>
+    <!-- Section -->
 
-    <section class="section5">
-        <span></span>
-
-        <div class="content-div">
-            <div>
-                <h1>FEATURED PRODUCTS</h1>
-                <hr>
-                <p>With more than 700 species of animals, having the correct animal supplies for the right animal is
-                    essential!</p>
+    <!-- Section -->
+    <section class="d-flex flex-column justify-content-center p-5">
+        <div class="bg-white d-flex flex-column-reverse flex-md-row justify-content-center align-items-center">
+            <div
+                class="sec6-content col-12 col-md-6 d-flex flex-column justify-content-center p-3 text-center align-items-center">
+                <h1>DOGS</h1>
+                <hr class="col-5">
+                <p>Have a new puppy at home? In our shop, you can find everything you need for your puppy's new home
+                    from puppy food to puppy toys!</p>
+                <button class="myCustomBtn">DISCOVER MORE</button>
             </div>
-            <div class="boxes-container">
-                <div>
-                    <img src="./img/accessories/Parrot-Chewing-Bite-Hanging-Cage-Pet-Bird-Parrot-Chew-Toy-Bird-Perch-Leather-Colorful-Wood-Building.jpg_q50.jpg"
-                        alt="accessories">
-                    <h3>Cockatoo</h3>
-                    <p>$250.00 – $600.00</p>
-                </div>
-                <div>
-                    <img src="./img/accessories/Parrot-Chewing-Bite-Hanging-Cage-Pet-Bird-Parrot-Chew-Toy-Bird-Perch-Leather-Colorful-Wood-Building.jpg_q50.jpg"
-                        alt="accessories">
-                    <h3>Cockatoo</h3>
-                    <p>$250.00 – $600.00</p>
-                </div>
-                <div>
-                    <img src="./img/accessories/Parrot-Chewing-Bite-Hanging-Cage-Pet-Bird-Parrot-Chew-Toy-Bird-Perch-Leather-Colorful-Wood-Building.jpg_q50.jpg"
-                        alt="accessories">
-                    <h3>Cockatoo</h3>
-                    <p>$250.00 – $600.00</p>
-                </div>
-                <div>
-                    <img src="./img/accessories/Parrot-Chewing-Bite-Hanging-Cage-Pet-Bird-Parrot-Chew-Toy-Bird-Perch-Leather-Colorful-Wood-Building.jpg_q50.jpg"
-                        alt="accessories">
-                    <h3>Cockatoo</h3>
-                    <p>$250.00 – $600.00</p>
-                </div>
-                <div>
-                    <img src="./img/accessories/Parrot-Chewing-Bite-Hanging-Cage-Pet-Bird-Parrot-Chew-Toy-Bird-Perch-Leather-Colorful-Wood-Building.jpg_q50.jpg"
-                        alt="accessories">
-                    <h3>Cockatoo</h3>
-                    <p>$250.00 – $600.00</p>
-                </div>
-                <div>
-                    <img src="./img/accessories/Parrot-Chewing-Bite-Hanging-Cage-Pet-Bird-Parrot-Chew-Toy-Bird-Perch-Leather-Colorful-Wood-Building.jpg_q50.jpg"
-                        alt="accessories">
-                    <h3>Cockatoo</h3>
-                    <p>$250.00 – $600.00</p>
-                </div>
-                <div>
-                    <img src="./img/accessories/Parrot-Chewing-Bite-Hanging-Cage-Pet-Bird-Parrot-Chew-Toy-Bird-Perch-Leather-Colorful-Wood-Building.jpg_q50.jpg"
-                        alt="accessories">
-                    <h3>Cockatoo</h3>
-                    <p>$250.00 – $600.00</p>
-                </div>
-                <div>
-                    <img src="./img/accessories/Parrot-Chewing-Bite-Hanging-Cage-Pet-Bird-Parrot-Chew-Toy-Bird-Perch-Leather-Colorful-Wood-Building.jpg_q50.jpg"
-                        alt="accessories">
-                    <h3>Cockatoo</h3>
-                    <p>$250.00 – $600.00</p>
-                </div>
+            <div class="col-12 col-md-6">
+                <img width="100%" class="categories" style="max-height: 400px;" src="./img/Categories/dogs.jpg"
+                    alt="dogs">
+            </div>
+        </div>
+        <div class="bg-white d-flex flex-column flex-md-row justify-content-center align-items-center">
+            <div class="col-12 col-md-6">
+                <img width="100%" class="categories" style="max-height: 400px;" src="./img/Categories/cats.jpg"
+                    alt="cats">
+            </div>
+            <div
+                class="sec6-content col-12 col-md-6 d-flex flex-column justify-content-center p-3 text-center align-items-center">
+                <h1>CATS</h1>
+                <hr class="col-5">
+                <p>All you need for your kitten to settle into its new home under one roof: kitten beds and food, kitten
+                    treats, kitten milk and toys, cat litter, and litter trays.</p>
+                <button class="myCustomBtn">DISCOVER MORE</button>
+            </div>
+        </div>
+        <div class="bg-white d-flex flex-column-reverse flex-md-row justify-content-center align-items-center">
+            <div
+                class="sec6-content col-12 col-md-6 d-flex flex-column justify-content-center p-3 text-center align-items-center">
+                <h1>BIRDS</h1>
+                <hr class="col-5">
+                <p>Toys shouldn't be forgotten in a well-equipped cage; birds are highly intelligent and need activity
+                    and variety to stimulate them. Here you'll find the appropriate toys for birds including parakeets,
+                    large parakeets, and parrots.</p>
+                <button class="myCustomBtn">DISCOVER MORE</button>
+            </div>
+            <div class="col-12 col-md-6">
+                <img width="100%" class="categories" style="max-height: 400px;" src="./img/Categories/birds.jpg"
+                    alt="birds">
             </div>
         </div>
     </section>
-    <section class="section6">
-        <div class="sec6-content">
-            <h1>DOGS</h1>
-            <hr>
-            <p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Ut elit tellus, luctus nec mattis pulvinar</p>
-            <button>DISCOVER MORE</button>
-        </div>
-        <div>
-            <img src="./img/pexels-andreas-schmolmueller-3568134.jpg" alt="dogs">
-        </div>
-        <div>
-            <img src="./img/pexels-gijs-coolen-2574173.jpg" alt="cats">
-        </div>
-        <div class="sec6-content">
-            <h1>CATS</h1>
-            <hr>
-            <p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Ut elit tellus, luctus nec mattis pulvinar</p>
-            <button>DISCOVER MORE</button>
-        </div>
-        <div class="sec6-content">
-            <h1>BIRDS</h1>
-            <hr>
-            <p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Ut elit tellus, luctus nec mattis pulvinar</p>
-            <button>DISCOVER MORE</button>
-        </div>
-        <div>
-            <img src="./img/pexels-bruno-henrique-2578367.jpg" alt="birds">
-        </div>
-    </section>
-    <section class="section7">
-        <span></span>
+    <!-- Section -->
 
-        <div>
-            <h1>TESTIMONIALS</h1>
-            <hr>
-            <p>It was an real incredible experience for me. The quality of food was only matched by the quality of
-                service I got. I wish I can keep the flavor in my mouth for ever.
-                Thanks for making the evening an unforgettable one.</p>
-            <img src="./img/home1.jpg" alt="sandra">
-            <h4>SANDRA FILES</h4>
+    <!-- Footer -->
+    <footer class="d-flex flex-column flex-md-row  p-5">
+        <div class="col-12 col-md-3 p-3">
+            <h3>Pet Accessories</h3>
+            <p style="text-align: justify;">A store that online sells different kinds of pet accessories and supplies including: food, treats,
+                toys, collars, leashes, cat litter, cages, and aquariums.</p>
         </div>
-    </section>
-
-    <footer>
-        <span></span>
-
-        <div class="footer-container">
-            <div>
-                <h3>WS <b>ANIMALS</b></h3>
-                <p>This prodigiously grew tortoise charact stupidly pernicious jeepers along while accordingly under
-                    useful much salacious walking fars before some supp aesthetically wow shuddered.</p>
-            </div>
-            <div>
-                <h3>WEB LINKS</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contct Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>GET IN TOUCH</h3>
-                <ul>
-                    <li><a href="#">32 BellSouth, Harley Street Florida 33968</a></li>
-                    <li><a href="#">+(1) 234 567 8900</a></li>
-                    <li><a href="#">support@pawrex.com</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>PHOTOS</h3>
-                <div>
-                    <img src="./img/manja-vitolic-bxvrvRNxksg-unsplash.jpg" alt="animal">
-                    <img src="./img/curology-A9CUBfntOFQ-unsplash.jpg" alt="animal">
-                    <img src="./img/jane-almon-7rriIaBH6JY-unsplash.jpg" alt="animal">
-                    <img src="./img/fernanda-matos-tj2OobwXFeA-unsplash.jpg" alt="animal">
-                    <img src="./img/pexels-andreas-schmolmueller-3568134.jpg" alt="animal">
-                    <img src="./img/ricardo-l-5gpEECJgLII-unsplash.jpg" alt="animal">
-                </div>
+        <div class="col-12 col-md-2 p-3">
+            <h3>WEB LINKS</h3>
+            <ul class="p-0 navbar-nav">
+                <li><a href="#" class="nav-item active">Home</a></li>
+                <li><a href="#" class="nav-item">About</a></li>
+                <li><a href="#" class="nav-item">Shop</a></li>
+                <li><a href="#" class="nav-item">Gallery</a></li>
+                <li><a href="#" class="nav-item">Contct Us</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-3 p-3">
+            <h3>GET IN TOUCH</h3>
+            <ul class="p-0 navbar-nav">
+                <li><a href="#" class="nav-item">Jordan - Amman, Irbid, Zarqa'</a></li>
+                <li><a href="#" class="nav-item">+962790580502</a></li>
+                <li><a href="#" class="nav-item">@petaccessories</a></li>
+            </ul>
+        </div>
+        <div class="flex-grow-1 p-3">
+            <h3>PHOTOS</h3>
+            <div class="d-flex flex-wrap">
+                <img class="animalSmall m-1" src="./img/products/1.jpg" alt="animal">
+                <img class="animalSmall m-1" src="./img/products/2.jpg" alt="animal">
+                <img class="animalSmall m-1" src="./img/products/3.jpg" alt="animal">
+                <img class="animalSmall m-1" src="./img/products/4.jpg" alt="animal">
+                <img class="animalSmall m-1" src="./img/products/5.jpg" alt="animal">
+                <img class="animalSmall m-1" src="./img/products/6.jpg" alt="animal">
             </div>
         </div>
     </footer>
+    <!-- Footer -->
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
-        crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
 
+    <!-- Scripts -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

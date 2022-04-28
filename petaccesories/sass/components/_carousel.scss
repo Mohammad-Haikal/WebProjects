@@ -1,0 +1,15 @@
+.carousel-caption {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    right: auto;
+    color: black;
+    text-align: justify;
+}
+
+.carousel-item > img {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  max-height:90vh;
+}

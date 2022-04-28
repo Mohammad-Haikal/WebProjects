@@ -1,7 +1,4 @@
-// @import "vendors/";
-// @import "core/";
-// @import "tools/";
-
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import "abstracts/variables";
 
 @import "layout/header";
@@ -13,8 +10,26 @@
 
 @import "components/text";
 @import "components/buttons";
-@import "components/slider";
+@import "components/carousel";
 
-@import "responsive/medium";
+.animal{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
 
-@import "pages/home";
+.animalSmall{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+.categories{
+    object-fit: cover;
+    object-position: top;
+    overflow: hidden;
+}
