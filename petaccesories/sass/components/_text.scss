@@ -4,33 +4,52 @@
     font-family: 'Bitter', serif !important;
 }
 
-.active{
+.active {
     color: $c2 !important;
 }
 
-hr {
-    background-color: $c1;
-    height:3px !important;
-    border:none;
-    opacity: 1;
 
+.myCustomHr{
+    background-color: $c1;
+    height          : 2px !important;
+    border          : none;
+    opacity         : 1;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h5,
+h6 {
     color: $c-font1;
 }
 
-p{
-    color: $c-font2;
+h4 {
+    color: $c-font5;
 }
 
-a{
-    color          : $c-font4;
+p {
+    color: $c-font2;
+}
+.price{
+    color: $c1;
+}
+
+a {
+    color              : $c-font4;
     transition-duration: 0.1s;
-    text-decoration: none;
-    &:hover{
-        color: $c-font3;
+    text-decoration    : none;
+
+    &:hover {
+        color          : $c-font3;
         text-decoration: none;
     }
 }
 
+.myCustomLink {
+    color: $c-font6 !important;
+
+    &:hover {
+        color: $c-font5 !important;
+    }
+}

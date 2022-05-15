@@ -1,4 +1,4 @@
-.myCustomBtn {
+.myCustomBtn, .myFilledCustomBtn, .myQuantityCustomBtn {
     padding         : 10px;
     color           : $c1;
     border-radius   : 5px;
@@ -13,3 +13,22 @@
     }
 }
 
+.myFilledCustomBtn {
+    color           : white !important;
+    background-color: $c1 !important;
+    border          : none !important;
+
+    &:hover {
+        background-color: $c2 !important;
+    }
+}
+
+.myQuantityCustomBtn {
+    color           : white !important;
+    background-color: $c-bg3 !important;
+    border          : none !important;
+
+    &:hover {
+        background-color: $c-bg4 !important;
+    }
+}

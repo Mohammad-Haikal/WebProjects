@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500&display=swap");
 html, body {
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -5,12 +6,19 @@ html, body {
 }
 
 form {
+  margin: 50px;
   padding: 100px;
+}
+
+form fieldset {
+  border-radius: 10px;
 }
 
 form div {
   position: relative;
   border-bottom: 1px solid #9e9e9e;
+  margin: 30px;
+  min-width: 25%;
 }
 
 form div #label {
@@ -22,7 +30,13 @@ form div #label {
   transition: 300ms ease;
 }
 
-form div input[type=text] {
+form div input[type=password] {
+  letter-spacing: 3px;
+}
+
+form div input[type=text],
+form div input[type=password] {
+  width: 100%;
   padding-bottom: 3px;
   border: none;
   background: none;
@@ -30,13 +44,17 @@ form div input[type=text] {
 }
 
 form div input[type=text]:focus ~ #label,
-form div input[type=text]:valid ~ #label {
+form div input[type=text]:valid ~ #label,
+form div input[type=password]:focus ~ #label,
+form div input[type=password]:valid ~ #label {
   top: -15px;
   font-size: small;
   color: #0077ff;
+  opacity: 0.7;
 }
 
-form div input[type=text]:focus ~ .bar {
+form div input[type=text]:focus ~ .bar,
+form div input[type=password]:focus ~ .bar {
   width: 100%;
   opacity: 1;
 }
@@ -53,5 +71,41 @@ form div .bar {
   opacity: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+* {
+  font-family: 'Bitter', serif;
+}
+
+h1 {
+  width: 200;
+  font-weight: 500;
+  padding: 20px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+  margin: 10px 0px 10px 0px;
+}
+
+p {
+  line-height: 20px;
+  font-weight: 300;
+  margin: 5px 0px 5px 0px;
+}
+
+a {
+  font-size: large;
+  text-decoration: none;
+  color: white;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+a:hover, .activeA {
+  color: #379AD6;
 }
 /*# sourceMappingURL=root.css.map */

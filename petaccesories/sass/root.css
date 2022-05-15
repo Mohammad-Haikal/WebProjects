@@ -11959,7 +11959,7 @@ fieldset:disabled .btn {
 }
 
 footer {
-  background-color: #14213d;
+  background-color: #0D0D0D;
 }
 
 footer h1, footer .h1, footer h3, footer .h3 {
@@ -11981,7 +11981,12 @@ footer p {
 }
 
 section:nth-last-of-type(odd) {
-  background-color: #F1F2F4 !important;
+  background-color: #f8f8f8 !important;
+}
+
+.myCustomBg {
+  color: white !important;
+  background-color: #FCA311 !important;
 }
 
 * {
@@ -11992,19 +11997,27 @@ section:nth-last-of-type(odd) {
   color: #ffb134 !important;
 }
 
-hr {
+.myCustomHr {
   background-color: #FCA311;
-  height: 3px !important;
+  height: 2px !important;
   border: none;
   opacity: 1;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1, h2, .h2, h3, .h3, h5, .h5, h6, .h6 {
   color: #14213D;
+}
+
+h4, .h4 {
+  color: #0f1112;
 }
 
 p {
   color: #575757;
+}
+
+.price {
+  color: #FCA311;
 }
 
 a {
@@ -12019,7 +12032,15 @@ a:hover {
   text-decoration: none;
 }
 
-.myCustomBtn {
+.myCustomLink {
+  color: #1a1d1fc4 !important;
+}
+
+.myCustomLink:hover {
+  color: #0f1112 !important;
+}
+
+.myCustomBtn, .myFilledCustomBtn, .myQuantityCustomBtn {
   padding: 10px;
   color: #FCA311;
   border-radius: 5px;
@@ -12032,9 +12053,29 @@ a:hover {
   transition: 0.2s;
 }
 
-.myCustomBtn:hover {
+.myCustomBtn:hover, .myFilledCustomBtn:hover, .myQuantityCustomBtn:hover {
   background-color: #FCA311;
   color: white;
+}
+
+.myFilledCustomBtn {
+  color: white !important;
+  background-color: #FCA311 !important;
+  border: none !important;
+}
+
+.myFilledCustomBtn:hover {
+  background-color: #ffb134 !important;
+}
+
+.myQuantityCustomBtn {
+  color: white !important;
+  background-color: #14213d !important;
+  border: none !important;
+}
+
+.myQuantityCustomBtn:hover {
+  background-color: #0D0D0D !important;
 }
 
 .carousel-caption {
@@ -12076,11 +12117,33 @@ a:hover {
   overflow: hidden;
 }
 
-.categories {
+.categories, .myCustomImg {
   -o-object-fit: cover;
      object-fit: cover;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.categories {
+  -o-object-position: center;
+     object-position: center;
+}
+
+.myCustomImg {
   -o-object-position: top;
      object-position: top;
-  overflow: hidden;
+}
+
+.imgLowOpacity {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  opacity: 0.8;
+}
+
+.imgLowOpacity:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=root.css.map */

@@ -20,7 +20,7 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: #F1F1F1;
+  background-color: #FAFBFC;
 }
 
 header {
@@ -53,7 +53,7 @@ header select option {
   text-align: center;
   width: 50%;
   border: 1px solid #DBDBDB;
-  background-color: white;
+  background-color: #ffffff;
   min-height: 80%;
   max-height: 80%;
   overflow-y: scroll;
@@ -72,17 +72,17 @@ header select option {
 }
 
 *::-moz-selection {
-  background-color: #0095F6;
+  background-color: #FF424D;
 }
 
 *::selection {
-  background-color: #0095F6;
+  background-color: #FF424D;
 }
 
 h1,
 .aya {
   cursor: pointer;
-  color: #383838;
+  color: #241E12;
 }
 
 .aya {
@@ -94,12 +94,12 @@ h1,
 }
 
 .aya:hover {
-  color: #0095F6;
+  color: #FF424D;
 }
 
 .aya:hover .aya-num {
-  background-color: #0095F6;
-  color: white;
+  background-color: #FF424D;
+  color: #FAFBFC;
 }
 
 .aya-num {
@@ -122,6 +122,6 @@ h1,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  border: 2px double #0095F6;
+  border: 2px double #FF424D;
 }
 /*# sourceMappingURL=root.css.map */

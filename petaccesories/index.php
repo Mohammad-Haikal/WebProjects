@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./sass/root.css">
-    <title>Pet Accessories</title>
-</head>
+<?php include('./templates/head.php')?>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark">
-        <div class="container-fluid pe-5 ps-5">
+        <div class="container-fluid pe-md-5 ps-md-5">
             <a class="navbar-brand" href="#">Pet Accessories</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,20 +14,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link active" href="#">Home</a>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
+                        <a class="nav-link" href="store.html">Store</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
+                        <a class="nav-link" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contct Us</a>
+                        <a class="nav-link" href="contact.html">Contct Us</a>
                     </li>
 
                 </ul>
@@ -77,7 +71,7 @@
             <div class="carousel-item">
                 <img src="./img/pexels-andrew-kota-4083442.jpg" class="d-block w-100 img-fluid" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1>FREE SHIPPING ON ALL ORDERS OVER 50 JD!</h1><br>
+                    <h1>FREE SHIPPING ON ALL ORDERS OVER $50!</h1><br>
                     <p>Your First Order?</p>
                     <button class="myCustomBtn">DISCOVER THE COLLECTION</button>
                 </div>
@@ -136,7 +130,7 @@
         </div>
         <div class="col-12 col-md-6 flex-md-grow-1">
             <h1>A PET'S FAVORITE PLACE</h1>
-            <hr class="col-5">
+            <hr class="col-5 myCustomHr">
             <p>Welcome to Pet Accessories Store, home to some of the world's most renowned international pet brands, we
                 take great pride in curating collections of the best designer pet products and luxury pet accessories
                 the world has to offer.</p>
@@ -148,7 +142,7 @@
     <section class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-between p-5">
         <div class="col-12 col-md-7">
             <p>EVERYTHING YOU NEED FOR YOUR DEAR PET</p>
-            <h2>FREE SHIPPING ON ALL ORDERS OVER 50 JD</h2>
+            <h2>FREE SHIPPING ON ALL ORDERS OVER $50</h2>
             <p>Our promise to pet owners is commitment, experience, and values built through years to build a better
                 world for pets. Our Pet Advisors work at their best, to help you match your pet's needs to their breed,
                 condition, age, or life stage and get the answers you need.</p>
@@ -165,42 +159,42 @@
             <div
                 class="sec6-content col-12 col-md-6 d-flex flex-column justify-content-center p-3 text-center align-items-center">
                 <h1>DOGS</h1>
-                <hr class="col-5">
-                <p>Have a new puppy at home? In our shop, you can find everything you need for your puppy's new home
+                <hr class="col-5 myCustomHr">
+                <p>Have a new puppy at home? In our store, you can find everything you need for your puppy's new home
                     from puppy food to puppy toys!</p>
-                <button class="myCustomBtn">DISCOVER MORE</button>
+                <a href="./store.html" class="myCustomBtn">DISCOVER MORE</a>
             </div>
             <div class="col-12 col-md-6">
-                <img width="100%" class="categories" style="max-height: 400px;" src="./img/Categories/dogs.jpg"
+                <img width="100%" class="myCustomImg" style="max-height: 400px;" src="./img/Categories/dogs.jpg"
                     alt="dogs">
             </div>
         </div>
         <div class="bg-white d-flex flex-column flex-md-row justify-content-center align-items-center">
             <div class="col-12 col-md-6">
-                <img width="100%" class="categories" style="max-height: 400px;" src="./img/Categories/cats.jpg"
+                <img width="100%" class="myCustomImg" style="max-height: 400px;" src="./img/Categories/cats.jpg"
                     alt="cats">
             </div>
             <div
                 class="sec6-content col-12 col-md-6 d-flex flex-column justify-content-center p-3 text-center align-items-center">
                 <h1>CATS</h1>
-                <hr class="col-5">
+                <hr class="col-5 myCustomHr">
                 <p>All you need for your kitten to settle into its new home under one roof: kitten beds and food, kitten
                     treats, kitten milk and toys, cat litter, and litter trays.</p>
-                <button class="myCustomBtn">DISCOVER MORE</button>
+                <a href="./store.html" class="myCustomBtn">DISCOVER MORE</a>
             </div>
         </div>
         <div class="bg-white d-flex flex-column-reverse flex-md-row justify-content-center align-items-center">
             <div
                 class="sec6-content col-12 col-md-6 d-flex flex-column justify-content-center p-3 text-center align-items-center">
                 <h1>BIRDS</h1>
-                <hr class="col-5">
+                <hr class="col-5 myCustomHr">
                 <p>Toys shouldn't be forgotten in a well-equipped cage; birds are highly intelligent and need activity
                     and variety to stimulate them. Here you'll find the appropriate toys for birds including parakeets,
                     large parakeets, and parrots.</p>
-                <button class="myCustomBtn">DISCOVER MORE</button>
+                <a href="./store.html" class="myCustomBtn">DISCOVER MORE</a>
             </div>
             <div class="col-12 col-md-6">
-                <img width="100%" class="categories" style="max-height: 400px;" src="./img/Categories/birds.jpg"
+                <img width="100%" class="myCustomImg" style="max-height: 400px;" src="./img/Categories/birds.jpg"
                     alt="birds">
             </div>
         </div>
@@ -216,20 +210,20 @@
         </div>
         <div class="col-12 col-md-2 p-3">
             <h3>WEB LINKS</h3>
-            <ul class="p-0 navbar-nav">
-                <li><a href="#" class="nav-item active">Home</a></li>
-                <li><a href="#" class="nav-item">About</a></li>
-                <li><a href="#" class="nav-item">Shop</a></li>
-                <li><a href="#" class="nav-item">Gallery</a></li>
-                <li><a href="#" class="nav-item">Contct Us</a></li>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.html" class="active">Home</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="store.html">Store</a></li>
+                <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a href="contact.html">Contct Us</a></li>
             </ul>
         </div>
         <div class="col-12 col-md-3 p-3">
             <h3>GET IN TOUCH</h3>
-            <ul class="p-0 navbar-nav">
-                <li><a href="#" class="nav-item">Jordan - Amman, Irbid, Zarqa'</a></li>
-                <li><a href="#" class="nav-item">+962790580502</a></li>
-                <li><a href="#" class="nav-item">@petaccessories</a></li>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#">Jordan - Amman, Irbid, Zarqa'</a></li>
+                <li class="nav-item"><a href="#">+962790580502</a></li>
+                <li class="nav-item"><a href="#">@petaccessories</a></li>
             </ul>
         </div>
         <div class="flex-grow-1 p-3">

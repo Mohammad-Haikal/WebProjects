@@ -10,14 +10,14 @@
     transition-duration: 0.2s;
 
     &::selection {
-        background-color: #0095F6;
+        background-color: $c5;
     }
 }
 
 h1,
 .aya {
     cursor: pointer;
-    color : #383838;
+    color : $c4;
 }
 
 .aya {
@@ -28,11 +28,11 @@ h1,
     font-size  : 20px;
 
     &:hover {
-        color: #0095F6;
+        color: $c5;
 
         .aya-num {
-            background-color: #0095F6;
-            color           : white;
+            background-color: $c5;
+            color           : $c2;
         }
     }
 }
@@ -49,5 +49,5 @@ h1,
     justify-content: center;
     align-items    : center;
     display        : inline-flex;
-    border         : 2px double #0095F6;
+    border         : 2px double $c5;
 }
