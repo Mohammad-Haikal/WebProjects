@@ -1,12 +1,10 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
+
 @import "abstracts/variables";
 
-@import "layout/header";
 @import "layout/body";
-@import "layout/footer";
 @import "layout/nav";
-
-@import "sections/section";
+@import "layout/footer";
 
 @import "components/text";
 @import "components/buttons";

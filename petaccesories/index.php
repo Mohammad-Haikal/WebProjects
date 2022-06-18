@@ -1,100 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include('./templates/PHPScripts.php');
+Visitor::addVisitor();
+?>
 
-<?php include('./templates/head.php')?>
+
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<?php include('./templates/head.php') ?>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark">
-        <div class="container-fluid pe-md-5 ps-md-5">
-            <a class="navbar-brand" href="#">Pet Accessories</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="store.html">Store</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contct Us</a>
-                    </li>
-
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Mohammad Haikal
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Account Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include('./templates/nav.php') ?>
     <!-- Navbar -->
 
-    <!-- Carousel -->
-    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+    <!-- Search Box -->
+    <div class="container my-3 col-md-9">
+    <form class="input-group" action="store.php" method="GET">
+        <input type="text" name="searchValue" class="form-control col" placeholder="Search Product">
+        <button type="submit" name="search" class="btn myFilledCustomBtn px-5">Search</button>
+    </form>
+    </div>
+    <!-- Search Box -->
+
+
+
+    <!-- Welcome Hero -->
+    <div class=" d-flex flex-column justify-content-center text-center mb-5">
+        <!-- <img class="d-block mx-auto mb-4 bg-dark rounded-2" src="./img/logo.png" width="72" height="57"> -->
+        <h1 class="fw-bold">Welcome to Pets Accessories</h1>
+        <div>
+            <p class="lead mb-4">Here you will find everything about your pets needs!</p>
+            <a href="#carousel1" role="button" class="btn myCustomBtn">LET'S GET STARTED</a>
         </div>
+
+    </div>
+    <!-- Welcome Hero -->
+
+
+    <div id="carousel1" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./img/main.jpg" class="d-block w-100 img-fluid" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <p>With the many types of pets, having the correct pet supplies for the right pet is essential!</p>
-                    <h1>Caring Loving Pets</h1><br>
-                    <p>Your First Order?</p>
-                    <button class="myCustomBtn">DISCOVER THE COLLECTION</button>
+                <img src="./img/slides/1.jpeg" class="d-block w-100 img-fluid" alt="1">
+                <div class="carousel-caption d-none d-md-block row g-0 bg-black bg-opacity-25 p-3 rounded">
+                    <h1 class="text-light">Welcome to Pets Accessories</h1>
+                    <p class="text-light">Here you will find very interesting and helpful pets accessories!</p>
+                    <a href="./store.php" class="btn myFilledCustomBtn w-25">DISCOVER MORE</a>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="./img/pexels-andrew-kota-4083442.jpg" class="d-block w-100 img-fluid" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>FREE SHIPPING ON ALL ORDERS OVER $50!</h1><br>
-                    <p>Your First Order?</p>
-                    <button class="myCustomBtn">DISCOVER THE COLLECTION</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./img/Categories/dogs.jpg" class="d-block w-100 img-fluid" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Caring Loving Pets</h1><br>
-                    <p>Your First Order?</p>
-                    <button class="myCustomBtn">DISCOVER THE COLLECTION</button>
+                <img src="./img/slides/2.jpeg" class="d-block w-100 img-fluid" alt="2">
+                <div class="carousel-caption d-none d-md-block row g-0 bg-black bg-opacity-25 p-3 rounded">
+                    <h1 class="text-light">Welcome to Pets Accessories</h1>
+                    <p class="text-light">Here you will find very interesting and helpful pets accessories!</p>
+                    <a href="./store.php" class="btn myFilledCustomBtn w-25">DISCOVER MORE</a>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
     <!-- Carousel -->
 
@@ -156,94 +118,56 @@
     <!-- Section -->
     <section class="d-flex flex-column justify-content-center p-5">
         <div class="bg-white d-flex flex-column-reverse flex-md-row justify-content-center align-items-center">
-            <div
-                class="sec6-content col-12 col-md-6 d-flex flex-column justify-content-center p-3 text-center align-items-center">
+            <div class="sec6-content col-12 col-md-6 d-flex flex-column justify-content-center p-3 text-center align-items-center">
                 <h1>DOGS</h1>
                 <hr class="col-5 myCustomHr">
                 <p>Have a new puppy at home? In our store, you can find everything you need for your puppy's new home
                     from puppy food to puppy toys!</p>
-                <a href="./store.html" class="myCustomBtn">DISCOVER MORE</a>
+                <a href="./store.php" class="btn myCustomBtn">DISCOVER MORE</a>
             </div>
             <div class="col-12 col-md-6">
-                <img width="100%" class="myCustomImg" style="max-height: 400px;" src="./img/Categories/dogs.jpg"
-                    alt="dogs">
+                <img width="100%" class="myCustomImg" style="max-height: 400px;" src="./img/Categories/dogs.jpg" alt="dogs">
             </div>
         </div>
         <div class="bg-white d-flex flex-column flex-md-row justify-content-center align-items-center">
             <div class="col-12 col-md-6">
-                <img width="100%" class="myCustomImg" style="max-height: 400px;" src="./img/Categories/cats.jpg"
-                    alt="cats">
+                <img width="100%" class="myCustomImg" style="max-height: 400px;" src="./img/Categories/cats.jpg" alt="cats">
             </div>
-            <div
-                class="sec6-content col-12 col-md-6 d-flex flex-column justify-content-center p-3 text-center align-items-center">
+            <div class="sec6-content col-12 col-md-6 d-flex flex-column justify-content-center p-3 text-center align-items-center">
                 <h1>CATS</h1>
                 <hr class="col-5 myCustomHr">
                 <p>All you need for your kitten to settle into its new home under one roof: kitten beds and food, kitten
                     treats, kitten milk and toys, cat litter, and litter trays.</p>
-                <a href="./store.html" class="myCustomBtn">DISCOVER MORE</a>
+                <a href="./store.php" class="btn myCustomBtn">DISCOVER MORE</a>
             </div>
         </div>
         <div class="bg-white d-flex flex-column-reverse flex-md-row justify-content-center align-items-center">
-            <div
-                class="sec6-content col-12 col-md-6 d-flex flex-column justify-content-center p-3 text-center align-items-center">
+            <div class="sec6-content col-12 col-md-6 d-flex flex-column justify-content-center p-3 text-center align-items-center">
                 <h1>BIRDS</h1>
                 <hr class="col-5 myCustomHr">
                 <p>Toys shouldn't be forgotten in a well-equipped cage; birds are highly intelligent and need activity
                     and variety to stimulate them. Here you'll find the appropriate toys for birds including parakeets,
                     large parakeets, and parrots.</p>
-                <a href="./store.html" class="myCustomBtn">DISCOVER MORE</a>
+                <a href="./store.php" class="btn myCustomBtn">DISCOVER MORE</a>
             </div>
             <div class="col-12 col-md-6">
-                <img width="100%" class="myCustomImg" style="max-height: 400px;" src="./img/Categories/birds.jpg"
-                    alt="birds">
+                <img width="100%" class="myCustomImg" style="max-height: 400px;" src="./img/Categories/birds.jpg" alt="birds">
             </div>
         </div>
     </section>
     <!-- Section -->
 
-    <!-- Footer -->
-    <footer class="d-flex flex-column flex-md-row  p-5">
-        <div class="col-12 col-md-3 p-3">
-            <h3>Pet Accessories</h3>
-            <p style="text-align: justify;">A store that online sells different kinds of pet accessories and supplies including: food, treats,
-                toys, collars, leashes, cat litter, cages, and aquariums.</p>
-        </div>
-        <div class="col-12 col-md-2 p-3">
-            <h3>WEB LINKS</h3>
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="index.html" class="active">Home</a></li>
-                <li class="nav-item"><a href="about.html">About</a></li>
-                <li class="nav-item"><a href="store.html">Store</a></li>
-                <li class="nav-item"><a href="gallery.html">Gallery</a></li>
-                <li class="nav-item"><a href="contact.html">Contct Us</a></li>
-            </ul>
-        </div>
-        <div class="col-12 col-md-3 p-3">
-            <h3>GET IN TOUCH</h3>
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="#">Jordan - Amman, Irbid, Zarqa'</a></li>
-                <li class="nav-item"><a href="#">+962790580502</a></li>
-                <li class="nav-item"><a href="#">@petaccessories</a></li>
-            </ul>
-        </div>
-        <div class="flex-grow-1 p-3">
-            <h3>PHOTOS</h3>
-            <div class="d-flex flex-wrap">
-                <img class="animalSmall m-1" src="./img/products/1.jpg" alt="animal">
-                <img class="animalSmall m-1" src="./img/products/2.jpg" alt="animal">
-                <img class="animalSmall m-1" src="./img/products/3.jpg" alt="animal">
-                <img class="animalSmall m-1" src="./img/products/4.jpg" alt="animal">
-                <img class="animalSmall m-1" src="./img/products/5.jpg" alt="animal">
-                <img class="animalSmall m-1" src="./img/products/6.jpg" alt="animal">
-            </div>
-        </div>
-    </footer>
-    <!-- Footer -->
 
 
-    <!-- Scripts -->
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/index.js"></script>
+
+    <!-- Footer -->
+    <?php include('./templates/footer.php') ?>
+    <!-- Footer -->
+
+    <!-- JS Scripts -->
+    <?php include('./templates/jsScripts.php') ?>
+    <script src="./js/carousel.js"></script>
+    <!-- JS Scripts -->
 </body>
 
 </html>

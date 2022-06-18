@@ -1,121 +1,52 @@
+<?php
+include('./templates/PHPScripts.php');
+$images = Product::getAllImages();
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./sass/root.css">
-    <title>Pet Accessories</title>
-</head>
+<?php include('./templates/head.php') ?>
 
-<body>
+<body class="bg-light">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark">
-        <div class="container-fluid pe-md-5 ps-md-5">
-            <a class="navbar-brand" href="#">Pet Accessories</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="store.html">Store</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contct Us</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Mohammad Haikal
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Account Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include('./templates/nav.php') ?>
     <!-- Navbar -->
-    <section class="p-5 pb-1 text-center d-flex flex-column align-items-center">
-        <h2>Gallery</h2>
-        <hr class="col-10 col-sm-3 mt-0 myCustomHr">
-    </section>
+    <?php echo $success ?>
 
+    <div class="container py-3">
+        <section class="p-2 pb-1 text-center d-flex flex-column align-items-center">
+            <h2>Our Gallery</h2>
+            <hr class="col-10 col-sm-3 mt-0 myCustomHr">
+        </section>
+        <section class="row g-2 mb-5 justify-content-center">
+            <?php foreach ($images as $image) : ?>
+                <img src="<?= $image['image'] ?>" class="image myCustomImg shadow" style="width: 250px; height: 180px;">
+            <?php endforeach ?>
+        </section>
+        <style>
+            .image{
+                transition-duration: 0.2s;
+            }
+            .image:hover {
+                z-index: 1;
+                -ms-transform: scale(1.1);
+                /* IE 9 */
+                -webkit-transform: scale(1.1);
+                /* Safari 3-8 */
+                transform: scale(1.1);
+            }
+        </style>
 
-    <section class="d-flex flex-column flex-md-row flex-md-wrap justify-content-center p-5">
-        <img src="./img/main.jpg" class="rounded-1 shadow-sm img-fluid m-1 myCustomImg imgLowOpacity col-md-5">
-        <img src="./img/pexels-andrew-kota-4083442.jpg" class="rounded-1 shadow-sm img-fluid m-1 myCustomImg imgLowOpacity col-md-5">
-        <img src="./img/main.jpg" class="rounded-1 shadow-sm img-fluid m-1 myCustomImg imgLowOpacity col-md-5">
-        <img src="./img/main.jpg" class="rounded-1 shadow-sm img-fluid m-1 myCustomImg imgLowOpacity col-md-5">
-        <img src="./img/pexels-andrew-kota-4083442.jpg" class="rounded-1 shadow-sm img-fluid m-1 myCustomImg imgLowOpacity col-md-5">
-        <img src="./img/pexels-andrew-kota-4083442.jpg" class="rounded-1 shadow-sm img-fluid m-1 myCustomImg imgLowOpacity col-md-5">
-        <img src="./img/main.jpg" class="rounded-1 shadow-sm img-fluid m-1 myCustomImg imgLowOpacity col-md-5">
-        <img src="./img/main.jpg" class="rounded-1 shadow-sm img-fluid m-1 myCustomImg imgLowOpacity col-md-5">
-        <img src="./img/main.jpg" class="rounded-1 shadow-sm img-fluid m-1 myCustomImg imgLowOpacity col-md-5">
-        <img src="./img/pexels-andrew-kota-4083442.jpg" class="rounded-1 shadow-sm img-fluid m-1 myCustomImg imgLowOpacity col-md-5">
-        <img src="./img/pexels-andrew-kota-4083442.jpg" class="rounded-1 shadow-sm img-fluid m-1 myCustomImg imgLowOpacity col-md-5">
-    </section>
-       
+    </div>
 
     <!-- Footer -->
-    <footer class="d-flex flex-column flex-md-row  p-5">
-        <div class="col-12 col-md-3 p-3">
-            <h3>Pet Accessories</h3>
-            <p style="text-align: justify;">A store that online sells different kinds of pet accessories and supplies including: food, treats,
-                toys, collars, leashes, cat litter, cages, and aquariums.</p>
-        </div>
-        <div class="col-12 col-md-2 p-3">
-            <h3>WEB LINKS</h3>
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="index.html">Home</a></li>
-                <li class="nav-item"><a href="about.html">About</a></li>
-                <li class="nav-item"><a href="store.html">Store</a></li>
-                <li class="nav-item"><a href="gallery.html" class="active">Gallery</a></li>
-                <li class="nav-item"><a href="contact.html">Contct Us</a></li>
-            </ul>
-        </div>
-        <div class="col-12 col-md-3 p-3">
-            <h3>GET IN TOUCH</h3>
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="#">Jordan - Amman, Irbid, Zarqa'</a></li>
-                <li class="nav-item"><a href="#">+962790580502</a></li>
-                <li class="nav-item"><a href="#">@petaccessories</a></li>
-            </ul>
-        </div>
-        <div class="flex-grow-1 p-3">
-            <h3>PHOTOS</h3>
-            <div class="d-flex flex-wrap">
-                <img class="animalSmall m-1" src="./img/products/1.jpg" alt="animal">
-                <img class="animalSmall m-1" src="./img/products/2.jpg" alt="animal">
-                <img class="animalSmall m-1" src="./img/products/3.jpg" alt="animal">
-                <img class="animalSmall m-1" src="./img/products/4.jpg" alt="animal">
-                <img class="animalSmall m-1" src="./img/products/5.jpg" alt="animal">
-                <img class="animalSmall m-1" src="./img/products/6.jpg" alt="animal">
-            </div>
-        </div>
-    </footer>
+    <?php include('./templates/footer.php') ?>
     <!-- Footer -->
 
-
-    <!-- Scripts -->
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/index.js"></script>
+    <!-- JS Scripts -->
+    <?php include('./templates/jsScripts.php') ?>
+    <!-- JS Scripts -->
 </body>
 
 </html>

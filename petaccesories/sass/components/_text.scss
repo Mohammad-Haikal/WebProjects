@@ -9,11 +9,18 @@
 }
 
 
-.myCustomHr{
+.myCustomHr {
     background-color: $c1;
     height          : 2px !important;
     border          : none;
     opacity         : 1;
+}
+
+.myCustomText{
+    color: $c-font1;
+    &:hover{
+        color: $c-font6;
+    }
 }
 
 h1,
@@ -31,7 +38,8 @@ h4 {
 p {
     color: $c-font2;
 }
-.price{
+
+.price {
     color: $c1;
 }
 
