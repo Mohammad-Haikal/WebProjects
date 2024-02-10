@@ -27,7 +27,7 @@ $_SESSION['ip'] = getIPAddress();
 // Open log.txt (append mode)  
 $fp = fopen('log.txt', 'a');
 
-if($_SESSION['username'] == "muhhl" && $_SESSION['password'] == "muh@20001#hl"){
+if($_SESSION['username'] == "muhhl" && $_SESSION['password'] == "admin"){
 
     $_SESSION['loggedin'] = true;
     fwrite($fp,"\n===== New Access! =====\n". $_SESSION['username']. "\nIP Address: ". $_SESSION['ip']. "\nDate: ". $_SESSION['date']. "\nTime: ". $_SESSION['time']."\n=======================\n");
@@ -36,14 +36,6 @@ if($_SESSION['username'] == "muhhl" && $_SESSION['password'] == "muh@20001#hl"){
     header("Location: index2.php");
 }
 
-elseif($_SESSION['username'] == "nouf" && $_SESSION['password'] == "nn@98#nouff"){
-
-    $_SESSION['loggedin'] = true;
-    fwrite($fp,"\n===== New Access! =====\n". $_SESSION['username']. "\nIP Address: ". $_SESSION['ip']. "\nDate: ". $_SESSION['date']. "\nTime: ". $_SESSION['time']."\n=======================\n");
-    
-    // Redirect
-    header("Location: index2.php");
-}
 
 else{
     $_SESSION['loggedin'] = false;

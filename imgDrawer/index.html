@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imgDrawer</title>
+</head>
+<body>
+    <div id="canvas">
+        
+    </div>
+    
+
+    <style>
+        body{
+            margin: 0;
+        }
+        #canvas{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background-color: rgb(236, 236, 236);
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start
+        }
+        .pixel{
+            width: 10px;
+            height: 10px;
+            background-color: rgb(0, 0, 0);
+            /* border-radius: 50%; */
+        }
+        .pixel2{
+            width: 10px;
+            height: 10px;
+            background-color: rgb(255, 255, 255);  
+            /* border-radius: 50%; */
+            transition: 0.5s;
+        }
+        .p:hover{
+            background-color: red;
+        }
+
+    </style>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+        var child1 = "<div class='p pixel'></div>";
+        var child2 = "<div class='p pixel2'></div>";
+        const size = 2500;
+        const draw = (pixel) => canvas.innerHTML += pixel; 
+        const random = () => Math.floor(Math.random() * 3); 
+        let black = false;
+        let temp = 0;
+        
+        for (let i = 1; i <= size; i++) {             
+            if (temp == 50) {
+                black = !black;
+                temp = 0;
+            }
+            if (black) {
+                draw(child1);                
+                black = !black;
+
+            }else{
+                draw(child2);
+                black = !black;
+            }
+            temp++;
+        }
+
+        
+    </script>
+</body>
+</html>

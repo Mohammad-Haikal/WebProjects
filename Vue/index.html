@@ -1,40 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="./jquery/jquery.js"></script>
-        <script src="./jquery/jquery-ui.js"></script>
-        <link rel="stylesheet" type="text/css" href="./sass/root.css">
-        <title>Document</title>
-    </head>
-    <body>
-        <div id="container">
-            <input id="coloredInput" type="text" v-model="color" value="changeColor()">
-            <p>{{changeColor()}}</p>
-            
-        </div>
 
-        <script src="./js/vue.js"></script>
-        <script>
-            var app = new Vue({
-                el: '#container',
-                data: {
-                    color: ''
-                },
-                methods: {
-                    changeColor: function () { 
-                        $("#coloredInput").css('background-color', this.color);
-                    }
-                },
-                computed: {
-                    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="muhhlApp">
+        {{ name }}
+        <app-count></app-count>
+        <app-count></app-count>
+
+        <p @click="count++">{{count}}</p>
+        <label for="">Username</label>
+        <input type="text" v-model="username"><br>
+        <small v-bind:style="{color: color}">{{validate}}</small>
+
+
+    </div>
+
+
+
+
+    <script src="./js/vue.js"></script>
+
+    <script>
+        var appCount = {
+            data: function () {
+                return {
+                    name: 'ahmad',
+                    count: 0,
+                    people: [
+                        {
+                            website: "stackabuse.com",
+                            from: "Nebraska",
+                            name: "Scott"
+                        },
+                        {
+                            website: "google.com",
+                            from: "US",
+                            name: "Zuck"
+                        }
+                    ]
+
                 }
-            })
-        </script>
+            },
+            template: '<p @click="count++"> {{count}} Hello {{name}}</p>'
+        }
 
 
-        <script src="./js/script.js"></script>
-    </body>
+
+        var app = new Vue({
+            el: '#muhhlApp',
+            data: {
+                username: '',
+                count: 0,
+                color: 'black',
+            },
+            components: {
+                'app-count': appCount,
+            },
+            computed: {
+                counter: function () {
+                    console.log("Ran");
+                    this.count++;
+                },
+                validate: function () {
+                    if (!this.username) {
+                        this.color = "red"
+                        return "please fill the username";
+                    }
+                    else if (!isNaN(this.username)) {
+                        this.color = "red"
+                        return "Username must be a string";
+                    }
+                    else {
+                        this.color = "blue"
+                        return `Welcome ${this.username}`;
+                    }
+                }
+            },
+        });
+
+    </script>
+
+
+    
+
+</body>
+
+
+
 </html>
